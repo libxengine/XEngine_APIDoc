@@ -1,0 +1,56 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>APIClient_File_Create</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<H1>函数</H1>
+<P>APIClient_File_Create</P>
+<H1>功能</H1>
+<P>创建一个HTTP或者FTP上传下载任务</P>
+<H1>语法 </H1>
+<P>XHANDLE APIClient_File_Create(LPCTSTR lpszAddr, LPCTSTR 
+lpszFile, BOOL bIsDown =    
+TRUE, LPCTSTR lpszRange =    
+  NULL, CALLBACK_XENGINE_NETHELP_APICLIENT_FILE fpCall_HttpProgress = NULL, 
+LPVOID lParam =   
+      NULL)</P>
+<P></P>
+<P>
+</P>
+<H1>
+参数
+
+</H1>
+<P>&nbsp;参数.一：lpszAddr<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：下载的HTTP地址<BR>&nbsp;参数.二：lpszFile<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：本地地址<BR>&nbsp;参数.三：bIsDown<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：逻辑型<BR>&nbsp; 
+可空：Y<BR>&nbsp; 意思：是下载还是上传<BR>&nbsp;参数.四：lpszRange<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：续传范围参数,如果为NULL,不启用,否则使用HTTP 
+Range字段,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+上传:100-400/400(100-400的字节,总大小400)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+下载:100-(100个字节开始到结束)或者100-400<BR>&nbsp;参数.五：fpCall_HttpProgress<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：回调函数<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：下载过程<BR>&nbsp;参数.六：lParam<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：无类型指针<BR>&nbsp; 
+可空：Y<BR>&nbsp; 意思：回调函数自定义参数
+
+</P>
+<P></P>
+<H1>返回值</H1>
+<P>类型：句柄型<BR>意思：成功返回句柄,失败返回NULL</P>
+<H1>备注</H1>
+<P>回调函数为空请调用QUERY来查询</P>
+<H1>示例</H1></body>
+</html>

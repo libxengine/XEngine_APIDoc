@@ -1,0 +1,52 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>FAQ</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<P>此为API文档的一些常见问题和解释</P>
+<P>1.问:注释和函数不对应</P>
+<P>&nbsp;&nbsp; 
+答:我们的注释在某些扩展函数EX中,会忽略掉第一个句柄参数,所以部分注释要从函数的第二个参数开始读</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <FONT color=#ff0000>注释不一定会全部正确,一切以代码为准.</FONT> 
+</P>
+<P> 
+2.问:所有功能都进行了分类整理嘛</P>
+<P>&nbsp;&nbsp; 
+答:不是所有功能都是单独的分类,比如线程就不是(因为功能区分很小),他有几种线程池,各类线程池是不能通用的</P>
+<P> 
+3.问:请求的IP版本参数是INT类型,不知道怎么传参</P>
+<P> 
+&nbsp;&nbsp;&nbsp;答:IP版本类型我们采用系统默认的值,比如IPV4是AF_INET,IPV6是AF_INET6</P>
+<P> 
+4.问:文档里面的例子是最新的吗?</P>
+<P>&nbsp;&nbsp; 
+答:不一定.代码示例应该按照版本库中的示例为标准</P>
+<P>5.问:句柄返回有时候是XNETHANDLE,有时候是XHANDLE,他们有什么区别?</P>
+<P>&nbsp;&nbsp; 
+答:XHANDLE一般有内部线程,而且是线程安全,为了防止内部线程锁冲突,我们通过单独申请内存XHANDLE来处理相关代码逻辑</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+XNETHANDLE属于线程安全,XHANDLE不属于线程安全.</P>
+<P> 
+6.问:目前的字符编码集是什么</P>
+<P>&nbsp;&nbsp; 
+答:都是UTF8的字符集,WINDOWS是使用的UTF8代码格式ANSI的字符集</P>
+<P> 
+7.问:什么是三级指针什么是二级指针数据类型</P>
+<P>&nbsp;&nbsp;&nbsp;答:无论是三级指针还是二级指针,他们都是系统内部申请内存保存数据所处理的一种方法,使用了这种方式的函数参数,如果没有特别说明,都需要用户自己主动的调用内存释放</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+XPPMEM:二级指针,使用BaseLib_OperatorMemory_FreeCStyle释放内存.</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+XPPPMEM:三级指针,使用BaseLib_OperatorMemory_Free释放内存</P></body>
+</html>

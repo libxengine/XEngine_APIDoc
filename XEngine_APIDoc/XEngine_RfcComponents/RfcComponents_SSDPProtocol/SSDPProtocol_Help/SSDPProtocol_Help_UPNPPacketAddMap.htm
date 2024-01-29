@@ -1,0 +1,61 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SSDPProtocol_Help_UPNPPacketAddMap</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<H1 >
+ 函数</H1>
+<P >
+  SSDPProtocol_Help_UPNPPacketAddMap</P>
+
+<H1>功能</H1> 
+ <P>             UPNP添加端口映射打包协议</P>
+<H1>语法</H1>
+<P>BOOL SSDPProtocol_Help_UPNPPacketAddMap(CHAR* 
+ptszMsgBuffer, int* pInt_MsgLen, CHAR* ptszHDRBuffer, int* pInt_HDRLen, LPCSTR 
+lpszUPNPType, LPCSTR lpszIntAddr, int nExtPort, int nIntPort, int nIPProto, 
+LPCSTR lpszDescription = NULL, int nDuration = 3600)</P>
+<P></P>
+<P></P>
+<P></P>
+<H1>参数</H1>
+<P>&nbsp;参数.一：ptszMsgBuffer<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输出发送的负载内容<BR>&nbsp;参数.二：pInt_MsgLen<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输出负载内容大小<BR>&nbsp;参数.三：ptszHDRBuffer<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输出HTTP请求头字段内容<BR>&nbsp;参数.四：pInt_HDRLen<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输出请求头大小<BR>&nbsp;参数.五：lpszUPNPType<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入UPNP的设备类型<BR>&nbsp;参数.六：lpszIntAddr<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入转发到的内部地址<BR>&nbsp;参数.七：nExtPort<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入外部端口<BR>&nbsp;参数.八：nIntPort<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入映射到的内部端口<BR>&nbsp;参数.九：nIPProto<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入是UDP还是TCP协议<BR>&nbsp;参数.十：lpszDescription<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入描述信息<BR>&nbsp;参数.十一：nDuration<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：超时时间单位秒</P>
+<P></P>
+<H1>返回值</H1>
+<P>类型：逻辑型<BR>意思：是否成功</P>
+<H1>备注</H1>
+<P>使用HTTP POST提交,ptszMsgBuffer为HTTP BODY,ptszHDRBuffer 
+为HTTP的请求附加头<BR>此为UPNP操作打包帮助函数,解析需要自己使用XML解析</P>
+<H1>示例</H1></body>
+</html>

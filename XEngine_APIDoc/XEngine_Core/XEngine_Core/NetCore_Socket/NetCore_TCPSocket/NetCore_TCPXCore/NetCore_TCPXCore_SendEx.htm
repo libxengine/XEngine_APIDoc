@@ -1,0 +1,51 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>NetCore_TCPXCore_SendEx</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<H1>
+函数 
+</H1>
+<P>
+NetCore_TCPXCore_SendMsg
+
+</P>
+<H1>说明</H1>
+<P >
+ 发送数据给客户端</P>
+<H1 >
+  语法</H1>
+
+<P>BOOL NetCore_TCPXCore_SendEx(XHANDLE xhNet, LPCSTR 
+lpszClientAddr, LPCSTR lpszMsgBuffer, int nMsgLen, int nTrySecond = 0, int 
+nTimeout = -1)</P> 
+ <P>             </P>
+<P></P>
+<H1>参数</H1>
+<P>&nbsp;参数.一：lpszClientAddr<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：要发送的地址，格式：IP:PORT<BR>&nbsp;参数.二：lpszMsgBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：发送缓冲区，要发送的数据<BR>&nbsp;参数.三：nMsgLen<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：发送的数据缓冲区长度<BR>&nbsp;参数.四：nTrySecond<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：传输失败,重试超时时间,单位秒.<BR>&nbsp;参数.五：nTimeout<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：是否可写检查,-1:不使用,0:立即返回结果,&gt;0:检查时间<BR></P>
+<P></P>
+<H1>返回值</H1>
+<P>类型：逻辑型<BR>意思：是否成功</P>
+<H1>备注</H1>
+<P>参数4和5不建议同时使用</P></body>
+</html>

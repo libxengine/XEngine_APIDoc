@@ -1,0 +1,45 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>RfcComponents_WSPacket_InsertQueueEx</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<H1>函数</H1>
+<P >
+ RfcComponents_WSPacket_InsertQueueEx</P>
+<H1 >
+  功能</H1>
+
+<P>投递组包函数</P> 
+ <H1>             语法</H1>
+<P>BOOL RfcComponents_WSPacket_InsertQueueEx(XHANDLE 
+xhToken, LPCSTR lpszClientAddr, LPCSTR lpszPostMsg, int nMsgLen)</P>
+<P></P>
+<P></P>
+<P></P>
+<H1>参数</H1>
+<P>&nbsp;参数.一：lpszClientAddr<BR>&nbsp;&nbsp; In/Out：In<BR>&nbsp;&nbsp; 
+类型：常量字符指针<BR>&nbsp;&nbsp; 可空：N<BR>&nbsp;&nbsp; 
+意思：组包ID，可以是任意字符串，当对方发送数据过来需要拆包组包的时候这个ID可以是IP+端口。<BR>&nbsp;参数.二：lpszPostMsg<BR>&nbsp;&nbsp; 
+In/Out：In<BR>&nbsp;&nbsp; 类型：常量字符指针<BR>&nbsp;&nbsp; 可空：N<BR>&nbsp;&nbsp; 
+意思：要投递的数据缓冲区<BR>&nbsp;参数.三：nMsgLen<BR>&nbsp;&nbsp; In/Out：In<BR>&nbsp;&nbsp; 
+类型；整数型<BR>&nbsp;&nbsp; 可空：N<BR>&nbsp;&nbsp; 意思：数据的大小<BR>&nbsp;参数.四：enPacket_Priority<BR>&nbsp;&nbsp; In/Out：In<BR>&nbsp;&nbsp; 
+类型；枚举型<BR>&nbsp;&nbsp; 可空：Y<BR>&nbsp;&nbsp; 意思：数据包的优先级</P>
+<P></P>
+<H1>返回值</H1>
+<P>类型：逻辑型<BR>意思：是否成功</P>
+<H1>备注</H1>
+<P>&nbsp;</P>
+<H1>示例</H1></body>
+</html>

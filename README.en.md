@@ -1,36 +1,27 @@
-# XEngine_APIDoc
+[中文](README.md) ||  [English](README.en.md)  
 
-#### Description
-xengine api 接口文档仓库
+# XEngine_OPenSource
+This repository is the repository for XEngine's api interface docment  
+This document system is generated using winchm  
 
-#### Software Architecture
-Software architecture description
+## Introduction
 
-#### Installation
+An interface documentation system based on HTML page generation. Currently, all API functions supported by the system and their explanations are provided  
+V8.24Support XEngine API Version is:V8.24
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+## Participate in contribution
 
-#### Instructions
+1.  Fork this code
+2.  Create new Feat_xxx branch
+3.  Submit the code
+4.  New Pull Request
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+## Follow us
 
-#### Contribution
+If you think this software is helpful to you, please give us a START  
+You can also follow us via WeChat  
+![qrcode](https://www.xyry.org/qrcode.jpg)
 
-1.  Fork the repository
-2.  Create Feat_xxx branch
-3.  Commit your code
-4.  Create Pull Request
+## post issues
 
-
-#### Gitee Feature
-
-1.  You can use Readme\_XXX.md to support different languages, such as Readme\_en.md, Readme\_zh.md
-2.  Gitee blog [blog.gitee.com](https://blog.gitee.com)
-3.  Explore open source project [https://gitee.com/explore](https://gitee.com/explore)
-4.  The most valuable open source project [GVP](https://gitee.com/gvp)
-5.  The manual of Gitee [https://gitee.com/help](https://gitee.com/help)
-6.  The most popular members  [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+if you have eny quest.post issues...

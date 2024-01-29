@@ -1,0 +1,47 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>XClient_StreamPush_LiveVideo</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<H1>函数</H1>
+<P>XClient_StreamPush_LiveVideo</P>
+<H1>功能</H1>
+<P>推送一个视频数据</P>
+<H1>语法 </H1>
+<P>BOOL XClient_StreamPush_LiveVideo(XHANDLE xhNet, 
+uint8_t* punYBuffer, int nYLen, uint8_t* punUBuffer, int nULen, uint8_t* 
+punVBuffer, int nVLen)</P>
+<P></P>
+<P></P>
+<P></P>
+<H1>参数</H1>
+<P>&nbsp;参数.一：xhNet<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入初始化的推流句柄<BR>&nbsp;参数.二：punYBuffer<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：无符号整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：yuv中的y数据<BR>&nbsp;参数.三：nYLen<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 
+可空：N<BR>&nbsp; 意思：y数据大小<BR>&nbsp;参数.四：punUBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：无符号整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：yuv中的u数据<BR>&nbsp;参数.五：nULen<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：u数据大小<BR>&nbsp;参数.七：punVBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：无符号整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：yuv中的v数据<BR>&nbsp;参数.八：nVLen<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：数据大小</P>
+<P></P>
+<H1>返回值</H1>
+<P>类型：逻辑型<BR>意思：是否成功</P>
+<H1>备注</H1>
+<P>punYBuffer 可以作用于yuv数据集合,那么u和v 
+都需要设置为NULL,并且<BR>nYLen是YUV的总大小</P>
+<H1>示例</H1></body>
+</html>

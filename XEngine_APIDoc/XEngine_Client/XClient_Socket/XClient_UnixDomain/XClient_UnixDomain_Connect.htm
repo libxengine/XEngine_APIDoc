@@ -1,0 +1,105 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>XClient_UnixDomain_Connect</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<H1>函数</H1>
+<P>
+XClient_UnixDomain_Connect
+</P>
+<H1>
+功能
+
+</H1>
+<P>连接到指定UNIX域地址</P>
+<H1 >
+ 语法</H1>
+<P >
+  BOOL XClient_UnixDomain_Connect(LPCSTR lpszUnixName, 
+SOCKET* phSocket, BOOL bStream = TRUE, LPCSTR lpszUnixServer = NULL)</P>
+
+<P></P> 
+ <P>             </P>
+<H1>参数</H1>
+<P>&nbsp;参数.一：lpszUnixName<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：流式(TCP)输入目标套接字文件地址,UDP输入本地要绑定的套接字地址<BR>&nbsp;参数.二：phSocket<BR>&nbsp; 
+In/Out：Out<BR>&nbsp; 类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输出连接成功后的操作句柄<BR>&nbsp;参数.三：bStream<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：使用流式还是消息类型,WINDOWS目前只能流式<BR>&nbsp;参数.四：lpszUnixServer<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：消息套接字(UDP)需要设置服务器套接字文件地址</P>
+<P></P>
+<H1>返回值</H1>
+<P>类型：逻辑型<BR>意思：是否成功</P>
+<H1>备注</H1>
+<P>WINDOWS不支持消息类型<BR>第一个参数的名称应该是你的服务器设置的地址</P>
+<H1>示例</H1>
+<DIV 
+style="FONT-SIZE: 12px; FONT-FAMILY: Consolas, 'Courier New', monospace; WHITE-SPACE: pre; FONT-WEIGHT: normal; COLOR: #000000; LINE-HEIGHT: 16px; BACKGROUND-COLOR: #fffffe">
+<DIV><SPAN style="COLOR: #0000ff">int</SPAN><SPAN style="COLOR: #000000"> 
+Test_Unix()</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">{</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #0000ff">int</SPAN><SPAN style="COLOR: #000000"> nMsgLen = 
+</SPAN><SPAN style="COLOR: #09885a">1024</SPAN><SPAN 
+style="COLOR: #000000">;</SPAN></DIV>
+<DIV><SPAN style="COLOR: #0000ff">#ifdef</SPAN><SPAN style="COLOR: #000000"> 
+_WINDOWS</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;LPCTSTR lpszUnixName = 
+_T(</SPAN><SPAN 
+style="COLOR: #a31515">"H:\\XEngine_Apps\\Debug\\unix.socket"</SPAN><SPAN 
+style="COLOR: #000000">);</SPAN></DIV>
+<DIV><SPAN style="COLOR: #0000ff">#else</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;LPCTSTR lpszUnixName = 
+_T(</SPAN><SPAN style="COLOR: #a31515">"/tmp/unix.socket"</SPAN><SPAN 
+style="COLOR: #000000">);</SPAN></DIV>
+<DIV><SPAN style="COLOR: #0000ff">#endif</SPAN></DIV><BR>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;SOCKET 
+m_Socket;</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #0000ff">if</SPAN><SPAN style="COLOR: #000000"> 
+(!XClient_UnixDomain_Connect(lpszUnixName, &amp;m_Socket))</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;{</SPAN></DIV>
+<DIV><SPAN 
+style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(_T(</SPAN><SPAN 
+style="COLOR: #a31515">"连接失败！\n"</SPAN><SPAN 
+style="COLOR: #000000">));</SPAN></DIV>
+<DIV><SPAN 
+style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #0000ff">return</SPAN><SPAN style="COLOR: #000000"> -</SPAN><SPAN 
+style="COLOR: #09885a">1</SPAN><SPAN style="COLOR: #000000">;</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;}</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;LPCTSTR lpszMsgBuffer 
+= _T(</SPAN><SPAN style="COLOR: #a31515">"hello"</SPAN><SPAN 
+style="COLOR: #000000">);</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #0000ff">if</SPAN><SPAN style="COLOR: #000000"> 
+(XClient_UnixDomain_SendMsg(m_Socket, lpszMsgBuffer, 
+strlen(lpszMsgBuffer)))</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;{</SPAN></DIV>
+<DIV><SPAN 
+style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(</SPAN><SPAN 
+style="COLOR: #a31515">"NetClient_UnixDomain_SendMsg:%d\n"</SPAN><SPAN 
+style="COLOR: #000000">, nMsgLen);</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;}</SPAN></DIV>
+<DIV><SPAN 
+style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;XClient_UnixDomain_Close(m_Socket);</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #0000ff">return</SPAN><SPAN style="COLOR: #000000"> </SPAN><SPAN 
+style="COLOR: #09885a">1</SPAN><SPAN style="COLOR: #000000">;</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">}</SPAN></DIV></DIV></body>
+</html>

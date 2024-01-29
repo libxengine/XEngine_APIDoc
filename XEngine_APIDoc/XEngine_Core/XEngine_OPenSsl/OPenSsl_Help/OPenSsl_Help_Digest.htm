@@ -1,0 +1,53 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>OPenSsl_Help_Digest</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<H1 >
+ 函数</H1>
+<P >
+  OPenSsl_Help_Digest</P>
+
+<H1>功能</H1> 
+ <P>             摘要计算函数</P>
+<H1>语法</H1>
+<P>BOOL OPenSsl_Help_Digest(CHAR* ptszResponseStr, LPCSTR 
+lpszUser, LPCSTR lpszPass, LPCSTR lpszRealm, LPCSTR lpszMethod, LPCSTR lpszUrl, 
+LPCSTR lpszNonce, LPCSTR lpszCNonce, LPCSTR lpszNC = NULL)</P>
+<P></P>
+<P></P>
+<H1>参数</H1>
+<P>&nbsp;参数.一：ptszResponseStr<BR>&nbsp; 
+In/Out：Out<BR>&nbsp; 类型：字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输出计算后的RESPONSE字符串<BR>&nbsp;参数.二：lpszUser<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入用户名<BR>&nbsp;参数.三：lpszPass<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入密码<BR>&nbsp;参数.四：lpszRealm<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入作用域,服务器发送的<BR>&nbsp;参数.五：lpszMethod<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入请求的方法<BR>&nbsp;参数.六：lpszUrl<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入请求的URL地址<BR>&nbsp;参数.七：lpszNonce<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：服务器生成并且发送的<BR>&nbsp;参数.八：lpszCNonce<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：客户端生成的随机字符串<BR>&nbsp;参数.九：lpszNC<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：验证的次数,建议为NULL.</P>
+<P></P>
+<H1>返回值</H1>
+<P>类型：逻辑型<BR>意思：是否成功</P>
+<H1>备注</H1>
+<P>信息摘要支持QOP=AUTH 算法MD5的验证模式</P>
+<H1>示例</H1></body>
+</html>

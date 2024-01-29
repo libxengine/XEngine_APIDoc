@@ -1,0 +1,47 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>NetCore_TCPXCore_GetAverageFlowEx</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<H1 >
+ 函数</H1>
+<P >
+  NetCore_TCPXCore_GetAverageFlowEx</P>
+
+<H1>说明</H1> 
+ <P>             获取平均流量</P>
+<H1>语法</H1>
+<P>BOOL NetCore_TCPXCore_GetAverageFlowEx(XHANDLE xhNet, 
+__int64u* pInt_SDByte, __int64u* pInt_RVByte, __int64u* pInt_SDPkt, __int64u* 
+pInt_RVPkt, LPCSTR lpszClientAddr = NULL, BOOL bTotal = TRUE)</P>
+<P></P>
+<P></P>
+<H1>参数</H1>
+<P>&nbsp;参数.一：pInt_SDByte<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输出发送的平均字节<BR>&nbsp;参数.二：pInt_RVByte<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输出接受的平均字节<BR>&nbsp;参数.三：pInt_SDPkt<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出发送的平均包<BR>&nbsp;参数.四：pInt_RVPkt<BR>&nbsp; 
+In/Out：Out<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输出接受的平均包<BR>&nbsp;参数.五：lpszClientAddr<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：是要计算指定客户端流量信息还是所有的<BR>&nbsp;参数.六：bTotal<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：是否统计所有时间内的流量还是指定时间内的流量</P>
+<P></P>
+<H1>返回值</H1>
+<P>类型：逻辑型<BR>意思：是否成功</P>
+<H1>备注</H1></body>
+</html>

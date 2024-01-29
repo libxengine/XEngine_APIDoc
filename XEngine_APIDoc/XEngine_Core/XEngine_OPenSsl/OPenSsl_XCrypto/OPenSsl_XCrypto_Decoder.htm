@@ -1,0 +1,52 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>OPenSsl_XCrypto_Decoder</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<H1 >
+ 函数</H1>
+<P >
+  OPenSsl_XCrypto_Decoder</P>
+
+<H1>功能</H1> 
+ <P>             X解密函数</P>
+<H1>语法</H1>
+<P>BOOL OPenSsl_XCrypto_Decoder(LPCSTR lpszMsgBuffer, int* 
+pInt_MsgLen, CHAR* ptszMsgBuffer =    
+NULL, LPCSTR lpszKeys = NULL, bool bXEngineHdr = true)</P>
+<P></P>
+<P></P>
+<H1>参数</H1>
+<P>&nbsp;参数.一：lpszMsgBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入要解密的缓冲区<BR>&nbsp;参数.二：pInt_MsgLen<BR>&nbsp; In/Out：In/Out<BR>&nbsp; 
+类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入要解密缓冲区大小,输出解密后的缓冲区大小<BR>&nbsp;参数.三：ptszDest<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输出解密好的缓冲区,如果此参数为NULL,参数二将被设置为需要的大小<BR>&nbsp;参数.四：lpszKeys<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输入要解密的密码,如果为空表示这个数据没有密码<BR>&nbsp;参数.五：bXEngineHdr<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：是否包含XEngine的协议头,方便用于区分加密信息,可以不带就设置否</P>
+<P></P>
+<H1>返回值</H1>
+<P>类型：逻辑型<BR>意思：是否成功</P>
+<H1>备注</H1>
+<P>bXEngineHdr为false,大小输入多少就是多少</P>
+<H1>示例</H1>
+<DIV 
+style="FONT-SIZE: 12px; FONT-FAMILY: Consolas, 'Courier New', monospace; WHITE-SPACE: pre; FONT-WEIGHT: normal; COLOR: #000000; LINE-HEIGHT: 16px; BACKGROUND-COLOR: #fffffe">
+<DIV><SPAN style="COLOR: #000000"></SPAN>&nbsp;</DIV></DIV></body>
+</html>

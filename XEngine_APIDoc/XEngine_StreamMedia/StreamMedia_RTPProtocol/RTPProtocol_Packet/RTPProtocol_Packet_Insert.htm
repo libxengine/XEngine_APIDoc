@@ -1,0 +1,47 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>RTPProtocol_Packet_Insert</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<H1 >
+ 函数</H1>
+<P >
+  RTPProtocol_Packet_Insert</P>
+
+<H1>功能</H1> 
+ <P>             插入一个客户端到RTP包管理器中</P>
+<H1>语法</H1>
+<P>bool RTPProtocol_Packet_Insert(LPCXSTR lpszClientID, 
+ENUM_STREAMMEDIA_RTPPROTOCOL_PAYLOADTYPE enPayLoad = 
+ENUM_STREAMMEDIA_RTPPROTOCOL_PAYLOAD_TYPE_H264, bool bIsUDP = true, int nChannel 
+= 0)</P>
+<P></P>
+<P></P>
+<P></P>
+<H1>参数</H1>
+<P>&nbsp;参数.一：lpszClientID<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入要操作的客户端句柄<BR>&nbsp;参数.二：enPayLoad<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：枚举型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入初始化的RTP包负载类型<BR>&nbsp;参数.三：bIsUDP<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：是否负载的UDP,默认为是<BR>&nbsp;参数.四：nChannel<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：TCP有效,表示RTP所使用的通道号</P>
+<P></P>
+<H1>返回值</H1>
+<P>类型：逻辑型<BR>意思：是否成功</P>
+<H1>备注</H1>
+<P>&nbsp;</P>
+<H1>示例</H1></body>
+</html>

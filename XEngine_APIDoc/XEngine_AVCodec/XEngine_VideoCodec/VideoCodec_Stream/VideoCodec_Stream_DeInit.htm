@@ -1,0 +1,66 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>VideoCodec_Stream_DeInit</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<H1 >
+ 函数</H1>
+<P >
+  VideoCodec_Stream_DeInit</P>
+
+<H1>功能</H1> 
+ <P>             初始化解码器</P>
+<H1>语法</H1>
+<P>   
+bool VideoCodec_Stream_DeInit(XNETHANDLE *pxhNet, 
+ENUM_AVCODEC_VEDIOTYPE nAvCodec, CALLBACK_XENGINE_AVCODEC_VIDEO_STREAM_DECODEC 
+fpCall_StreamFrame =   
+   
+      
+   
+NULL, XPVOID lParam = NULL, bool bCallYuv =   
+   
+true, LPCXSTR lpszVInfo = NULL, int nVLen = 0, 
+ENUM_XENGINE_AVCODEC_HWDEVICE enHWDevice = 
+ENUM_AVCODEC_HWDEVICE_HWDEVICE_TYPE_NONE)</P>
+<P></P>
+<P></P>
+<P></P>
+<H1>参数</H1>
+<P>&nbsp;参数.一：pxhNet<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：导出解码器句柄<BR>&nbsp;参数.二：nAvCodec<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：枚举型<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：初始化解码器的类型<BR>&nbsp;参数.三：fpCall_StreamFrame<BR>&nbsp; In/Out：In/Out<BR>&nbsp; 
+类型：回调函数<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：解码的时候返回的数据,可以通过回调或者数组处理,根据此值决定<BR>&nbsp;参数.四：lParam<BR>&nbsp; 
+In/Out：In/Out<BR>&nbsp; 类型：无类型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：解码器回调函数的参数<BR>&nbsp;参数.五：bCallYuv<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：导出回调数据的方式<BR>&nbsp;参数.六：lpszVInfo<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：解码器附加信息,某些流可能需要附加SPS 
+PPS等信息才能解码<BR>&nbsp;参数.七：nVLen<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 
+可空：Y<BR>&nbsp; 意思：附加媒体信息大小<BR>&nbsp;参数.八：enHWDevice<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：枚举型<BR>&nbsp; 可空：Y<BR>    
+         
+       
+ &nbsp;  
+意思：选择硬件解码器,默认不启用,如果启用将只有Y数据生效</P>
+<P></P>
+<H1>返回值</H1>
+<P>类型：逻辑型<BR>意思：是否成功</P>
+<H1>备注</H1>
+<P>bCallYuv为真表示pszYBuffer包含一个完整的YUV,nYLen是完成的大小<BR> 
+U和V的值是NULL,长度是0,否则的话,他们将分开回调给你</P>
+<H1>示例</H1></body>
+</html>

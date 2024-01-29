@@ -1,0 +1,55 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>AVCollect_Audio_Init</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<H1>函数</H1>
+<P>
+AVCollect_Audio_Init
+</P>
+<H1>
+功能
+
+</H1>
+<P>初始化音频采集器</P>
+<H1 >
+ 语法</H1>
+<P >
+  XHANDLE AVCollect_Audio_Init(LPCXSTR
+  lpszCaptureType, LPCXSTR lpszCaptureName, 
+CALLBACK_XENGINE_AVCODER_AVCOLLECT_AUDIO fpCall_AVHelpAudio, LPVOID lParam =
+      
+   
+   NULL)</P>
+
+<P></P> 
+ <P>             </P>
+<P></P>
+<H1>参数</H1>
+<P>&nbsp;参数.一：lpszCaptureType<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：采集使用的驱动,Linux:alsa Macos:avfoundation 
+Windows:dshow<BR>&nbsp;参数.二：lpszCaptureName<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：采集器使用的设备名称,hw:0,1 
+表示，表示第1张采集卡的第2个设备,又比如使用麦克风:audio=%s<BR>&nbsp;参数.三：fpCall_AVHelpAudio<BR>&nbsp; 
+In/Out：In/Out<BR>&nbsp; 类型：回调函数<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：麦克风数据返回回调函数<BR>&nbsp;参数.四：lParam<BR>&nbsp; In/Out：In/Out<BR>&nbsp; 
+类型：无类型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：回调函数的参数</P>
+<P></P>
+<H1>返回值</H1>
+<P>类型：句柄<BR>意思：返回创建成功的句柄,错误返回NULL</P>
+<H1>备注</H1>
+<P>回调函数导出的是PCM数据,你需要调用我们的编解码工具进行进一步处理<BR>参数一和二必须是UTF8字符集编码</P>
+<H1>示例</H1></body>
+</html>

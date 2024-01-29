@@ -1,0 +1,48 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>HelpComponents_XLog_GetLogBuffer</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<H1 >
+ 函数</H1>
+<P >
+  HelpComponents_XLog_GetLogBuffer</P>
+
+<H1>功能</H1> 
+ <P>             获取日志队列缓冲区</P>
+<H1>语法</H1>
+<P>BOOL HelpComponents_XLog_GetLogBuffer(XHANDLE xhLog, 
+XENGINE_PROTOCOL_XLOG * pSt_XLogProtocol, TCHAR * 
+ptszMsgBuffer, int* pInt_Len);</P>
+<P></P>
+<P></P>
+<P></P>
+<H1>参数</H1>
+<P>&nbsp;参数.一：xhLog<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入要操作的日志句柄<BR>&nbsp;参数.二：pSt_XLogProtocol<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：数据结构指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输出日志信息<BR>&nbsp;参数.三：ptszMsgBuffer<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出获取到的日志打印信息,不包含前缀信息,比如LINE FILE 
+TIME等<BR>&nbsp;参数.四：pInt_Len<BR>&nbsp; In/Out：In/Out<BR>&nbsp; 
+类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输出日志信息大小</P>
+<P></P>
+<H1>返回值</H1>
+<P>类型：逻辑型<BR>意思：是否成功</P>
+<H1>备注</H1>
+<P>如果启用了套接字,那么这个函数必须调用,否则会造成日志模块内存溢出<BR>每次获取一条缓冲区日志</P>
+<H1>示例</H1></body>
+</html>

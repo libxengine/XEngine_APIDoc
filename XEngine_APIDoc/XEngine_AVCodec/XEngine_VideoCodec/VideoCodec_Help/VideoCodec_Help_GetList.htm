@@ -1,0 +1,47 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>VideoCodec_Help_GetList</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<H1 >
+ 函数</H1>
+<P >
+  VideoCodec_Help_GetList</P>
+
+<H1>功能</H1> 
+ <P>             获得当前版本支持的视频编解码器</P>
+<H1>语法</H1>
+<P>BOOL VideoCodec_Help_GetList(AVCODEC_VIDEO_CODECLIST * 
+**pppSt_ListEncoder, int* pInt_EncoderCount, AVCODEC_VIDEO_CODECLIST * 
+**pppSt_ListDecoder, int* pInt_DecoderCount)</P>
+<P></P>
+<P></P>
+<P></P>
+<H1>参数</H1>
+<P>&nbsp;参数.一：pStl_ListEncoder<BR>&nbsp; 
+In/Out：Out<BR>&nbsp; 类型：三级指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：导出获取到的编码器<BR>&nbsp;参数.二：pInt_EncoderCount<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：导出编码器个数<BR>&nbsp;参数.三：pStl_ListDecoder<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：三级指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：导出获取到的解码器<BR>&nbsp;参数.四：pInt_DecoderCount<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：导出解码器个数</P>
+<P></P>
+<H1>返回值</H1>
+<P>类型：逻辑型<BR>意思：是否成功</P>
+<H1>备注</H1>
+<P>参数一和三必须使用基础库的BaseLib_OperatorMemory_Free函数释放内存</P>
+<H1>示例</H1></body>
+</html>

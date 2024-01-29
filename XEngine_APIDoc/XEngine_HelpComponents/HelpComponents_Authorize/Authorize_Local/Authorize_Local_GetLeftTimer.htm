@@ -1,0 +1,44 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Authorize_Local_GetLeftTimer</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<H1 >
+ 函数</H1>
+<P >
+  Authorize_Local_GetLeftTimer</P>
+
+<H1>功能</H1> 
+ <P>             验证CDKey</P>
+<H1>语法</H1>
+<P>BOOL 
+Authorize_Local_GetLeftTimer(XENGINE_AUTHORIZE_LOCAL * pSt_AuthLocal, LPCTSTR 
+lpszSerialNumber = 
+  NULL)</P>
+<P></P>
+<P></P>
+<H1>参数 </H1>
+<P>&nbsp;参数.一：pSt_AuthLocal<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：数据结构指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入Authorize_Local_ReadKey获取到的值<BR>&nbsp;参数.二：lpszSerialNumber<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：如果CDKEY带序列号,可以输入序列号进行验证(优先序列号验证,失败进行常规CDKEY验证)</P>
+<P></P>
+<H1>返回值</H1>
+<P>类型：逻辑型 <BR>意思：是否成功</P>
+<H1>备注</H1>
+<P>无限制版本不做验证<BR>其他验证nHasTime将被设置还拥有时间</P>
+<H1>示例</H1></body>
+</html>

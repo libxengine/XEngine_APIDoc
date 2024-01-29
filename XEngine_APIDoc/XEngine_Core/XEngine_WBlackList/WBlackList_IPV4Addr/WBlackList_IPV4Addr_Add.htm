@@ -1,0 +1,46 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>WBlackList_IPV4Addr_Add</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<H1 >
+ 函数</H1>
+<P >
+  WBlackList_IPV4Addr_Add</P>
+
+<H1>功能</H1> 
+ <P>             添加一个地址信息到黑名单中</P>
+<H1>语法</H1>
+<P>BOOL WBlackList_IPV4Addr_Add(XNETHANDLE xhNet, LPCSTR 
+lpszAddrStart, LPCSTR lpszAddrEnd = NULL, BOOL bIsTail = FALSE)</P>
+<P></P>
+<P></P>
+<H1>参数 </H1>
+<P>&nbsp;参数.一：xhNet<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：要操作的句柄<BR>&nbsp;参数.二：lpszAddrStart<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：要插入的起始地址,支持通配符<BR>&nbsp;参数.三：lpszAddrEnd<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：如果这个参数为NULL,表示插入单独的地址<BR>&nbsp;参数.四：bIsTail<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：包含后续地址,这个值只有返回地址才有效,这个值可能导致你的黑名单过于过于严格<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+比如192.168.*.100 ,那么,只有是192.168.开头的地址,都会被认为是黑名单</P>
+<P></P>
+<H1>返回值</H1>
+<P>类型：逻辑型<BR>意思：是否成功</P>
+<H1>备注</H1>
+<P>使用通配符函数会自动转换为范围地址,通配符不支持两边同时存在,如果插入的范围大于以往保存的范围,会自动替换为新的范围</P>
+<H1>示例</H1></body>
+</html>

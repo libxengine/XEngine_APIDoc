@@ -1,0 +1,61 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>HelpComponents_Datas_Init</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<H1>函数</H1>
+<P>HelpComponents_Datas_Init</P>
+<H1>功能</H1>
+<P>初始化一个组包器</P>
+<H1>
+语法
+</H1>
+<P>
+XHANDLE HelpComponents_Datas_Init(int nMaxPacketCount = 
+100000, int nPoolCount = 0, int nBuildTime = 0, BOOL bIsClear = FALSE, BOOL 
+bSingleMode = FALSE, BOOL bCreateKey = TRUE, 
+CALLBACK_NETENGINE_HELPCOMPONENT_PACKET_DATA_CHUNK fpCall_DATAChunk = NULL, 
+LPVOID lParam = NULL)
+
+</P>
+<P></P>
+<P ></P>
+<H1 >
+  参数</H1>
+
+<P>&nbsp;参数.一：nMaxPacketCount<BR>&nbsp;&nbsp; 
+In/Out：In<BR>&nbsp;&nbsp; 类型：整数型<BR>&nbsp;&nbsp; 可空：Y<BR>&nbsp;&nbsp; 
+意思：最大允许组包器一共拥有多少个包存在，默认10W条<BR>&nbsp;参数.二：nPoolCount<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：池化包技术是否启用,启用后HelpComponents_Datas_GetPool将生效<BR>&nbsp;参数.三：nBuildTime<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：一个包构建允许的最大时间，单位秒（0表示无限）<BR>&nbsp;参数.四：bIsClear<BR>&nbsp;&nbsp; 
+In/Out：In<BR>&nbsp;&nbsp; 类型：常量字符指针<BR>&nbsp;&nbsp; 可空：Y<BR>&nbsp;&nbsp; 
+意思：当组包器最大个数后，是清理包还是拒绝入包。默认为假，不入库<BR>&nbsp;参数.五：bSingleMode<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：设置包模式为单独队列压入取出模式<BR>&nbsp;参数.六：bCreateKey<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：在POST的时候是否自动创建KEY，如果为假，POST没有找到ID将返回错误<BR>&nbsp;参数.七：fpCall_DATAChunk<BR>&nbsp; 
+In/Out：In/Out<BR>&nbsp; 类型：回调函数<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：设置CHUNK包回调，如果不设置，那么将通过GET包返回数据<BR>&nbsp;参数.八：lParam<BR>&nbsp; 
+In/Out：In/Out<BR>&nbsp; 类型：无类型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：设置CHUNK包回调函数自定义参数</P>
+<P></P>
+<H1>返回值</H1>
+<P>类型：逻辑型 <BR>意思：是否成功</P>
+<H1>备注</H1>
+<P>初始化模式有多种,bSingleMode是最简单的,你不用去查找客户端,但是不支持多线程.<BR>默认参数是支持线程池的.高性能服务首选</P>
+<H1>示例</H1></body>
+</html>

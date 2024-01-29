@@ -1,0 +1,47 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SystemApi_Process_CreateProcess</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<H1 >
+ 函数</H1>
+<P >
+  SystemApi_Process_CreateProcess</P>
+
+<H1>功能</H1> 
+ <P>             创建一个指定的进程</P>
+<H1>语法</H1>
+<P>BOOL SystemApi_Process_CreateProcess(DWORD * 
+pdwProcessId, LPCSTR lpszFileName, LPCSTR lpszFileArg = NULL, BOOL bShowWindows 
+= TRUE)</P>
+<P></P>
+<P></P>
+<H1>参数 </H1>
+<P>&nbsp;参数.一：pdwProcessId<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：双字<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输出创建成功的进程ID<BR>&nbsp;参数.二：lpszFilePath<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：要创建的进程的路径<BR>&nbsp;参数.三：lpszFileArg<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：要创建进程的参数，使用空格分割<BR>&nbsp;参数.四：bShowWindows<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：进程窗口是显示还是隐藏,默认显示</P>
+<P></P>
+<H1>返回值</H1>
+<P>类型：逻辑型 <BR>意思：是否成功</P>
+<H1>备注</H1>
+<P>创建后，这个进程将被当做此程序的子进程运行，这个函数不会阻塞你的主程序<BR>注意:LINUX下创建的进程执行结束进程也会一直存在,除非调用waitpid函数.</P>
+<H1>示例</H1>
+<P>&nbsp;</P></body>
+</html>

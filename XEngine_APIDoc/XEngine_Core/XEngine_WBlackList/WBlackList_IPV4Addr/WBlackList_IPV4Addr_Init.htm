@@ -1,0 +1,168 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>WBlackList_IPV4Addr_Init</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<H1>函数</H1>
+<P>WBlackList_IPV4Addr_Init</P>
+<H1>功能</H1>
+<P>初始化黑名单处理函数</P>
+<H1>语法</H1>
+<P>BOOL WBlackList_IPV4Addr_Init(XNETHANDLE *pxhNet)</P>
+<P></P>
+<P>
+</P>
+<H1>
+参数
+
+</H1>
+<P>函数功能：初始化黑名单处理函数<BR>&nbsp;参数.一：pxhNet<BR>&nbsp; 
+In/Out：Out<BR>&nbsp; 类型：网络句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：导出句柄</P>
+<P></P>
+<H1>返回值</H1>
+<P>类型：逻辑型<BR>意思：是否成功</P>
+<H1>备注</H1>
+<P>&nbsp;</P>
+<H1>示例</H1>
+<DIV 
+style="FONT-SIZE: 12px; FONT-FAMILY: Consolas, 'Courier New', monospace; WHITE-SPACE: pre; FONT-WEIGHT: normal; COLOR: #000000; LINE-HEIGHT: 16px; BACKGROUND-COLOR: #fffffe">
+<DIV><SPAN style="COLOR: #0000ff">int</SPAN><SPAN style="COLOR: #000000"> 
+Test_IPV4BlackList()</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">{</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;XNETHANDLE 
+xhNet;</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;LPCTSTR lpszStartAddr1 
+= _T(</SPAN><SPAN style="COLOR: #a31515">"192.168.1.115"</SPAN><SPAN 
+style="COLOR: #000000">);</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;LPCTSTR lpszStartAddr2 
+= _T(</SPAN><SPAN style="COLOR: #a31515">"192.168.2.2"</SPAN><SPAN 
+style="COLOR: #000000">);</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;LPCTSTR lpszEndAddr2 = 
+_T(</SPAN><SPAN style="COLOR: #a31515">"192.168.2.115"</SPAN><SPAN 
+style="COLOR: #000000">);</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;LPCTSTR lpszExist1 = 
+_T(</SPAN><SPAN style="COLOR: #a31515">"192.168.2.2"</SPAN><SPAN 
+style="COLOR: #000000">);</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;LPCTSTR lpszExist2 = 
+_T(</SPAN><SPAN style="COLOR: #a31515">"192.168.2.118"</SPAN><SPAN 
+style="COLOR: #000000">);</SPAN></DIV><BR>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #0000ff">if</SPAN><SPAN style="COLOR: #000000"> 
+(!WBlackList_IPV4Addr_Init(&amp;xhNet))</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;{</SPAN></DIV>
+<DIV><SPAN 
+style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #0000ff">return</SPAN><SPAN style="COLOR: #000000"> -</SPAN><SPAN 
+style="COLOR: #09885a">1</SPAN><SPAN style="COLOR: #000000">;</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;}</SPAN></DIV>
+<DIV><SPAN 
+style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;WBlackList_IPV4Addr_Add(xhNet, 
+lpszStartAddr1);</SPAN></DIV>
+<DIV><SPAN 
+style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;WBlackList_IPV4Addr_Add(xhNet, 
+lpszStartAddr2, lpszEndAddr2, TRUE);</SPAN></DIV>
+<DIV><SPAN 
+style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;WBlackList_IPV4Addr_Add(xhNet, 
+lpszExist1, lpszExist2, TRUE);</SPAN></DIV>
+<DIV><SPAN 
+style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;WBlackList_IPV4Addr_Add(xhNet, 
+</SPAN><SPAN style="COLOR: #a31515">"192.168.1.1"</SPAN><SPAN 
+style="COLOR: #000000">, </SPAN><SPAN 
+style="COLOR: #a31515">"192.168.2.255"</SPAN><SPAN style="COLOR: #000000">, 
+TRUE);</SPAN></DIV>
+<DIV><SPAN 
+style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;WBlackList_IPV4Addr_Add(xhNet, 
+</SPAN><SPAN style="COLOR: #a31515">"1.1.1.1"</SPAN><SPAN 
+style="COLOR: #000000">, </SPAN><SPAN 
+style="COLOR: #a31515">"195.222.2.255"</SPAN><SPAN style="COLOR: #000000">, 
+FALSE);</SPAN></DIV>
+<DIV><SPAN 
+style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;WBlackList_IPV4Addr_Add(xhNet, 
+</SPAN><SPAN style="COLOR: #a31515">"200.1.2.2"</SPAN><SPAN 
+style="COLOR: #000000">, </SPAN><SPAN 
+style="COLOR: #a31515">"200.1.10.255"</SPAN><SPAN style="COLOR: #000000">, 
+TRUE);</SPAN></DIV>
+<DIV><SPAN 
+style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;WBlackList_IPV4Addr_Add(xhNet, 
+</SPAN><SPAN style="COLOR: #a31515">"200.1.-1.2"</SPAN><SPAN 
+style="COLOR: #000000">);</SPAN></DIV><BR>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #0000ff">int</SPAN><SPAN style="COLOR: #000000"> nBlackCount = 
+</SPAN><SPAN style="COLOR: #09885a">0</SPAN><SPAN 
+style="COLOR: #000000">;</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;BLACKLIST_IPV4ADDR 
+**ppSt_ListBlack;</SPAN></DIV><BR>
+<DIV><SPAN 
+style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;WBlackList_IPV4Addr_GetList(xhNet, 
+&amp;ppSt_ListBlack, &amp;nBlackCount);</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #0000ff">for</SPAN><SPAN style="COLOR: #000000"> (</SPAN><SPAN 
+style="COLOR: #0000ff">int</SPAN><SPAN style="COLOR: #000000"> i = </SPAN><SPAN 
+style="COLOR: #09885a">0</SPAN><SPAN style="COLOR: #000000">; i &lt; 
+nBlackCount; i++)</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;{</SPAN></DIV>
+<DIV><SPAN 
+style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(</SPAN><SPAN 
+style="COLOR: #a31515">"%s -&gt; %s\n"</SPAN><SPAN style="COLOR: #000000">, 
+ppSt_ListBlack[i]-&gt;tszAddrStart, 
+ppSt_ListBlack[i]-&gt;tszAddrEnd);</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;}</SPAN></DIV><BR>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #0000ff">if</SPAN><SPAN style="COLOR: #000000"> 
+(WBlackList_IPV4Addr_IsExistBlack(xhNet, </SPAN><SPAN 
+style="COLOR: #a31515">"200.1.2.30"</SPAN><SPAN 
+style="COLOR: #000000">))</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;{</SPAN></DIV>
+<DIV><SPAN 
+style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(</SPAN><SPAN 
+style="COLOR: #a31515">"找到\n"</SPAN><SPAN style="COLOR: #000000">);</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;}</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #0000ff">else</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;{</SPAN></DIV>
+<DIV><SPAN 
+style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(</SPAN><SPAN 
+style="COLOR: #a31515">"没找到\n"</SPAN><SPAN 
+style="COLOR: #000000">);</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;}</SPAN></DIV><BR>
+<DIV><SPAN 
+style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;WBlackList_IPV4Addr_AddWhite(xhNet, 
+</SPAN><SPAN style="COLOR: #a31515">"200.1.2.30"</SPAN><SPAN 
+style="COLOR: #000000">);</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #0000ff">if</SPAN><SPAN style="COLOR: #000000"> 
+(WBlackList_IPV4Addr_IsExistBlack(xhNet, </SPAN><SPAN 
+style="COLOR: #a31515">"200.1.2.30"</SPAN><SPAN 
+style="COLOR: #000000">))</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;{</SPAN></DIV>
+<DIV><SPAN 
+style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(</SPAN><SPAN 
+style="COLOR: #a31515">"找到\n"</SPAN><SPAN style="COLOR: #000000">);</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;}</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #0000ff">else</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;{</SPAN></DIV>
+<DIV><SPAN 
+style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(</SPAN><SPAN 
+style="COLOR: #a31515">"没找到\n"</SPAN><SPAN 
+style="COLOR: #000000">);</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;}</SPAN></DIV>
+<DIV><SPAN 
+style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;WBlackList_IPV4Addr_Destory(xhNet);</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #0000ff">return</SPAN><SPAN style="COLOR: #000000"> </SPAN><SPAN 
+style="COLOR: #09885a">0</SPAN><SPAN style="COLOR: #000000">;</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">}</SPAN></DIV></DIV></body>
+</html>

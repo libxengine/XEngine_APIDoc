@@ -1,0 +1,47 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Authorize_Serial_Create</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<H1>函数</H1>
+<P>Authorize_Serial_Create</P>
+<H1>功能</H1>
+<P>创建自定义无类型序列号</P>
+<H1>语法</H1>
+<P>BOOL Authorize_Serial_Create(CHAR*** ppptszSerialNumber, 
+LPCSTR lpszUserHeader, int nCardNumber, int nFieldNumber)</P>
+<P></P>
+<P>
+</P>
+<H1>
+参数 
+
+</H1>
+<P>&nbsp;参数.一：ppptszSerialNumber<BR>&nbsp; 
+In/Out：Out<BR>&nbsp; 类型：三级指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出序列卡列表,根据nCardNumber 
+来确定列表个数<BR>&nbsp;参数.二：lpszUserHeader<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：自定义头，长度为6，填充5 比如 
+XHEAD<BR>&nbsp;参数.三：nCardNumber<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 
+可空：N<BR>&nbsp; 
+意思：要生成多少张卡，生成多了，此函数会阻塞程序，那么请放置线程中运行<BR>&nbsp;参数.四：nFieldNumber<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：卡的段数，AAAAA-BBBBB-CCCCC-DDDDD-EEEEE</P>
+<P></P>
+<H1>返回值</H1>
+<P>类型：逻辑型 <BR>意思：是否成功</P>
+<H1>备注</H1>
+<P>&nbsp;</P>
+<H1>示例</H1></body>
+</html>

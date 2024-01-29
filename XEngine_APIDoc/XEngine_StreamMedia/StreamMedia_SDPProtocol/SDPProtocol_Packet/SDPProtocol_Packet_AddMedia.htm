@@ -1,0 +1,45 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SDPProtocol_Packet_AddMedia</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body> 
+ <H1>             函数</H1>
+<P>SDPProtocol_Packet_AddMedia</P>
+<H1>功能</H1>
+<P>添加媒体信息</P>
+<H1>语法</H1>
+<P>BOOL SDPProtocol_Packet_AddMedia(XNETHANDLE xhToken, 
+LPCXSTR lpszAVType, LPCXSTR 
+lpszAVTrans, XCHAR*** ppptszAVList, int nAVCount)</P>
+<P></P>
+<P></P>
+<P></P>
+<H1>参数</H1>
+<P>&nbsp;参数.一：xhToken<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要操作的SDP会话<BR>&nbsp;参数.二：lpszAVType<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入媒体类型,audio or 
+video<BR>&nbsp;参数.三：lpszAVTrans<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：指定传输类型,比如:UDP/TLS/RTP/SAVPF或者RTP/AVP<BR>&nbsp;参数.四：ppptszAVList<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：三级指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：媒体编码列表,可以一个或者多个,多个用于WEBRTC<BR>&nbsp;参数.五：nAVCount<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：列表个数</P>
+<P></P>
+<H1>返回值</H1>
+<P>类型：逻辑型<BR>意思：是否成功</P>
+<H1>备注</H1>
+<P>可添加多个支持的编码索引列表,一般用于请求的时候</P>
+<H1>示例</H1></body>
+</html>

@@ -1,0 +1,47 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SystemApi_File_EnumFile</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<H1 >
+ 函数</H1>
+<P >
+  SystemApi_File_EnumFile</P>
+
+<H1>功能</H1> 
+ <P>             枚举文件</P>
+<H1>语法</H1>bool SystemApi_File_EnumFile(LPCXSTR lpszPath, 
+XCHAR * **pppszListDir = NULL, int* pInt_ListCount = NULL, bool bRecursion = 
+true, int nFindType = 3)
+<P></P>
+<P></P>
+<P></P>
+<H1>参数 </H1>
+<P>&nbsp;参数.一：lpszPath<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：要枚举的文件目录,末尾必须添加通配符 比如d:\\*.dll 或者直接全部 
+*<BR>&nbsp;参数.二：pppszListDir<BR>&nbsp; In/Out：Out<BR>&nbsp; 类型：三级指针<BR>&nbsp; 
+可空：Y<BR>&nbsp; 意思：导出获取到的文件目录列表<BR>&nbsp;参数.三：pInt_ListCount<BR>&nbsp; 
+In/Out：Out<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：导出文件列表个数<BR>&nbsp;参数.四：bRecursion<BR>&nbsp; In/Out：In/Out<BR>&nbsp; 
+类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：是否枚举子目录，默认为真<BR>&nbsp;参数.五：nFindType<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：查找的类型,1文件,2文件夹,3包含两者</P>
+<P></P>
+<H1>返回值</H1>
+<P>类型：逻辑型<BR>意思：是否成功</P>
+<H1>备注</H1>
+<P>参数二必须调用基础库的内存释放函数进行内存释放</P>
+<H1>示例</H1></body>
+</html>

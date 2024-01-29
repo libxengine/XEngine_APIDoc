@@ -1,0 +1,54 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>SSDPProtocol_Packet_Notify</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<H1>函数</H1>
+<P >
+ SSDPProtocol_Packet_Notify</P>
+<H1 >
+  功能</H1>
+
+<P>设备通知协议</P> 
+ <H1>             语法</H1>
+<P>BOOL SSDPProtocol_Packet_Notify(CHAR* ptszMsgBuffer, int* 
+pInt_MsgLen, LPCSTR lpszNTStr, LPCSTR lpszUSNStr, LPCSTR lpszLocationUrl, int 
+nTime =   
+        
+ 3600, int nIPVer = 2)</P>
+<P></P>
+<P></P>
+<P></P>
+<H1>参数</H1>
+<P>&nbsp;参数.一：ptszMsgBuffer<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出打好包的协议<BR>&nbsp;参数.二：pInt_MsgLen<BR>&nbsp; 
+In/Out：Out<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输出打包大小<BR>&nbsp;参数.三：lpszNTStr<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：设备类型,1:UUID 2:设备类型:设备版本 3:upnp:rootdevice 
+4:服务类型:服务版本<BR>&nbsp;参数.四：lpszUSNStr<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：根据NT表示,1:UUID 2:UUID,设备类型:设备版本 
+3:UUID,设备类型和upnp:rootdevice 
+4:UUID,服务类型和服务版本<BR>&nbsp;参数.五：lpszLocationUrl<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：设备提供的XML接口地址<BR>&nbsp;参数.七：nTime<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：超时时间,单位秒<BR>&nbsp;参数.七：nIPVer<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 
+可空：Y<BR>&nbsp; 意思：IP版本</P>
+<P></P>
+<H1>返回值</H1>
+<P>类型：逻辑型<BR>意思：是否成功</P>
+<H1>备注</H1>
+<P>地址必须是239.255.255.250:1900（IPv4）或FF0x::C(IPv6)<BR>此请求消息没有响应</P>
+<H1>示例</H1></body>
+</html>

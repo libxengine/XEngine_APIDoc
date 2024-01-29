@@ -1,0 +1,41 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>BaseLib_OperatorSemaphore_Create</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<H1>函数</H1>
+<P >
+ BaseLib_OperatorSemaphore_Create</P>
+<H1 >
+  功能</H1>
+
+<P>创建一个信号量</P> 
+ <H1>             语法</H1>
+<P>XEVENT BaseLib_OperatorSemaphore_Create(LPCSTR 
+lpszSemaphoreName = NULL, int nMaxCount = 65535)</P>
+<P></P>
+<P></P>
+<H1>参数 </H1>
+<P>&nbsp;参数.一：lpszSemaphoreName<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输入信号量名称,这个值可以和BaseLib_OperatorSemaphore_IsExist做进程互斥<BR>&nbsp;参数.二：nMaxCount<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：最大允许信号个数</P>
+<P></P>
+<H1>返回值</H1>
+<P>类型：句柄<BR>意思：返回创建成功的句柄,失败返回NULL</P>
+<H1>备注</H1>
+<P>&nbsp;</P>
+<H1>示例</H1></body>
+</html>

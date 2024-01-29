@@ -1,0 +1,49 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>NetCore_UDPXCore_GetFlowEx</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<H1>函数</H1>
+<P>
+NetCore_UDPXCore_GetFlowEx
+</P>
+<H1>
+说明
+
+</H1>
+<P>获取服务发送和接受的流量信息</P>
+<H1 >
+ 语法</H1>
+<P >
+  BOOL NetCore_UDPXCore_GetFlowEx(XHANDLE xhNet, __int64u 
+* pInt_UPByte, __int64u * pInt_DWByte, __int64u * pInt_UPPkt = NULL, __int64u * 
+pInt_DWPkt = NULL)</P>
+
+<P></P> 
+ <P>             </P>
+<P></P>
+<H1>参数 </H1>
+<P>&nbsp;参数.一：pInt_UPByte<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：四字指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：总共发送了多少字节<BR>&nbsp;参数.二：pInt_DWByte<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：四字指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：总共接受了多少字节<BR>&nbsp;参数.三：pInt_UPPkt<BR>&nbsp; 
+In/Out：Out<BR>&nbsp; 类型：四字指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：总共发送次数<BR>&nbsp;参数.四：pInt_DWPkt<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：四字指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：总共接受次数</P>
+<P></P>
+<H1>返回值</H1>
+<P>类型：逻辑型<BR>意思：是否获取成功</P>
+<H1>备注</H1></body>
+</html>

@@ -1,0 +1,54 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>HelpComponents_Help_BuildPacket</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<H1>函数</H1>
+<P>
+HelpComponents_Help_BuildPacket
+</P>
+<H1>
+功能
+
+</H1>
+<P>构造一个普通的包</P>
+<H1 >
+ 语法</H1>
+<P >
+  BOOL HelpComponents_Help_BuildPacket(CHAR *ptszBuffer,int 
+*pInt_Len,XENGINE_PROTOCOLHDR *pSt_ProtocolHdr,LPCSTR lpszBuffer = NULL,int nLen 
+= 0)</P>
+
+<P></P> 
+ <P>             </P>
+<H1>参数</H1>
+<P>&nbsp; 参数.一：ptszBuffer<BR>&nbsp;&nbsp; 
+In/Out：In/Out<BR>&nbsp;&nbsp; 类型：常量字符指针<BR>&nbsp;&nbsp; 可空：N<BR>&nbsp;&nbsp; 
+意思：导出组好包的数据<BR>&nbsp; 参数.二：pInt_Len<BR>&nbsp;&nbsp; 
+In/Out：In/Out<BR>&nbsp;&nbsp; 类型：整数型指针<BR>&nbsp;&nbsp; 可空：N<BR>&nbsp;&nbsp; 
+意思：输入你的数据缓冲区大小，输出组包后缓冲区后续数据大小<BR>&nbsp; 参数.三：pSt_ProtocolHdr<BR>&nbsp;&nbsp; 
+In/Out：In<BR>&nbsp;&nbsp; 类型：字符指针<BR>&nbsp;&nbsp; 可空：N<BR>&nbsp;&nbsp; 
+意思：输入你的协议头，协议头会自动填充头尾和后续大小字段<BR>&nbsp; 参数.四：lpszBuffer<BR>&nbsp;&nbsp; 
+In/Out：In<BR>&nbsp;&nbsp; 类型；常量字符指针<BR>&nbsp;&nbsp; 可空：Y<BR>&nbsp;&nbsp; 
+意思：要传递的数据缓冲区<BR>&nbsp; 参数.五：nLen<BR>&nbsp;&nbsp; In/Out：In<BR>&nbsp;&nbsp; 
+类型；整数型<BR>&nbsp;&nbsp; 可空：Y<BR>&nbsp;&nbsp; 意思：数据缓冲区大小，为0表示没有数据包</P>
+<P></P>
+<H1>返回值</H1>
+<P>类型：逻辑型 <BR>意思：是否成功</P>
+<H1>备注</H1>
+<P>返回ERROR_HELPCOMPONENTS_PACKETS_HELP_BUILDPACKET_LEN 
+表示太小了，pInt_Len参数会被填充需要的缓冲区大小</P>
+<H1>示例</H1></body>
+</html>
