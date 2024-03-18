@@ -28,17 +28,18 @@ OPenSsl_Api_Digest
 <H1 >
   语法</H1>
 
-<P>BOOL OPenSsl_Api_Digest(LPCSTR lpszMD_Value,UCHAR 
-*ptszStr_Value,int *pInt_Len,BOOL bIsFile =   
+<P>BOOL OPenSsl_Api_Digest(LPCXSTR lpszMsgBuffer, XBYTE * 
+ptszMsgBuffer, int* pInt_Len, bool bIsFile =   
+  false,    
    
-FALSE,DWORD dwDigestLib = 
+XLONG dwDigestLib = 
 XENGINE_OPENSSL_API_DIGEST_MD5)</P> 
  <P>             </P>
 <P></P>
 <H1>参数</H1>
-<P>&nbsp;参数一：lpszMD_Value<BR>&nbsp; In/Out：In<BR>&nbsp; 
+<P>&nbsp;参数一：lpszMsgBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：要加密的数据<BR>&nbsp;参数二：ptszStr_Value<BR>&nbsp; In/Out：In/Out<BR>&nbsp; 
+意思：要加密的数据<BR>&nbsp;参数二：ptszMsgBuffer<BR>&nbsp; In/Out：In/Out<BR>&nbsp; 
 类型：无符号字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输入一个足够的大的内存，输出加密后的数据<BR>&nbsp;参数三：pInt_Len<BR>&nbsp; In/Out：In/Out<BR>&nbsp; 
 类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 

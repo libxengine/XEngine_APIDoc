@@ -7,7 +7,7 @@ This document system is generated using winchm
 ## Introduction
 
 An interface documentation system based on HTML page generation. all API functions supported  
-V8.24Support XEngine API Version is:V8.25
+V8.24Support XEngine API Version is:V8.26
 
 ## Participate in contribution
 

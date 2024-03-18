@@ -1,0 +1,56 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>OPenSsl_Cert_X509Sign</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<H1>函数</H1>
+<P >
+ OPenSsl_Cert_X509Sign</P>
+<H1 >
+  功能</H1>
+
+<P>对一个证书请求文件进行签名验证</P> 
+ <H1>             语法</H1>
+<P>bool OPenSsl_Cert_X509Sign(LPCXSTR lpszCACert, LPCXSTR 
+lpszREQFile, LPCXSTR lpszDstFile, long nlTimeSecond, LPCXSTR lpszCAKey, LPCXSTR 
+lpszREQPass = NULL, LPCXSTR lpszCAPass = NULL, OPENSSL_X509EXT * **pppSt_ListExt 
+= NULL, int nListCount = 0)</P>
+<P></P>
+<P></P>
+<H1>参数</H1>
+<P>&nbsp;参数.一：lpszCACert<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：CA根证书目录<BR>&nbsp;参数.二：lpszREQFile<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：生成的请求文件路径<BR>&nbsp;参数.三：lpszDstFile<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：签发后的证书保存路径<BR>&nbsp;参数.四：nlTimeSecond<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：长整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：跟证书时间,单位秒<BR>&nbsp;参数.五：lpszCAKey<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：CA根证书的密钥目录<BR>&nbsp;参数.六：lpszREQPass<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：请求的文件密钥,如果没有传递NULL<BR>&nbsp;参数.七：lpszCAPass<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：证书的私钥密码,如果没有传递NULL<BR>&nbsp;参数.八：pppSt_ListExt<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：三级指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：证书附加信息,这个内存应该由调用者申请释放<BR>&nbsp;参数.九：nListCount<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入整数信息个数</P>
+<P></P>
+<H1>返回值</H1>
+<P>类型：逻辑型<BR>意思：是否成功</P>
+<H1>备注</H1>
+<P>&nbsp;</P>
+<H1>示例</H1></body>
+</html>

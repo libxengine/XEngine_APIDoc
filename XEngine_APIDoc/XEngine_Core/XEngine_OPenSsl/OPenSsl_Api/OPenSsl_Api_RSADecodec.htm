@@ -27,25 +27,29 @@ OPenSsl_Api_RSADecodec
 <H1 >
  语法</H1>
 <P >
-  BOOL OPenSsl_Api_RSADecodec(LPCTSTR lpszKeyFile, const 
-UCHAR* lpszSourceData, int* pInt_Len, TCHAR* ptszDestData, BOOL bKeyType = TRUE, 
-LPCTSTR lpszPriPass = NULL)</P>
+  bool OPenSsl_Api_RSADecodec(LPCXSTR lpszKeyFile, LPCXSTR 
+lpszMSGBuffer, int* pInt_Len, XCHAR * ptszMSGBuffer, bool bKeyType =
+      
+     true, bool bKeyFile = true, 
+LPCXSTR lpszPriPass = NULL)</P>
 
 <P></P> 
  <P>             </P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：lpszKeyFile<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：KEY文件路径<BR>&nbsp;参数.二：lpszSourceData<BR>&nbsp; In/Out：In<BR>&nbsp; 
+意思：KEY文件路径<BR>&nbsp;参数.二：lpszMSGBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：常量无符号字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：要解密的原始数据<BR>&nbsp;参数.三：pInt_Len<BR>&nbsp; In/Out：In/Out<BR>&nbsp; 
 类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入：原始数据长度，输出解密后的数据长度<BR>&nbsp;参数.四：ptszDestData<BR>&nbsp; 
+意思：输入：原始数据长度，输出解密后的数据长度<BR>&nbsp;参数.四：ptszMSGBuffer<BR>&nbsp; 
 In/Out：Out<BR>&nbsp; 类型：字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输出解密后的数据<BR>&nbsp;参数.五：bKeyType<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：为真表示使用公钥解密，为假表示使用私钥解密<BR>&nbsp;参数.六：lpszPriPass<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：如果私钥加过密,那么必须输入私钥密码</P>
+意思：为真表示使用公钥解密，为假表示使用私钥解密<BR>&nbsp;参数.六：bKeyFile<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输入的KEY文件是文件还是内存缓冲区,默认文件<BR>&nbsp;参数.七：lpszPriPass<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：如果私钥加过密,那么必须输入私钥密码</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否解密成功</P>
