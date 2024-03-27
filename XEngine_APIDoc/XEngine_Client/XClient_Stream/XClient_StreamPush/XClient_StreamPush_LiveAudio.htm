@@ -24,7 +24,8 @@ html,body {
  <P>             推送音频数据到流中</P>
 <H1>语法 </H1>
 <P>BOOL XClient_StreamPush_LiveAudio(XHANDLE xhNet, 
-uint8_t* ptszPCMBuffer, int nLen)</P>
+uint8_t* ptszPCMBuffer, int nLen, __int64x nPTSValue =   
+   0)</P>
 <P></P>
 <P></P>
 <P></P>
@@ -33,7 +34,9 @@ uint8_t* ptszPCMBuffer, int nLen)</P>
 类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输入要操作的RTMP客户端<BR>&nbsp;参数.二：ptszPCMBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要推送的数据<BR>&nbsp;参数.三：nLen<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入数据大小</P>
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入数据大小<BR>&nbsp;参数.四：nPTSValue<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 
+可空：Y<BR>&nbsp; 意思：自定义PTS时间戳</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

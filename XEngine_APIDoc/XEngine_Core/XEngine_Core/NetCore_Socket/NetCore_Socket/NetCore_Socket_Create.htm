@@ -23,8 +23,9 @@ html,body {
 <H1>功能</H1> 
  <P>             创建一个套接字</P>
 <H1>语法</H1>
-<P>XBOOL NetCore_Socket_Create(XSOCKET* phSocket, XBOOL 
-bIsTcp = TRUE, int nIPVer = AF_INET)
+<P>bool NetCore_Socket_Create(XSOCKET* phSocket, bool 
+bIsTcp =    true, int 
+nIPVer = AF_INET, bool bBlock = true)
 <P></P>
 <P></P>
 <P></P>
@@ -33,9 +34,12 @@ bIsTcp = TRUE, int nIPVer = AF_INET)
 类型：套接字句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：导出创建成功的套接字<BR>&nbsp;参数.二：bIsTcp<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：是TCP还是UDP,默认TCP<BR>&nbsp;参数.三：nIPVer<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：是IPV4还是IPV6,默认IPV4</P>
+类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：是IPV4还是IPV6,默认IPV4<BR>&nbsp;参数.四：bBlock<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：是否是阻塞套接字</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：句柄<BR>意思：是否成功</P>
-<H1>备注</H1></body>
+<H1>备注</H1>
+<P>参数四仅WINDOWS下有效</P></body>
 </html>

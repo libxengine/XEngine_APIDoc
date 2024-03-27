@@ -23,9 +23,9 @@ html,body {
 <H1>功能</H1> 
  <P>             接受一个SSL连接</P>
 <H1>语法</H1>
-<P>BOOL OPenSsl_Server_AcceptEx(XHANDLE xhToken, SOCKET 
-hSocket, LPCSTR lpszClientAddr, CHAR * ptszSslSubJect = NULL, CHAR * 
-ptszSslIssuer = NULL, CHAR * ptszSslAlgorithm = NULL)</P>
+<P>    
+    bool OPenSsl_Server_AcceptEx(XHANDLE  xhToken, XSOCKET hSocket, 
+LPCXSTR  lpszClientAddr, XCHAR * ptszClientAddr = NULL)</P>
 <P></P>
 <P></P>
 <H1>参数</H1>
@@ -33,16 +33,12 @@ ptszSslIssuer = NULL, CHAR * ptszSslAlgorithm = NULL)</P>
 类型：网络套接字<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输入你的ACCEPT返回的套接字句柄<BR>&nbsp;参数.二：lpszClientAddr<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入你的客户端地址的信息IP:PORT<BR>&nbsp;参数.三：ptszSslSubJect<BR>&nbsp; 
+意思：输入你的客户端地址的信息IP:PORT<BR>&nbsp;参数.三：ptszClientAddr<BR>&nbsp; 
 In/Out：Out<BR>&nbsp; 类型：字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：输出客户端拥有的证书信息<BR>&nbsp;参数.四：ptszSslIssuer<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：输出客户端发布的整数型<BR>&nbsp;参数.五：ptszSslAlgorithm<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输出客户端拥有的加密算法</P>
+意思：得到客户端地址信息,如果lpszClientAddr为NULL,那么此参数有效</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
 <H1>备注</H1>
-<P>如果后面三个参数没有导出值,说明客户端没有使用证书连接</P>
-<H1>示例</H1></body>
+<P>&nbsp;</P></body>
 </html>
