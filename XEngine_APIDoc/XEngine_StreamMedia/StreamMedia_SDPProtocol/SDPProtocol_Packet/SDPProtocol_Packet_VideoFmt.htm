@@ -24,17 +24,18 @@ html,body {
  <P>             添加视频属性信息</P>
 <H1>语法</H1>
 <P>bool SDPProtocol_Packet_VideoFmt(XNETHANDLE xhToken, int 
-nIndex, STREAMMEDIA_SDPPROTOCOL_MEDIAINFO* pSt_SDPMedia)</P>
+nIndex, STREAMMEDIA_SDPPROTOCOL_MEDIAINFO* pSt_SDPMedia, bool bRTC =    
+  false)</P>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
-<P>&nbsp;参数.一：xhToken<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：句柄<BR>&nbsp; 
-可空：N<BR>&nbsp; 意思：输入要操作的SDP会话<BR>&nbsp;参数.二：nIndex<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 
-可空：N<BR>&nbsp; 意思：输入此媒体所属索引号<BR>&nbsp;参数.三：pSt_SDPMedia<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：数据结构指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入音频信息</P>
+<P>&nbsp;参数.一：xhToken<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要操作的SDP会话<BR>&nbsp;参数.二：nIndex<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入此媒体所属索引ID<BR>&nbsp;参数.三：pSt_SDPMedia<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：数据结构指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入视频信息<BR>&nbsp;参数.四：bRTC<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：是否为RTC格式的SDP</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

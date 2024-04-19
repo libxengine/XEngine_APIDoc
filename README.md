@@ -8,7 +8,7 @@
 ## 介绍
 
 基于HTML页面生成的接口文档系统.支持的所有API函数  
-当前支持的XEngine API版本:V8.28
+当前支持的XEngine API版本:V8.x
 
 
 ## 安装教程

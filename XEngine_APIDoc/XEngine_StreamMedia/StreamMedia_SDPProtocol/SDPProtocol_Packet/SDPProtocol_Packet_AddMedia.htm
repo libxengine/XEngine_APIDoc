@@ -21,8 +21,10 @@ html,body {
 <P>添加媒体信息</P>
 <H1>语法</H1>
 <P>BOOL SDPProtocol_Packet_AddMedia(XNETHANDLE xhToken, 
-LPCXSTR lpszAVType, LPCXSTR 
-lpszAVTrans, XCHAR*** ppptszAVList, int nAVCount)</P>
+LPCXSTR lpszAVType, LPCXSTR lpszAVTrans, XCHAR*** ppptszAVList, int nAVCount, 
+int nAVPort =   
+   
+    0)</P>
 <P></P>
 <P></P>
 <P></P>
@@ -35,7 +37,9 @@ video<BR>&nbsp;参数.三：lpszAVTrans<BR>&nbsp; In/Out：In<BR>&nbsp;
 意思：指定传输类型,比如:UDP/TLS/RTP/SAVPF或者RTP/AVP<BR>&nbsp;参数.四：ppptszAVList<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：三级指针<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：媒体编码列表,可以一个或者多个,多个用于WEBRTC<BR>&nbsp;参数.五：nAVCount<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：列表个数</P>
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：列表个数<BR>&nbsp;参数.六：nAVPort<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 
+可空：Y<BR>&nbsp; 意思：设置媒体类型</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

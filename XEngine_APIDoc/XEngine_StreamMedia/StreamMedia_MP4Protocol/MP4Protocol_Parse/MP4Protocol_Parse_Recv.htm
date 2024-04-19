@@ -21,7 +21,8 @@ html,body {
 <P>获取当前数据信息</P>
 <H1>语法</H1>
 <P>bool MP4Protocol_Parse_Recv(LPCXSTR lpszClientID, 
-XENGINE_MP4HDR* pSt_MP4Hdr)</P>
+XENGINE_MP4HDR* pSt_MP4Hdr, __int64u * pInt_FilePos =   
+ NULL)</P>
 <P></P>
 <P></P>
 <P></P>
@@ -29,7 +30,9 @@ XENGINE_MP4HDR* pSt_MP4Hdr)</P>
 <P>&nbsp;参数.一：lpszClientID<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输入要操作的ID<BR>&nbsp;参数.二：pSt_RTMPHdr<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：数据结构指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出RTMP协议头信息</P>
+类型：数据结构指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输出RTMP协议头信息<BR>&nbsp;参数.三：pInt_FilePos<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出当前数据处理位置,方便用户fseek操作文件或者内存</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

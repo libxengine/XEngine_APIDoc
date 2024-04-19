@@ -23,17 +23,21 @@ html,body {
 <H1>说明</H1> 
  <P>             获取一个客户端距离上次操作数据相差毫秒数</P>
 <H1>语法</H1>
-<P>BOOL NetCore_TCPXCore_GetTimeEx(XHANDLE xhNet,LPCSTR 
-lpszClientAddr, __int64u* pInt_SDTimer, __int64u* pInt_RVTimer)</P>
+<P>bool NetCore_TCPXCore_GetTimeEx(XHANDLE xhNet, LPCXSTR 
+lpszClientAddr, __int64u * pInt_SDTimer = NULL, __int64u * pInt_RVTimer = NULL, 
+__int64u * pInt_ConnTime =   
+    NULL)</P>
 <P></P>
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：lpszClientAddr<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：用户地址<BR>&nbsp;参数.二：pInt_SDTimer<BR>&nbsp; 
-In/Out：Out<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+In/Out：Out<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：导出发送的相差时间，如果是0,表示还没有接受过数据<BR>&nbsp;参数.三：pInt_RVTimer<BR>&nbsp; 
-In/Out：Out<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：导出接受的相差时间，如果是0,表示还没有接受过数据</P>
+In/Out：Out<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：导出接受的相差时间，如果是0,表示还没有接受过数据<BR>&nbsp;参数.四：pInt_ConnTime<BR>&nbsp; 
+In/Out：Out<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：导出客户端已经链接到服务器的时间</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

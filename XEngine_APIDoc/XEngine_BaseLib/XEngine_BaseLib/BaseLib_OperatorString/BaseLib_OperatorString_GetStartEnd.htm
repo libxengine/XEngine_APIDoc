@@ -24,7 +24,8 @@ html,body {
  <P>             通过开始和结束字符串获取中间的字符串</P>
 <H1>语法</H1>
 <P>BOOL BaseLib_OperatorString_GetStartEnd(LPCSTR 
-lpszSource,CHAR *ptszDest,LPCSTR lpszStart, LPCXSTR lpszEnd, bool bMixMatch =  
+lpszSource,CHAR *ptszDest,LPCSTR lpszStart = NULL, LPCXSTR lpszEnd =  
+    NULL, bool bMixMatch =  
    false)</P>
 <P></P>
 <P></P>
@@ -34,8 +35,8 @@ lpszSource,CHAR *ptszDest,LPCSTR lpszStart, LPCXSTR lpszEnd, bool bMixMatch =
 意思：要获取的源字符串内容<BR>&nbsp;参数.二：ptszDest<BR>&nbsp; In/Out：Out<BR>&nbsp; 
 类型：字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：获取到的字符串保存位置<BR>&nbsp;参数.三：lpszStart<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：开始字符串<BR>&nbsp;参数.四：lpszEnd<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：开始字符串<BR>&nbsp;参数.四：lpszEnd<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：结束字符串<BR>&nbsp;参数.五：bMixMatch<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：逻辑型<BR>&nbsp; 
 可空：Y<BR>&nbsp; 意思：是否启用最小匹配,启用后将会一直搜索到匹配到的最小索引</P>
 <P></P>
