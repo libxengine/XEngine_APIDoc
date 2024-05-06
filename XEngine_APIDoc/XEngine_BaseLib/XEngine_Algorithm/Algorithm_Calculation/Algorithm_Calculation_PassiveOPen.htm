@@ -27,9 +27,12 @@ Algorithm_Calculation_PassiveOPen
 <H1 >
  语法</H1>
 <P >
-  BOOL Algorithm_Calculation_PassiveOPen(XHANDLE pxhToken, 
+  bool Algorithm_Calculation_PassiveOPen(XHANDLE pxhToken, 
 CALLBACK_XENGINE_BASELIB_ALGORITHM_PASSIVE fpCall_CBPassive, int nAvgSDFlow = 0, 
-int nAvgRVFlow = 0, int nAvgTime = 0, LPVOID lParam = NULL)</P>
+int nAvgRVFlow =
+     
+ 0, int nAvgTime = 0, 
+bool bTrace = false, XPVOID lParam =     NULL)</P>
 
 <P></P> 
  <P>             </P>
@@ -43,8 +46,9 @@ int nAvgRVFlow = 0, int nAvgTime = 0, LPVOID lParam = NULL)</P>
 意思：输入发送的触发值,为0不启用<BR>&nbsp;参数.四：nAvgSDFlow<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入接受的触发值<BR>&nbsp;参数.五：nAvgTime<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：输入次数的触发值<BR>&nbsp;参数.六：lParam<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：无类型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入自定义参数</P>
+意思：输入次数的触发值<BR>&nbsp;参数.六：bTrace<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：是否使用追踪模式<BR>&nbsp;参数.七：lParam<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：无类型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入自定义参数</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

@@ -23,9 +23,10 @@ html,body {
 <H1>功能</H1> 
  <P>             连接到MYSQL服务器</P>
 <H1>语法</H1>
-<P>BOOL DataBase_MySQL_Connect(XHDATA 
-*pxhData,DATABASE_MYSQL_CONNECTINFO *pSt_MySQLConnector,int nTimeOut = 5,BOOL 
-bAutoReconnect = TRUE,LPCSTR lpszCharSet = ("utf8"))</P>
+<P>bool DataBase_MySQL_Connect(XNETHANDLE * pxhData, 
+DATABASE_MYSQL_CONNECTINFO * pSt_MySQLConnector, int nTimeOut =  
+5, bool bAutoReconnect =  
+true,  LPCXSTR lpszCharSet = ("utf8"))</P>
 <P></P>
 <P></P>
 <H1>参数 </H1>
@@ -37,13 +38,13 @@ In/Out：In<BR>&nbsp; 类型：结构体指针<BR>&nbsp; 可空：N<BR>&nbsp;
 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：连接超时时间，默认5秒<BR>&nbsp;参数.四：bAutoReconnect<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：是否在检测到断开与服务器连接后自动连接，默认为真<BR>&nbsp;参数.五：lpszCharSet<BR>&nbsp; 
+意思：是否在检测到断开与服务器连接后自动连接<BR>&nbsp;参数.五：lpszCharSet<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：输入链接的数据库的字符集，默认utf8</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型 <BR>意思：是否成功</P>
 <H1>备注</H1>
-<P>&nbsp;</P>
+<P>bAutoReconnect将在未来版本移除,建议使用DataBase_MySQL_Ping来检查服务器连接状态</P>
 <H1>示例</H1></body>
 </html>

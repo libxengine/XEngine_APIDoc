@@ -24,7 +24,8 @@ html,body {
  <P>             打包MVHD的BOX头协议</P>
 <H1>语法 </H1>
 <P>bool MP4Protocol_Packet_MVhd(LPCXSTR lpszClientID, XCHAR* 
-ptszMSGBuffer, int* pInt_MSGLen, int nTimeDuration, int nTimeScale = 1000)</P>
+ptszMSGBuffer, int* pInt_MSGLen, int nTimeDuration = 0, int nTimeScale =    
+        1000)</P>
 <P></P>
 <P></P>
 <P></P>
@@ -36,7 +37,7 @@ ptszMSGBuffer, int* pInt_MSGLen, int nTimeDuration, int nTimeScale = 1000)</P>
 意思：输出打包好的缓冲区<BR>&nbsp;参数.三：pInt_MSGLen<BR>&nbsp; In/Out：Out<BR>&nbsp; 
 类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输出缓冲区大小<BR>&nbsp;参数.四：nTimeDuration<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：输入媒体播放时长,代表媒体最大时长<BR>&nbsp;参数.五：nTimeScale<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入时长刻度,默认1000毫秒</P>
 <P></P>

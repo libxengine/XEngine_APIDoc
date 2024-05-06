@@ -29,8 +29,10 @@ MP4Protocol_Packet_TKhd
   语法</H1>
 
 <P>bool MP4Protocol_Packet_TKhd(LPCXSTR lpszClientID, XCHAR* 
-ptszMSGBuffer, int* pInt_MSGLen, int nTimeDuration, int nVolum, int nWidth, int 
-nHeight)</P> 
+ptszMSGBuffer, int* pInt_MSGLen, int nVolum = 0, int nWidth = 0, int nHeight = 
+0, int nTimeDuration =    
+          
+0)</P> 
  <P>             </P>
 <P></P>
 <P></P>
@@ -40,15 +42,15 @@ nHeight)</P>
 意思：输入要操作的客户端<BR>&nbsp;参数.二：ptszMSGBuffer<BR>&nbsp; In/Out：Out<BR>&nbsp; 
 类型：字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输出打包好的缓冲区<BR>&nbsp;参数.三：pInt_MSGLen<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输出缓冲区大小<BR>&nbsp;参数.四：nTimeDuration<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入媒体播放时长<BR>&nbsp;参数.五：nVolum<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：如果是音频轨道,此值需要输入值,比如0x0100,代表正常音量,否则为0<BR>&nbsp;参数.六：nWidth<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：如果是视频轨道,这个参数需要输入值,代表宽,否则为0<BR>&nbsp;参数.七：nHeight<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：如果是视频轨道,这个参数需要输入值,代表高,否则为0</P>
+类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出缓冲区大小<BR>&nbsp;参数.四：nVolum<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：如果是音频轨道,此值需要输入值,比如0x0100,代表正常音量,否则为0<BR>&nbsp;参数.五：nWidth<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：如果是视频轨道,这个参数需要输入值,代表宽,否则为0<BR>&nbsp;参数.六：nHeight<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：如果是视频轨道,这个参数需要输入值,代表高,否则为0<BR>&nbsp;参数.七：nTimeDuration<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输入媒体播放时长</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
