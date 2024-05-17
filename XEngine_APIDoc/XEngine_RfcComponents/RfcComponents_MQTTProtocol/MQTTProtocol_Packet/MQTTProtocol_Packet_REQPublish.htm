@@ -23,9 +23,11 @@ html,body {
 <H1>功能</H1> 
  <P>             打包请求消息发布协议</P>
 <H1>语法</H1>
-<P>BOOL MQTTProtocol_Packet_REQPublish(TCHAR* ptszMsgBuffer, 
-int* pInt_Len, LPCTSTR lpszTopicName, WORD wMsgID = 0, 
-MQTTPROTOCOL_HDRPROPERTY*** pppSt_HDRProperty = NULL, int nListCount = 0)</P>
+<P>bool MQTTProtocol_Packet_REQPublish(XCHAR * 
+ptszMsgBuffer, int* pInt_Len, LPCXSTR lpszTopicName, LPCXSTR lpszMSGBuffer, int 
+nMSGLen, XSHOT wMsgID =   
+  0, MQTTPROTOCOL_HDRPROPERTY * **pppSt_HDRProperty =  
+   NULL, int nListCount = 0)</P>
 <P></P>
 <P></P>
 <P></P>
@@ -34,17 +36,20 @@ MQTTPROTOCOL_HDRPROPERTY*** pppSt_HDRProperty = NULL, int nListCount = 0)</P>
 类型：字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出打好包的缓冲区<BR>&nbsp;参数.二：pInt_Len<BR>&nbsp; 
 In/Out：Out<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输出缓冲区大小<BR>&nbsp;参数.三：lpszTopicName<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：要打包的主题名<BR>&nbsp;参数.四：wMsgID<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：输入要打包的消息ID,如果QOS为0,那么此值不能填充<BR>&nbsp;参数.五：pppSt_HDRProperty<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：要打包的主题名<BR>&nbsp;参数.四：lpszMSGBuffer<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入要发送的消息<BR>&nbsp;参数.五：nMSGLen<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 
+可空：N<BR>&nbsp; 意思：输入消息大小<BR>&nbsp;参数.六：wMsgID<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输入要打包的消息ID,如果QOS为0,那么此值不能填充<BR>&nbsp;参数.七：pppSt_HDRProperty<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：三级指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：输入要打包的属性<BR>&nbsp;参数.六：nListCount<BR>&nbsp; In/Out：In<BR>&nbsp; 
+意思：输入要打包的属性<BR>&nbsp;参数.八：nListCount<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入要打包的属性个数</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
 <H1>备注</H1>
-<P>负载内容需要自己处理,比如打好包后,在缓冲区后跟上负载的内容即可<BR>memcpy(ptszMsgBuffer 
-+ pInt_Len,send message,message length);</P>
+<P> 
+   &nbsp;</P>
 <H1>示例</H1></body>
 </html>

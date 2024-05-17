@@ -1,0 +1,54 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>NTPProtocol_Parse_TimeInfo</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<H1>函数</H1>
+<P>
+NTPProtocol_Parse_TimeInfo
+</P>
+<H1>
+功能
+
+</H1>
+<P>NTP协议解析</P>
+<H1 >
+ 语法</H1>
+<P >bool NTPProtocol_Parse_TimeInfo(NTPPROTOCOL_TIMEINFO* 
+pSt_RecvTime, NTPPROTOCOL_TIMEINFO* pSt_OriginTime, NTPPROTOCOL_TIMEINFO* 
+pSt_TrsTimestamp, __int64x* pInt_TimeOffset, __int64x* pInt_TimeDelay)</P>
+
+<P></P>
+<P></P>
+<P></P>
+<H1>参数</H1>
+<P>&nbsp;参数.一：pSt_RecvTime<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：数据结构指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输出解析处理时钟,接受时钟<BR>&nbsp;参数.二：pSt_OriginTime<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：数据结构指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输出原始时钟<BR>&nbsp;参数.三：pSt_TrsTimestamp<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：数据结构指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输出传输时钟<BR>&nbsp;参数.四：pInt_TimeOffset<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输出时间偏移,单位微妙,正数代表你的系统时钟慢了,需要加上此微秒值<BR>&nbsp;&nbsp;负数代表你的系统快了,需要减少此微秒值设置你的系统时钟<BR>&nbsp;参数.五：pInt_TimeDelay<BR>&nbsp; 
+In/Out：Out<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输出往返延迟,如果没有原始时间,这个值为0,单位微妙</P>
+<P></P>
+<H1>返回值</H1>
+<P>类型：逻辑型<BR>意思：是否成功</P>
+<H1>备注</H1>
+<P>内部有计时器,如果有调试断点,数据将不正确</P>
+<H1>示例</H1></body>
+</html>

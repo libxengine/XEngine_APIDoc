@@ -27,8 +27,10 @@ MQTTProtocol_Packet_Header
 <H1 >
  语法</H1>
 <P >
-  BOOL MQTTProtocol_Packet_Header(TCHAR* ptszMsgBuffer, 
-int* pInt_Len, int nLen, BYTE byType, BYTE byFlag = 0)</P>
+  bool MQTTProtocol_Packet_Header(XCHAR * ptszMsgBuffer, 
+int* pInt_Len, XBYTE byType, LPCXSTR lpszMSGBuffer = NULL, int nMSGLen =
+     
+     0, XBYTE byFlag = 0)</P>
 
 <P></P> 
  <P>             </P>
@@ -37,11 +39,12 @@ int* pInt_Len, int nLen, BYTE byType, BYTE byFlag = 0)</P>
 <P>&nbsp;参数.一：ptszMsgBuffer<BR>&nbsp; In/Out：Out<BR>&nbsp; 
 类型：字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出打好包的缓冲区<BR>&nbsp;参数.二：pInt_Len<BR>&nbsp; 
 In/Out：Out<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输出缓冲区大小<BR>&nbsp;参数.三：nLen<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 
-可空：N<BR>&nbsp; 意思：输入要打包的负载大小(负载数据大小)<BR>&nbsp;参数.四：byType<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：字节型<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入要打包的协议类型<BR>&nbsp;参数.五：byFlag<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：字节型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入要打包的协议标识符</P>
+意思：输出缓冲区大小<BR>&nbsp;参数.三：byType<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：字节型<BR>&nbsp; 
+可空：N<BR>&nbsp; 意思：输入要打包的协议类型<BR>&nbsp;参数.四：lpszMSGBuffer<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输入要打包的数据<BR>&nbsp;参数.五：nLen<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 
+可空：Y<BR>&nbsp; 意思：输入要打包的负载大小(负载数据大小)<BR>&nbsp;参数.六：byFlag<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：字节型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入要打包的协议标识符</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
