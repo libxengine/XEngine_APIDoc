@@ -25,9 +25,12 @@ html,body {
 <H1>语法 </H1>
 <P>   
     XHANDLE XClient_StreamPull_PushStream(XHANDLE xhToken, 
-LPCSTR lpszPushAddr, STREAMMEDIA_PULLSTREAM *   
-    **pppSt_PullStream, int 
-nStreamCount)</P>
+LPCXSTR lpszPushAddr, XCLIENT_STREAMPULL * **pppSt_PullStream, int nStreamCount, 
+XENGINE_KEYVALUE*** pppSt_ListKey = NULL, int nListCount =   
+       
+      
+      
+0)</P>
 <P></P>
 <P></P>
 <P></P>
@@ -38,7 +41,11 @@ In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp;
 意思：输入要推流到的流地址<BR>&nbsp;参数.三：pppSt_PullStream<BR>&nbsp; In/Out：In/Out<BR>&nbsp; 
 类型：三级指针<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输入要使用的流ID<BR>&nbsp;参数.四：nStreamCount<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要使用的流ID个数</P>
+类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入要使用的流ID个数<BR>&nbsp;参数.五：pppSt_ListKey<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：三级指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入要附加的音视频参数.比如HLS的hls_time -&gt; 
+10<BR>&nbsp;参数.六：nListCount<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 
+可空：Y<BR>&nbsp; 意思：输入参数个数</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

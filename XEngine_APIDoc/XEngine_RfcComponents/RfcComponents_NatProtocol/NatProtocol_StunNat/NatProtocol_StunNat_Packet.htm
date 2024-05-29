@@ -27,9 +27,12 @@ NatProtocol_StunNat_Packet
 <H1 >
  语法</H1>
 <P >
-   bool NatProtocol_StunNat_Packet(XCHAR * 
-ptszMsgBuffer, int* pInt_Len, LPCXSTR lpszTokenStr, int nMsgClass, int nMsgMethod, LPCXSTR 
-lpszMsgBuffer = NULL)</P>
+   bool NatProtocol_StunNat_Packet(XCHAR * ptszMsgBuffer, 
+int* pInt_Len, LPCXSTR lpszTokenStr, int nMsgClass, int nMsgMethod, LPCXSTR 
+lpszMsgBuffer = NULL, bool bMSGIntegrity = false, LPCXSTR lpszHMACKey =
+      
+        NULL, bool 
+bFinger = false)</P>
 
 <P></P> 
  <P>             </P>
@@ -45,7 +48,13 @@ In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp;
 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：消息类型<BR>&nbsp;参数.五：nMsgMethod<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：消息方法<BR>&nbsp;参数.六：lpszMsgBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入要发送的数据包</P>
+类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输入要发送的数据包<BR>&nbsp;参数.七：bMSGIntegrity<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：是否启用完整性效验属性<BR>&nbsp;参数.八：lpszHMACKey<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输入效验的HMAC的密钥,SHA1效验<BR>&nbsp;参数.九：bFinger<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：是否启用CRC数据包验证</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

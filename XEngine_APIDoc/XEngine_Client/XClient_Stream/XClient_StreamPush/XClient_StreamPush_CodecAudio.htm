@@ -24,7 +24,8 @@ html,body {
 <P>推送一个音频数据</P> 
  <H1>             语法</H1>
 <P>BOOL XClient_StreamPush_CodecAudio(XHANDLE xhNet, LPCSTR 
-lpszMsgBuffer, int nMsgLen, __int64x nPTSValue =   
+lpszMsgBuffer, int nMsgLen, __int64x nPTSValue =    
+  0, __int64x nDuration =   
    0)</P>
 <P></P>
 <P></P>
@@ -36,7 +37,8 @@ lpszMsgBuffer, int nMsgLen, __int64x nPTSValue =
 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要发送的数据<BR>&nbsp;参数.三：nMsgLen<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：数据大小<BR>&nbsp;参数.四：nPTSValue<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 
-可空：Y<BR>&nbsp; 意思：自定义PTS时间戳</P>
+可空：Y<BR>&nbsp; 意思：自定义PTS时间戳<BR>&nbsp;参数.五：nDuration<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：帧时间</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

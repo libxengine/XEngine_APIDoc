@@ -25,21 +25,25 @@ html,body {
 推送数据到服务器</P>
 <H1>语法</H1>
 <P>   
- XHANDLE XClient_StreamPush_FileInit(LPCXSTR 
-lpszVBitStream = NULL, LPCXSTR lpszABitStream =   
- NULL, bool bSleep =   
-         true)</P>
+ XHANDLE XClient_StreamPush_FileInit(LPCXSTR lpszVBitStream 
+=   
+ NULL, LPCXSTR 
+lpszABitStream = NULL, bool bSleep =   
+ true, bool bReopen =   
+         false)</P>
 <P></P>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：lpszVBitStream<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入视频码流转换器,比如h264_mp4toannexb 
-h264_mp4toannexb<BR>&nbsp;参数.二：lpszABitStream<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入音频码率转换器,比如aac_adtstoasc 
-aac_asctoadts<BR>&nbsp;参数.三：bSleep<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：是否由系统计算休眠.默认真</P>
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入视频码流转换器,比如h264_mp4toannexb<BR>&nbsp;参数.二：lpszABitStream<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入音频码率转换器,比如aac_adtstoasc aac_asctoadts<BR>&nbsp;参数.三：bSleep<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：是否由系统计算休眠.默认真<BR>&nbsp;参数.四：bReopen<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：为真表示文件读取完毕后从头重新继续开始推流</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

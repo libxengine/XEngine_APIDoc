@@ -23,14 +23,18 @@ html,body {
 <H1>功能</H1> 
  <P>             启动推流器</P>
 <H1>语法</H1>
-<P>BOOL XClient_StreamPush_FileStart(XHANDLE xhNet)</P>
+<P>BOOL XClient_StreamPush_FileStart(XHANDLE xhNet, 
+XENGINE_KEYVALUE*** pppSt_ListKey = NULL, int nListCount =  0)</P>
 <P></P>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：xhNet<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：要操作的句柄</P>
+类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：要操作的句柄<BR>&nbsp;参数.二：pppSt_ListKey<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：三级指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输入要附加的音视频参数.比如HLS的hls_time -&gt; 10<BR>&nbsp;参数.三：nListCount<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入参数个数</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

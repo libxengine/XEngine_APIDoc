@@ -22,8 +22,10 @@ html,body {
 <H1>语法 </H1>
 <P>BOOL XClient_StreamPush_LiveVideo(XHANDLE xhNet, 
 uint8_t* punYBuffer, int nYLen, uint8_t* punUBuffer, int nULen, uint8_t* 
-punVBuffer, int nVLen, bool bKeyFrame = false, __int64x nPTSValue = 0, __int64x 
-nDTSValue =   
+punVBuffer, int nVLen, bool bKeyFrame =   
+         
+  false, __int64x nPTSValue = 0, __int64x nDTSValue = 0, __int64x 
+nDuration =   
          
   0)</P>
 <P></P>
@@ -44,7 +46,8 @@ In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp;
 可空：Y<BR>&nbsp; 意思：是否设置关键帧编码<BR>&nbsp;参数.十：nPTSValue<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：自定义PTS时间戳<BR>&nbsp;参数.十一：nDTSValue<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：自定义DTS时间戳</P>
+类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：自定义DTS时间戳<BR>&nbsp;参数.十二：nDuration<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：真持续时间</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
