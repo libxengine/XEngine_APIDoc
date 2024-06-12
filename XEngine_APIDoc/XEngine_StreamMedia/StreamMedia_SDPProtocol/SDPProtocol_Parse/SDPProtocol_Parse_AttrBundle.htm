@@ -23,9 +23,9 @@ html,body {
 <H1>功能</H1> 
  <P>             获取BUNDLE控制属性</P>
 <H1>语法</H1>
-<P>bool 
-SDPProtocol_Parse_AttrBundle(STREAMMEDIA_SDPPROTOCOL_ATTR*** pppSt_ListAttr, int 
-nAttrCount, bool* pbAudio, bool* pbVideo, bool* pbRTCPMux)</P>
+<P> 
+ bool SDPProtocol_Parse_AttrBundle(STREAMMEDIA_SDPPROTOCOL_ATTR*** 
+pppSt_ListAttr, int nAttrCount, int* pInt_Index1, int* pInt_Index2)</P>
 <P></P>
 <P></P>
 <P></P>
@@ -33,15 +33,14 @@ nAttrCount, bool* pbAudio, bool* pbVideo, bool* pbRTCPMux)</P>
 <P>&nbsp;参数.一：pppSt_ListAttr<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：三级指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要解析的列表<BR>&nbsp;参数.二：nAttrCount<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入列表个数<BR>&nbsp;参数.三：pbAudio<BR>&nbsp; In/Out：Out<BR>&nbsp; 类型：逻辑型<BR>&nbsp; 
-可空：N<BR>&nbsp; 意思：输出是否绑定了音频为一个端口<BR>&nbsp;参数.四：pbVideo<BR>&nbsp; 
-In/Out：Out<BR>&nbsp; 类型：逻辑型<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输出是否绑定了视频为一个端口<BR>&nbsp;参数.五：pbRTCPMux<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：逻辑型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出RTCP协议端口是否也复用了同一个端口</P>
+意思：输入列表个数<BR>&nbsp;参数.三：pInt_Index1<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输出索引编号1的索引值,-1表示不起作用<BR>&nbsp;参数.四：pInt_Index2<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出索引编号2的索引值,-1表示不起作用</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
 <H1>备注</H1>
-<P>&nbsp;</P>
+<P>索引值对应的媒体类型可以通过SDPProtocol_Parse_GetAVMedia获得</P>
 <H1>示例</H1></body>
 </html>

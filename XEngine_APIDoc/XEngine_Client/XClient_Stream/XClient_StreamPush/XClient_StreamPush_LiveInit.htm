@@ -40,7 +40,7 @@ NULL, int nListCount =
 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：推送的URL地址,播放也是这个地址<BR>&nbsp;参数.二：pSt_AVProtocol<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：数据结构指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入音视频媒体信息,tszPktName需要填写推流格s式,比如flv(rtmp),mpegts(srt)等<BR>&nbsp;参数.三：pppSt_ListKey<BR>&nbsp; 
+意思：输入音视频媒体信息,tszPktName需要填写推流格式,比如flv(rtmp),mpegts(srt)等<BR>&nbsp;参数.三：pppSt_ListKey<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：三级指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：输入要附加的音视频参数.比如HLS的hls_time -&gt; 10<BR>&nbsp;参数.四：nListCount<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
@@ -49,6 +49,6 @@ In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp;
 <H1>返回值</H1>
 <P>类型：句柄<BR>意思：返回初始化后的句柄</P>
 <H1>备注</H1>
-<P>&nbsp;</P>
+<P>pSt_AVProtocol的视频参数需要填写长宽帧率,码率,编码器等<BR>pSt_AVProtocol的音频参数需要填写样本大小,采样率,编码器,码率,通道等</P>
 <H1>示例</H1></body>
 </html>

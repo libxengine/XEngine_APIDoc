@@ -23,17 +23,17 @@ html,body {
 <H1>功能</H1> 
  <P>             打包流绑定属性</P>
 <H1>语法</H1>
-<P>bool SDPProtocol_Packet_Bundle(XNETHANDLE xhToken, bool 
-bAudio = true, bool bVideo = true)</P>
+<P>bool SDPProtocol_Packet_Bundle(XNETHANDLE xhToken, int 
+nIndex1 = 0, int nIndex2 = 1)</P>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：xhToken<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要操作的SDP会话<BR>&nbsp;参数.二：bAudio<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：绑定音频流为一个流<BR>&nbsp;参数.三：bVideo<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：逻辑型<BR>&nbsp; 
-可空：Y<BR>&nbsp; 意思：绑定视频流为一个流</P>
+类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要操作的SDP会话<BR>&nbsp;参数.二：nIndex1<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输入流的MID索引,-1不启用<BR>&nbsp;参数.三：nIndex2<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入流的MID索引,-1不启用</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

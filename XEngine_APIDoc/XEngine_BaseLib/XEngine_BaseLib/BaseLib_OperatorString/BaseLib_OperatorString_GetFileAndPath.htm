@@ -23,9 +23,10 @@ html,body {
 <H1>功能</H1> 
  <P>             通过URL获取文件路径和文件名</P>
 <H1>语法</H1>
-<P>BOOL BaseLib_OperatorString_GetFileAndPath(LPCSTR 
-lpszUrl, CHAR * ptszPath = NULL, CHAR * ptszFile = NULL, CHAR * ptszDrive = 
-NULL, CHAR * ptszFileExt = NULL)</P>
+<P>BOOL BaseLib_OperatorString_GetFileAndPath(LPCXSTR 
+lpszUrl, XCHAR * ptszPath = NULL, XCHAR * ptszFile =  
+NULL, XCHAR * ptszDrive =      NULL, XCHAR * ptszFileExt = 
+ NULL, bool bOnlyName = false)</P>
 <P></P>
 <P></P>
 <H1>参数</H1>
@@ -35,7 +36,9 @@ In/Out：Out<BR>&nbsp; 类型：字符指针<BR>&nbsp; 可空：Y<BR>&nbsp;
 意思：全路径<BR>&nbsp;参数.三：ptszFile<BR>&nbsp; In/Out：Out<BR>&nbsp; 类型：字符指针<BR>&nbsp; 
 可空：Y<BR>&nbsp; 意思：文件名称<BR>&nbsp;参数.四：ptszDrive<BR>&nbsp; In/Out：Out<BR>&nbsp; 
 类型：字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：驱动器名称<BR>&nbsp;参数.五：ptszFileExt<BR>&nbsp; 
-In/Out：Out<BR>&nbsp; 类型：字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：文件扩展名</P>
+In/Out：Out<BR>&nbsp; 类型：字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：文件扩展名<BR>&nbsp;参数.六：bOnlyName<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：逻辑型<BR>&nbsp; 
+可空：Y<BR>&nbsp; 意思：设置ptszFile导出的只有名字没有扩展名</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

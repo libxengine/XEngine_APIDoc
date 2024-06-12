@@ -24,11 +24,12 @@ html,body {
  <P>             音频重采样启用并且设置</P>
 <H1>语法</H1>
 <P>BOOL AudioCodec_Stream_SetResample(XNETHANDLE xhNet, 
-int* pInt_Len, int nSrcRate = 11025, int nDstRate = 44100, 
-ENUM_AVCOLLECT_AUDIOSAMPLEFORMAT enSrcSampleFmt = 
-ENUM_AVCOLLECT_AUDIO_SAMPLE_FMT_S16, ENUM_AVCOLLECT_AUDIOSAMPLEFORMAT 
-enDstSampleFmt = ENUM_AVCOLLECT_AUDIO_SAMPLE_FMT_FLTP, int nSrcChannel = 1, int 
-nDstChannel = 2)</P>
+int* pInt_Len, int nSrcRate = 11025, int nDstRate =   
+ 44100, ENUM_AVCOLLECT_AUDIOSAMPLEFORMAT enSrcSampleFmt =     ENUM_AVCOLLECT_AUDIO_SAMPLE_FMT_S16, 
+ENUM_AVCOLLECT_AUDIOSAMPLEFORMAT enDstSampleFmt = 
+ENUM_AVCOLLECT_AUDIO_SAMPLE_FMT_FLTP, int 
+nSrcChannel = 1, int nDstChannel = 2, int 
+nSrcNBSample = 0)</P>
 <P></P>
 <P></P>
 <P></P>
@@ -45,7 +46,8 @@ In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp;
 类型：枚举型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入目标采样格式<BR>&nbsp;参数.七：nSrcChannel<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：源通道个数<BR>&nbsp;参数.八：nDstChannel<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：目标通道个数</P>
+类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：目标通道个数<BR>&nbsp;参数.九：nSrcNBSample<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：原始样本大小,如果为0,使用目标样本大小</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
