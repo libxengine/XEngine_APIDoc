@@ -23,12 +23,12 @@ html,body {
 <H1>功能</H1> 
  <P>             初始化解码器</P>
 <H1>语法</H1>
-<P>   BOOL 
-AudioCodec_Stream_DeInit(XNETHANDLE * pxhNet, 
-ENUM_AVCODEC_AUDIOTYPE  nAvCodec, CALLBACK_NETENGINE_AVCODER_AUDIO_STREAM_DECODEC fpCall_StreamFrame =    
- NULL, LPVOID 
-lParam =   NULL,   AVCODEC_AUDIO_INFO * 
-pSt_AudioInfo = NULL)</P>
+<P>    
+  bool 
+AudioCodec_Stream_DeInit(XNETHANDLE  * pxhNet, ENUM_AVCODEC_AUDIOTYPE     
+ nAvCodec, AVCODEC_AUDIO_INFO* 
+pSt_AudioInfo =      NULL, XHANDLE 
+pSt_AVCodecParameter = NULL)</P>
 <P></P>
 <P></P>
 <P></P>
@@ -37,13 +37,12 @@ pSt_AudioInfo = NULL)</P>
 <P>&nbsp;参数.一：pxhNet<BR>&nbsp; In/Out：Out<BR>&nbsp; 
 类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：导出初始化成功的解码器句柄<BR>&nbsp;参数.二：nAvCodec<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：枚举型<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：要使用哪个解码器<BR>&nbsp;参数.三：fpCall_StreamFrame<BR>&nbsp; In/Out：In/Out<BR>&nbsp; 
-类型：回调函数<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：每次解码一个数据会通过回调返回<BR>&nbsp;参数.四：lParam<BR>&nbsp; In/Out：In/Out<BR>&nbsp; 
-类型：无类型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：回调函数参数<BR>&nbsp;参数.五：pSt_AudioInfo<BR>&nbsp; In/Out：In<BR>&nbsp; 
+意思：要使用哪个解码器<BR>&nbsp;参数.三：pSt_AudioInfo<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：数据结构指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：如果非封装类型的音频格式,需要自定义输入采样率,采样格式,通道</P>
+意思：如果非封装类型的音频格式,需要自定义输入采样率,采样格式,通道<BR>&nbsp;参数.四：pSt_AVCodecParameter<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：数据结构指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：原始的音频编解码参数信息,某些时候解码失败,可以使用此方法可以配置解码器更有效果<BR> 
+&nbsp;&nbsp;此参数与pSt_AudioInfo冲突,不能同时设置</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

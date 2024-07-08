@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>AVHelp_Parse_FrameGet</title>
+<title>AVFrame_Frame_ParseGet</title>
 <meta name="GENERATOR" content="WinCHM">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style>
@@ -15,24 +15,19 @@ html,body {
 </head>
 
 <body>
-<H1>函数 </H1>
-<P>
-AVHelp_Parse_FrameGet
-</P>
-<H1>
-功能
-
-</H1>
-<P>解析并且获取一帧</P>
 <H1 >
- 语法</H1>
+ 函数</H1>
 <P >
-  BOOL AVHelp_Parse_FrameGet(XNETHANDLE
-  xhToken, LPCTSTR lpszMsgBuffer, int 
-nMsgLen, AVHELP_FRAMEDATA * **pppSt_Frame, int*  pInt_ListCount)</P>
+  AVFrame_Frame_ParseGet</P>
 
-<P></P> 
- <P>             </P>
+<H1>功能</H1> 
+ <P>             解析并且获取一帧</P>
+<H1>语法</H1>
+<P>bool AVFrame_Frame_ParseGet(XNETHANDLE xhToken, LPCXSTR 
+lpszMsgBuffer, int nMsgLen, AVFRAME_PARSEDATA*** pppSt_Frame, int* 
+pInt_ListCount)</P>
+<P></P>
+<P></P>
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：xhToken<BR>&nbsp; In/Out：In<BR>&nbsp; 
@@ -45,8 +40,8 @@ In/Out：Out<BR>&nbsp; 类型：三级指针<BR>&nbsp; 可空：N<BR>&nbsp;
 类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出队列个数</P>
 <P></P>
 <H1>返回值</H1>
-<P>类型：逻辑型<BR>意思：是否成功</P>
+<P>类型：逻辑型 <BR>意思：是否成功</P>
 <H1>备注</H1>
-<P>    &nbsp;</P>
+<P>&nbsp;</P>
 <H1>示例</H1></body>
 </html>

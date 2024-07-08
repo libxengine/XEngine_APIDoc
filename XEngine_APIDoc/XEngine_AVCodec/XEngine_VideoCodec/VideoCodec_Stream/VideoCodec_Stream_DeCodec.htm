@@ -23,10 +23,10 @@ html,body {
 <H1>功能</H1> 
  <P>             解码一个视频帧</P>
 <H1>语法</H1>
-<P>bool VideoCodec_Stream_DeCodec(XNETHANDLE xhNet, uint8_t 
-*pszSourceBuffer, int nLen, AVCODEC_VIDEO_MSGBUFFER * **pppSt_MSGBuffer = NULL, 
-int* pInt_ListCount =    
-  NULL)</P>
+<P>  bool VideoCodec_Stream_DeCodec(XNETHANDLE 
+xhNet, uint8_t *pszSourceBuffer, int nLen, AVCODEC_VIDEO_MSGBUFFER  * 
+**pppSt_MSGBuffer, int*     
+  pInt_ListCount)</P>
 <P></P>
 <P></P>
 <P></P>
@@ -38,10 +38,10 @@ int* pInt_ListCount =
 意思：要解码的数据缓冲区地址,必须为一个完整的帧<BR>&nbsp;参数.三：nLen<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：要解码的缓冲区长度<BR>&nbsp;参数.四：pppSt_MSGBuffer<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：三级指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：输出解码的数据列表,如果回调函数为NULL,此值必须填充<BR>&nbsp;参数.五：pInt_ListCount<BR>&nbsp; 
-In/Out：Out<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：输出列表个数,如果回调函数为NULL,此值必须填充</P>
+类型：三级指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输出解码的数据列表,<BR>&nbsp;参数.五：pInt_ListCount<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输出列表个数</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

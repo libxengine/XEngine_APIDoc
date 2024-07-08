@@ -23,9 +23,9 @@ html,body {
 <H1>功能</H1> 
  <P>             解码音频数据</P>
 <H1>语法</H1>
-<P>BOOL AudioCodec_Stream_DeCodec(XNETHANDLE xhNet, uint8_t 
-*pszSourceBuffer, int nLen, AVCODEC_AUDIO_MSGBUFFER * **pppSt_ListMsgBuffer = 
-NULL, int* pInt_ListCount = NULL)</P>
+<P>  bool AudioCodec_Stream_DeCodec(XNETHANDLE 
+xhNet, uint8_t *pszSourceBuffer, int nLen, AVCODEC_AUDIO_MSGBUFFER  
+* **pppSt_ListMsgBuffer, int*  pInt_ListCount)</P>
 <P></P>
 <P></P>
 <P></P>
@@ -36,9 +36,9 @@ NULL, int* pInt_ListCount = NULL)</P>
 In/Out：In<BR>&nbsp; 类型：无符号整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：要解码的数据缓冲区<BR>&nbsp;参数.三：nLen<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 
 可空：N<BR>&nbsp; 意思：要解码的数据缓冲区大小<BR>&nbsp;参数.四：pppSt_ListMsgBuffer<BR>&nbsp; 
-In/Out：Out<BR>&nbsp; 类型：三级指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：如果你解码初始化没有设置回调函数,那么就这个参数将导出解码后的数据.并且你这个参数不能为NULL<BR>&nbsp;参数.五：pInt_ListCount<BR>&nbsp; 
-In/Out：Out<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输出消息个数</P>
+In/Out：Out<BR>&nbsp; 类型：三级指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输出解码后的音频数据列表<BR>&nbsp;参数.五：pInt_ListCount<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出列表个数<BR> </P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

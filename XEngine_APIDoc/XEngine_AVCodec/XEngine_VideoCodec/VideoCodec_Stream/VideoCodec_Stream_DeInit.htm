@@ -24,15 +24,15 @@ html,body {
  <P>             初始化解码器</P>
 <H1>语法</H1>
 <P>   
+   
 bool VideoCodec_Stream_DeInit(XNETHANDLE *pxhNet, 
-ENUM_AVCODEC_VEDIOTYPE nAvCodec, CALLBACK_XENGINE_AVCODEC_VIDEO_STREAM_DECODEC 
-fpCall_StreamFrame =   
+ENUM_AVCODEC_VIDEOTYPE    
    
       
    
-NULL, XPVOID lParam = NULL, bool bCallYuv =   
+nAvCodec, bool bCallYuv = true, LPCXSTR lpszVInfo =   
    
-true, LPCXSTR lpszVInfo = NULL, int nVLen = 0, 
+NULL, int nVLen = 0, XHANDLE pSt_AVParameter = NULL, 
 ENUM_XENGINE_AVCODEC_HWDEVICE enHWDevice = 
 ENUM_AVCODEC_HWDEVICE_HWDEVICE_TYPE_NONE)</P>
 <P></P>
@@ -42,15 +42,13 @@ ENUM_AVCODEC_HWDEVICE_HWDEVICE_TYPE_NONE)</P>
 <P>&nbsp;参数.一：pxhNet<BR>&nbsp; In/Out：Out<BR>&nbsp; 
 类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：导出解码器句柄<BR>&nbsp;参数.二：nAvCodec<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：枚举型<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：初始化解码器的类型<BR>&nbsp;参数.三：fpCall_StreamFrame<BR>&nbsp; In/Out：In/Out<BR>&nbsp; 
-类型：回调函数<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：解码的时候返回的数据,可以通过回调或者数组处理,根据此值决定<BR>&nbsp;参数.四：lParam<BR>&nbsp; 
-In/Out：In/Out<BR>&nbsp; 类型：无类型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：解码器回调函数的参数<BR>&nbsp;参数.五：bCallYuv<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：导出回调数据的方式<BR>&nbsp;参数.六：lpszVInfo<BR>&nbsp; 
+意思：初始化解码器的类型<BR>&nbsp;参数.三：bCallYuv<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：导出回调数据的方式<BR>&nbsp;参数.四：lpszVInfo<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：解码器附加信息,某些流可能需要附加SPS 
-PPS等信息才能解码<BR>&nbsp;参数.七：nVLen<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 
-可空：Y<BR>&nbsp; 意思：附加媒体信息大小<BR>&nbsp;参数.八：enHWDevice<BR>&nbsp; 
+PPS等信息才能解码<BR>&nbsp;参数.五：nVLen<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 
+可空：Y<BR>&nbsp; 意思：附加媒体信息大小<BR>&nbsp;参数.六：pSt_AVParameter<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：句柄<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：指定解码器参数,用于一些特别的解码媒体格式解码<BR>&nbsp;参数.七：enHWDevice<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：枚举型<BR>&nbsp; 可空：Y<BR>    
          
        

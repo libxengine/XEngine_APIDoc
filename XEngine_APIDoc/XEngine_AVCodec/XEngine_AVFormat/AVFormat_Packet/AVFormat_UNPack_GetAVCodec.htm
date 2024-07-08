@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>AVFormat_UNPack_GetCodec</title>
+<title>AVFormat_UNPack_GetAVCodec</title>
 <meta name="GENERATOR" content="WinCHM">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style>
@@ -14,17 +14,25 @@ html,body {
 
 </head>
 
-<body> 
- <H1>             函数</H1>
-<P>AVFormat_UNPack_GetCodec</P>
-<H1>功能</H1>
+<body>
+<H1>函数</H1>
+<P>
+AVFormat_UNPack_GetAVCodec
+</P>
+<H1>
+功能
+
+</H1>
 <P>获取流信息</P>
-<H1>语法</H1>
-<P>bool AVFormat_UNPack_GetCodec(XHANDLE xhNet, int 
-nAVIndex, XHANDLE* pSt_AVParameter = NULL, int* pInt_TimeNum = NULL, int* 
-pInt_TimeDen = NULL)</P>
-<P></P>
-<P></P>
+<H1 >
+ 语法</H1>
+<P >
+  bool AVFormat_UNPack_GetAVCodec(XHANDLE xhNet, int 
+nAVIndex, XHANDLE* pSt_AVParameter = NULL, AVCODEC_TIMEBASE* pSt_AVTimeBase = 
+NULL)</P>
+
+<P></P> 
+ <P>             </P>
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：xhNet<BR>&nbsp; In/Out：In<BR>&nbsp; 
@@ -32,10 +40,8 @@ pInt_TimeDen = NULL)</P>
 In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输入要操作的索引<BR>&nbsp;参数.三：pSt_AVParameter<BR>&nbsp; In/Out：Out<BR>&nbsp; 
 类型：二级指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：输出获取的编解码参数信息,AVCodecParameters类型.此参数需要释放内存<BR>&nbsp;参数.四：pInt_TimeNum<BR>&nbsp; 
-In/Out：Out<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：输出获取的时间基<BR>&nbsp;参数.五：pInt_TimeDen<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：整数型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输出获取的时间基</P>
+意思：输出获取的编解码参数信息,AVCodecParameters类型.此参数需要释放内存<BR>&nbsp;参数.四：pSt_AVTimeBase<BR>&nbsp; 
+In/Out：Out<BR>&nbsp; 类型：数据结构指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输出获取的时间基</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

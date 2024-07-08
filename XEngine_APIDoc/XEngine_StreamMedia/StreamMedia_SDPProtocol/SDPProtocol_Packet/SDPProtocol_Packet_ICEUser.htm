@@ -24,7 +24,8 @@ html,body {
  <P>             打包ICE用户密码属性</P>
 <H1>语法</H1>
 <P>bool SDPProtocol_Packet_ICEUser(XNETHANDLE xhToken, 
-LPCXSTR lpszUserStr, LPCXSTR lpszPassStr)</P>
+LPCXSTR lpszUserStr, LPCXSTR lpszPassStr, bool bOPtionTrickle =   
+   false)</P>
 <P></P>
 <P></P>
 <P></P>
@@ -33,8 +34,9 @@ LPCXSTR lpszUserStr, LPCXSTR lpszPassStr)</P>
 类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输入要操作的SDP会话<BR>&nbsp;参数.二：lpszUserStr<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入用户名<BR>&nbsp;参数.三：lpszPassStr<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入密码<BR>返回值<BR>&nbsp; 
-类型：逻辑型<BR>&nbsp; 意思：是否成功</P>
+In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入密码<BR>&nbsp;参数.四：bOPtionTrickle<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：是否启用ICE候选路径优先发送</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
