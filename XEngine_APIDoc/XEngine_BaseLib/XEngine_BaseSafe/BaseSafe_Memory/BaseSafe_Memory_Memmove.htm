@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>BaseSafe_Memory_Memcopy</title>
+<title>BaseSafe_Memory_Memmove</title>
 <meta name="GENERATOR" content="WinCHM">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style>
@@ -15,33 +15,28 @@ html,body {
 </head>
 
 <body>
-<H1>
-函数
-</H1>
-<P>
-BaseSafe_String_Memcopy
-
-</P>
-<H1>功能</H1>
-<P >
- 安全的内存拷贝函数</P>
 <H1 >
-  语法</H1>
+ 函数</H1>
+<P >
+  BaseSafe_String_Memmove</P>
 
-<P>bool BaseSafe_Memory_Memcopy(void* ptszDestByte, size_t 
-nDestSize, LPCXBTR lpszSourceByte, size_t nSourceSize)</P> 
- <P>             </P>
+<H1>功能</H1> 
+ <P>             安全的内存重叠区域处理拷贝函数</P>
+<H1>语法</H1>
+<P>bool BaseSafe_Memory_Memmove(void* ptszDestByte, size_t 
+nDestSize, LPCXBTR lpszSourceByte, size_t nSourceSize)</P>
+<P></P>
 <P></P>
 <H1>参数 </H1>
 <P>&nbsp;参数.一：ptszDestByte<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：无类型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：目标内存<BR>&nbsp;参数.三：nDestSize<BR>&nbsp; 
+类型：字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：无类型指针<BR>&nbsp;参数.三：nDestSize<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输入目标缓冲区最大大小<BR>&nbsp;参数.二：lpszSourceByte<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要拷贝的内存<BR>&nbsp;参数.三：nDestSize<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要拷贝的缓冲区最大大小</P>
 <P></P>
 <H1>返回值</H1>
-<P>类型：逻辑型<BR>意思：是否拷贝成功</P>
+<P>类型：整数型<BR>意思：拷贝大小</P>
 <H1>备注</H1>
 <P>&nbsp;</P>
 <H1>示例</H1></body>

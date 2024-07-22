@@ -28,9 +28,11 @@ XClient_OPenSsl_Init
  语法</H1>
 <P >
   XHANDLE XClient_OPenSsl_InitEx(ENUM_XCLIENT_SSL_TYPE 
-enSslProtocol = ENUM_XCLIENT_SSL_TYPE_TLS_VERSION, BOOL bSSocket = TRUE, LPCSTR 
-lpszCACertFile = NULL, LPCSTR lpszCertFile = NULL, LPCSTR lpszPrivateKey = 
-NULL)</P>
+enSslProtocol = ENUM_XCLIENT_SSL_TYPE_TLS_VERSION, bool bSSocket =
+  true, LPCXSTR 
+lpszCACertFile = NULL, LPCXSTR lpszCertFile = NULL, LPCXSTR 
+lpszPrivateKey =     NULL, XSHOT nCertType = 
+1)</P>
 
 <P></P> 
  <P>             </P>
@@ -44,7 +46,9 @@ In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp;
 意思：CA证书文件路径<BR>&nbsp;参数.四：lpszCertFile<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：客户端证书文件路径<BR>&nbsp;参数.五：lpszPrivateKey<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：客户端秘钥文件路径</P>
+类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：客户端秘钥文件路径<BR>&nbsp;参数.六：nCertType<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：1为PEM,2为ANS1</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

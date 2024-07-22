@@ -25,21 +25,22 @@ html,body {
 <H1>语法</H1>
 <DIV 
 style="FONT-SIZE: 14px; FONT-FAMILY: Consolas, 'Courier New', monospace; WHITE-SPACE: pre; FONT-WEIGHT: normal; COLOR: #000000; LINE-HEIGHT: 19px; BACKGROUND-COLOR: #ffffff">
-<DIV>bool AVFilter_Video_MIXInit(XNETHANDLE* pxhToken, 
-LPCXSTR lpszFilterStr, AVFILTER_VIDEO_INFO*** pppSt_VideoSrc, int nListSrc, 
-AVFILTER_VIDEO_INFO* pSt_VideoDst)</DIV></DIV>
+bool AVFilter_Video_MIXInit(XNETHANDLE* pxhToken, 
+AVFILTER_VIDEO_INFO*** pppSt_VideoFilter, int nListCount, LPCXSTR 
+lpszFilterName, LPCXSTR lpszFilterStr)</DIV>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：pxhToken<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：过滤器句柄<BR>&nbsp;参数.二：lpszFilterStr<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入要操作的滤镜<BR>&nbsp;参数.三：pppSt_VideoSrc<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：三级指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入原始流信息<BR>&nbsp;参数.四：nListSrc<BR>&nbsp; 
+类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：过滤器句柄<BR>&nbsp;参数.二：pppSt_VideoFilter<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：三级指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入原始流信息<BR>&nbsp;参数.三：nListCount<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入原始流个数<BR>&nbsp;参数.五：pSt_VideoDst<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：数据结构指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入操作后的图像信息</P>
+意思：输入原始流个数<BR>&nbsp;参数.四：lpszFilterName<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入过滤器输出名称<BR>&nbsp;参数.五：lpszFilterStr<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入过滤器字符串</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

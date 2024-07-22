@@ -24,16 +24,16 @@ html,body {
  <P>             目前支持DTSL的AES             KEY获取</P>
 <H1>语法</H1>
 <P>bool XClient_OPenSsl_GetKeyEx(XHANDLE xhNet, XBYTE* 
-ptszSDBuffer, XBYTE* ptszRVBuffer, int nKeySize = 30)</P>
+ptszKEYBuffer, LPCXSTR lpszKeyTStr = _X("EXTRACTOR-dtls_srtp"), int nKeySize =    
+      30)</P>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
-<P>&nbsp;参数.一：ptszSDBuffer<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输出本地发送KEY数据密钥<BR>&nbsp;参数.二：ptszRVBuffer<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输出远端接受KEY数据密钥<BR>&nbsp;参数.三：nKeySize<BR>&nbsp; In/Out：In<BR>&nbsp; 
+<P>&nbsp;参数.一：ptszKEYBuffer<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：导出密钥缓冲区<BR>&nbsp;参数.二：lpszKeyTStr<BR>&nbsp; 
+In/Out：Out<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输入密钥获取类型字符串<BR>&nbsp;参数.三：nKeySize<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：根据密钥不同加密算法不同大小也不一样,DTSL-AES128的大小是30字节</P>
 <P></P>
 <H1>返回值</H1>

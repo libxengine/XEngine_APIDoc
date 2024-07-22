@@ -23,18 +23,18 @@ html,body {
 <H1>功能</H1> 
  <P>             获取流信息</P>
 <H1>语法</H1>
-<P>BOOL AVHelp_MetaInfo_GetStream(LPCSTR lpszFile, int 
-*pInt_ACount, int *pInt_VCount)</P>
+<P>bool AVHelp_MetaInfo_GetStream(LPCXSTR lpszFile, AVHELP_STREAMINFO*** 
+pppSt_ListFile, int* pInt_ListCount)</P>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：lpszFile<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：要获取的音视频文件地址<BR>&nbsp;参数.二：pInt_ACount<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：导出可用的音频流个数<BR>&nbsp;参数.三：pInt_VCount<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：导出可用的视频流个数</P>
+意思：要获取的音视频文件地址<BR>&nbsp;参数.二：pppSt_ListFile<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：三级指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：导出可用的媒体信息列表<BR>&nbsp;参数.三：pInt_ListCount<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：导出可用的流个数</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

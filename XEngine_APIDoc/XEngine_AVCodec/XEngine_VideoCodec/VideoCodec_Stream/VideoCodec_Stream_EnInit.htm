@@ -28,12 +28,15 @@ VideoCodec_Stream_EnInit
  语法</H1>
 <P >
  bool VideoCodec_Stream_EnInit(XNETHANDLE * pxhNet, 
-AVCODEC_VIDEO_INFO * pSt_VideoInfo, __int64x nRangeRate =
+AVCODEC_VIDEO_INFO * pSt_VideoInfo, XENGINE_KEYVALUE*** pppSt_KEYValue = NULL, 
+int nListCount =
+     
+  0, __int64x nRangeRate =
      
   0, ENUM_XENGINE_AVCODEC_HWDEVICE enHWDevice =  
- ENUM_AVCODEC_HWDEVICE_HWDEVICE_TYPE_NONE)&lt;  
-/P    
-     &gt;  
+   
+    
+     ENUM_AVCODEC_HWDEVICE_HWDEVICE_TYPE_NONE)  
 <P></P>
 
 <P></P> 
@@ -44,9 +47,12 @@ AVCODEC_VIDEO_INFO * pSt_VideoInfo, __int64x nRangeRate =
 类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：导出初始化成功的句柄<BR>&nbsp;参数.二：pSt_VideoInfo<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：数据结构指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入视频信息,必须输入宽高,编码器ID,码率,帧率<BR>&nbsp;参数.三：nRangeRate<BR>&nbsp; 
+意思：输入视频信息,必须输入宽高,编码器ID,码率,帧率<BR>&nbsp;参数.三：pppSt_KEYValue<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：三级指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输入自定义编码器参数列表<BR>&nbsp;参数.四：nListCount<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入参数列表个数<BR>&nbsp;参数.五：nRangeRate<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：可变码率范围,如果设置了,那么表示可变码率(VBR),nRangeRate没有设置表示平均码率ABR<BR>&nbsp;参数.四：enHWDevice<BR>&nbsp; 
+意思：可变码率范围,如果设置了,那么表示可变码率(VBR),nRangeRate没有设置表示平均码率ABR<BR>&nbsp;参数.六：enHWDevice<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：枚举型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：选择硬件编码器,默认不启用</P>
 <P></P>
 <H1>返回值</H1>
