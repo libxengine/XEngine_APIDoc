@@ -21,26 +21,28 @@ html,body {
   AVFilter_Video_MIXInit</P>
 
 <H1>功能</H1> 
- <P>             多路视频混流器初始化</P>
+ <P>             初始化音频混合器</P>
 <H1>语法</H1>
 <DIV 
 style="FONT-SIZE: 14px; FONT-FAMILY: Consolas, 'Courier New', monospace; WHITE-SPACE: pre; FONT-WEIGHT: normal; COLOR: #000000; LINE-HEIGHT: 19px; BACKGROUND-COLOR: #ffffff">
-bool AVFilter_Video_MIXInit(XNETHANDLE* pxhToken, 
-AVFILTER_VIDEO_INFO*** pppSt_VideoFilter, int nListCount, LPCXSTR 
+bool AVFilter_Video_MIXInit(XNETHANDLE 
+* pxhToken, AVFILTER_AUDIO_INFO 
+* **pppSt_ListFile, int nListCount, LPCXSTR 
 lpszFilterName, LPCXSTR lpszFilterStr)</DIV>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：pxhToken<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：过滤器句柄<BR>&nbsp;参数.二：pppSt_VideoFilter<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：三级指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入原始流信息<BR>&nbsp;参数.三：nListCount<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入原始流个数<BR>&nbsp;参数.四：lpszFilterName<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：网络句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：导出初始化成功的音频过滤器<BR>&nbsp;参数.二：pppSt_ListFile<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：三级指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入要混合的音频文件和参数,内存由调用者维护<BR>&nbsp;参数.三：nListCount<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入要混合的音频文件和参数<BR>&nbsp;参数.四：lpszFilterName<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入过滤器输出名称<BR>&nbsp;参数.五：lpszFilterStr<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入过滤器字符串</P>
+意思：输入音频滤镜的输出滤镜别名<BR>&nbsp;参数.四：lpszFilterStr<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入音频滤镜的输出滤镜字符串</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
