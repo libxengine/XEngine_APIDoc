@@ -23,26 +23,24 @@ html,body {
 <H1>功能</H1> 
  <P>             解析验证类型</P>
 <H1>语法</H1>
-<P>BOOL ProxyProtocol_SocksCore_ParseAuth(LPCSTR 
-lpszClientID, LPCSTR lpszMsgBuffer, int nMsgLen, 
+<P>  
+ bool&nbsp;ProxyProtocol_SocksCore_ParseAuth(LPCXSTR lpszMsgBuffer, int nMsgLen, 
 ENUM_RFCCOMPONENTS_PROXYSOCKS_AUTH* penListAuth, int* pInt_Count)</P>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
-<P>&nbsp;参数.一：lpszClientID<BR>&nbsp; In/Out：In<BR>&nbsp; 
+<P>&nbsp;参数.一：lpszMsgBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入客户端ID<BR>&nbsp;参数.二：lpszMsgBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入要解析的缓冲区内容<BR>&nbsp;参数.三：nMsgLen<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入缓冲区大小<BR>&nbsp;参数.四：penListAuth<BR>&nbsp; 
+意思：输入要解析的缓冲区内容<BR>&nbsp;参数.二：nMsgLen<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入缓冲区大小<BR>&nbsp;参数.三：penListAuth<BR>&nbsp; 
 In/Out：Out<BR>&nbsp; 类型：枚举型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输出客户端支持的验证类型列表,由用户提供内存,最大也就6个数组<BR>&nbsp;参数.五：pInt_Count<BR>&nbsp; 
+意思：输出客户端支持的验证类型列表,由用户提供内存,最大也就6个数组<BR>&nbsp;参数.四：pInt_Count<BR>&nbsp; 
 In/Out：Out<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出列表个数</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
 <H1>备注</H1>
-<P>当状态为ENUM_RFCCOMPONENTS_PROXY_STATUS_CREATE需要做这一步</P>
+<P>&nbsp;</P>
 <H1>示例</H1></body>
 </html>

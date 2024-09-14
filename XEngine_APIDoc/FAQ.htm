@@ -72,5 +72,9 @@ XClient_OPenSsl_GetKeyEx
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;发送或者接受数据函数</P>
 <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XClient_OPenSsl_CloseEx 
  
-必须得关闭函数</P></body>
+必须得关闭函数</P>
+<P> 
+ 
+9.问:为什么只有TCPXCore的高性能客户端函数库,没有UDP高性能的客户端函数</P>
+<P>&nbsp;&nbsp;&nbsp;答:无论TCP还是UDP的XCore,内部都是使用IOCP,EPOLL,KEVENT实现,UDP的XCore可以直接使用XEngine_Core模块下的UDPXCore服务端函数实现客户端的功能.</P></body>
 </html>

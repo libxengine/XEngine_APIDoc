@@ -23,31 +23,29 @@ html,body {
 
 <P>解析用户命令连接类型</P> 
  <H1>             语法</H1>
-<P>BOOL ProxyProtocol_SocksCore_ParseConnect(LPCSTR 
-lpszClientID, LPCSTR lpszMsgBuffer, int nMsgLen, 
-ENUM_RFCCOMPONENTS_PROXYSOCKS_COMMAND * penCommand, 
-ENUM_RFCCOMPONENTS_PROXYSOCKS_IPADDR * penIPAddr, CHAR * ptszClientAddr, int* 
+<P>  
+   bool ProxyProtocol_SocksCore_ParseConnect(LPCXSTR 
+lpszMsgBuffer, int nMsgLen, 
+ENUM_RFCCOMPONENTS_PROXYSOCKS_COMMAND* penCommand, ENUM_RFCCOMPONENTS_PROXYSOCKS_IPADDR* penIPAddr, XCHAR* ptszClientAddr, int* 
 pInt_Port)</P>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
-<P>&nbsp;参数.一：lpszClientID<BR>&nbsp; In/Out：In<BR>&nbsp; 
+<P>&nbsp;参数.一：lpszMsgBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入客户端ID<BR>&nbsp;参数.二：lpszMsgBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入要解析的缓冲区内容<BR>&nbsp;参数.三：nMsgLen<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入缓冲区大小<BR>&nbsp;参数.四：penCommand<BR>&nbsp; 
+意思：输入要解析的缓冲区内容<BR>&nbsp;参数.二：nMsgLen<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入缓冲区大小<BR>&nbsp;参数.三：penCommand<BR>&nbsp; 
 In/Out：Out<BR>&nbsp; 类型：枚举型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输出客户端请求的命令<BR>&nbsp;参数.五：penIPAddr<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+意思：输出客户端请求的命令<BR>&nbsp;参数.四：penIPAddr<BR>&nbsp; In/Out：Out<BR>&nbsp; 
 类型：枚举型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输出IP类型<BR>&nbsp;参数.六：ptszClientAddr<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输出客户端地址信息<BR>&nbsp;参数.七：pInt_Port<BR>&nbsp; 
+意思：输出IP类型<BR>&nbsp;参数.五：ptszClientAddr<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输出客户端地址信息<BR>&nbsp;参数.六：pInt_Port<BR>&nbsp; 
 In/Out：Out<BR>&nbsp; 类型：字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输出端口</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
 <H1>备注</H1>
-<P>当状态为ENUM_RFCCOMPONENTS_PROXY_STATUS_USER需要做这一步</P>
+<P>完整验证后进行连接解析</P>
 <H1>示例</H1></body>
 </html>

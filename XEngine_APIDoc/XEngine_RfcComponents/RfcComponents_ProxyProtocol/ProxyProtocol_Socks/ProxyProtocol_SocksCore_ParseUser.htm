@@ -20,29 +20,27 @@ html,body {
 <H1>功能</H1>
 <P>解析验证用户信息</P>
 <H1>语法</H1>
-<P>BOOL ProxyProtocol_SocksCore_ParseUser(LPCSTR 
-lpszClientID, LPCSTR lpszMsgBuffer, int nMsgLen, 
-ENUM_RFCCOMPONENTS_PROXYSOCKS_AUTH* penAuthType, CHAR* ptszUser = NULL, CHAR* 
+<P>  
+ bool&nbsp;ProxyProtocol_SocksCore_ParseUser(LPCXSTR lpszMsgBuffer, int nMsgLen, 
+ENUM_RFCCOMPONENTS_PROXYSOCKS_AUTH* penAuthType, XCHAR* ptszUser = NULL, XCHAR* 
 ptszPass = NULL)</P>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
-<P>&nbsp;参数.一：lpszClientID<BR>&nbsp; In/Out：In<BR>&nbsp; 
+<P>&nbsp;参数.一：lpszMsgBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入客户端ID<BR>&nbsp;参数.二：lpszMsgBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入要解析的缓冲区内容<BR>&nbsp;参数.三：nMsgLen<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入缓冲区大小<BR>&nbsp;参数.四：penAuthType<BR>&nbsp; 
+意思：输入要解析的缓冲区内容<BR>&nbsp;参数.二：nMsgLen<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入缓冲区大小<BR>&nbsp;参数.三：penAuthType<BR>&nbsp; 
 In/Out：Out<BR>&nbsp; 类型：枚举型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输出客户端请求的验证方法<BR>&nbsp;参数.五：ptszUser<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+意思：输出客户端请求的验证方法<BR>&nbsp;参数.四：ptszUser<BR>&nbsp; In/Out：Out<BR>&nbsp; 
 类型：字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：输出用户名,只有你要求对方用户名密码才会有用户名密码,如果是匿名,是没有这些信息的<BR>&nbsp;参数.六：ptszPass<BR>&nbsp; 
+意思：输出用户名,只有你要求对方用户名密码才会有用户名密码,如果是匿名,是没有这些信息的<BR>&nbsp;参数.五：ptszPass<BR>&nbsp; 
 In/Out：Out<BR>&nbsp; 类型：字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输出密码</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
 <H1>备注</H1>
-<P>当状态为ENUM_RFCCOMPONENTS_PROXY_STATUS_AUTH需要做这一步<BR>如果是匿名登录,需要设置跳过此步骤</P>
+<P>匿名登录不需要这一步骤</P>
 <H1>示例</H1></body>
 </html>

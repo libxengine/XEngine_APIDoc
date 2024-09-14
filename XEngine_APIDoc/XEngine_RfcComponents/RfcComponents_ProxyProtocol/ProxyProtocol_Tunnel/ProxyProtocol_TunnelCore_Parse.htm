@@ -23,27 +23,27 @@ html,body {
 <H1>功能</H1> 
  <P>             解析客户端的隧道代理协议</P>
 <H1>语法 </H1>
-<P>BOOL ProxyProtocol_TunnelCore_Parse(LPCSTR lpszClientID, 
-LPCSTR lpszMsgBuffer, int nMsgLen, CHAR* ptszIPAddr, int* pInt_Port, CHAR* 
-ptszUserInfo, BOOL * pbConnect = NULL)</P>
+<P>   
+bool ProxyProtocol_TunnelCore_Parse(LPCXSTR lpszMsgBuffer, int nMsgLen, XCHAR* ptszIPAddr, int* pInt_Port, 
+XCHAR* ptszUserInfo, bool *pbConnect = NULL)</P>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
-<P>&nbsp;参数.一：lpszClientID<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入客户端ID<BR>&nbsp;参数.二：lpszMsgBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要解析的内容<BR>&nbsp;参数.三：nMsgLen<BR>&nbsp; 
+<P>&nbsp;参数.一：lpszMsgBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要解析的内容<BR>&nbsp;参数.二：nMsgLen<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入内容大小<BR>&nbsp;参数.四：ptszIPAddr<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+意思：输入内容大小<BR>&nbsp;参数.三：ptszIPAddr<BR>&nbsp; In/Out：Out<BR>&nbsp; 
 类型：字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输出解析到的地址,可能是IP或者域名<BR>&nbsp;参数.五：pInt_Port<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+意思：输出解析到的地址,可能是IP或者域名<BR>&nbsp;参数.四：pInt_Port<BR>&nbsp; In/Out：Out<BR>&nbsp; 
 类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输出得到的端口<BR>&nbsp;参数.六：ptszUserInfo<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+意思：输出得到的端口<BR>&nbsp;参数.五：ptszUserInfo<BR>&nbsp; In/Out：Out<BR>&nbsp; 
 类型：字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输出解析到的用户验证信息<BR>&nbsp;参数.七：pbConnect<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+意思：输出解析到的用户验证信息<BR>&nbsp;参数.六：pbConnect<BR>&nbsp; In/Out：Out<BR>&nbsp; 
 类型：逻辑型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：输出为CONNECT协议,如果返回真表示是正常的代理协议<BR>&nbsp;&nbsp;但是某些时候有些程序不支持隧道代理会直接请求数据,此值会为假,表示对方没有请求CONNECT代理协议<BR>&nbsp;&nbsp;那么要不要继续交由调用者来继续</P>
+意思：输出为CONNECT协议,如果返回真表示是正常的代理协议<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+但是某些时候有些程序不支持隧道代理会直接请求数据,此值会为假,表示对方没有请求CONNECT代理协议<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+那么要不要继续交由调用者来继续</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

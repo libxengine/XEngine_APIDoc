@@ -23,23 +23,21 @@ html,body {
 <H1>功能</H1> 
  <P>             打包一条协议</P>
 <H1>语法</H1>
-<P>BOOL ProxyProtocol_SocksCore_HdrPacket(LPCSTR 
-lpszClientID, CHAR* ptszMsgBuffer, int* pInt_Len, BYTE byValue)</P>
+<P>  
+ bool&nbsp;ProxyProtocol_SocksCore_HdrPacket(XCHAR* ptszMsgBuffer, int* pInt_Len, XBYTE byValue)</P>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
-<P>&nbsp;参数.一：lpszClientID<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入客户端ID<BR>&nbsp;参数.二：ptszMsgBuffer<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出打好包的内容<BR>&nbsp;参数.三：pInt_Len<BR>&nbsp; 
+<P>&nbsp;参数.一：ptszMsgBuffer<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出打好包的内容<BR>&nbsp;参数.二：pInt_Len<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输出包大小<BR>&nbsp;参数.四：byValue<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：字节型<BR>&nbsp; 
+意思：输出包大小<BR>&nbsp;参数.三：byValue<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：字节型<BR>&nbsp; 
 可空：N<BR>&nbsp; 意思：输入打包的值</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
 <H1>备注</H1>
-<P>根据状态自动打包协议<BR>ENUM_RFCCOMPONENTS_PROXY_STATUS_AUTH:参数4表示服务器验证类型<BR>ENUM_RFCCOMPONENTS_PROXY_STATUS_USER:参数4表示验证成功还是失败<BR>ENUM_RFCCOMPONENTS_PROXY_STATUS_CONNECT:参数4表示处理连接的结果</P>
+<P>&nbsp;</P>
 <H1>示例</H1></body>
 </html>
