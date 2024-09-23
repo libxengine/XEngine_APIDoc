@@ -25,30 +25,23 @@ html,body {
 <H1>语法</H1>
 <DIV 
 style="FONT-SIZE: 14px; FONT-FAMILY: Consolas, 'Courier New', monospace; WHITE-SPACE: pre; FONT-WEIGHT: normal; COLOR: #000000; LINE-HEIGHT: 19px; BACKGROUND-COLOR: #ffffff">
-<DIV>bool AVFilter_Video_MIXSend(XNETHANDLE xhToken, int 
-nIndex, uint8_t* ptszYBuffer, uint8_t* ptszUBuffer, uint8_t* ptszVBuffer, int 
-nYLen, int nULen, int nVLen)</DIV></DIV>
+<DIV>    
+    bool AVFilter_Video_MIXSend(XNETHANDLE xhToken, int 
+nIndex, uint8_t* ptszAVBuffer, int nAVLen)</DIV></DIV>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
-<P>&nbsp;参数.一：xhToken<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：网络句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要操作的过滤器句柄<BR>&nbsp;参数.二：nIndex<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入要操作的索引<BR>&nbsp;参数.三：ptszYBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：无符号字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：YUV中的Y<BR>&nbsp;参数.四：ptszUBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：无符号字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：YUV中的U<BR>&nbsp;参数.五：ptszVBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：无符号字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：YUV中的V<BR>&nbsp;参数.六：nYLen<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：Y缓冲区大小<BR>&nbsp;参数.七：nULen<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 
-可空：N<BR>&nbsp; 意思：U缓冲区大小<BR>&nbsp;参数.八：nVLen<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：V缓冲区大小</P>
+<P>&nbsp; In/Out：In<BR>&nbsp; 类型：网络句柄<BR>&nbsp; 
+可空：N<BR>&nbsp; 意思：输入要操作的过滤器句柄<BR>&nbsp;参数.二：nIndex<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要操作的索引<BR>&nbsp;参数.三：ptszAVBuffer<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：无符号字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：视频缓冲区<BR>&nbsp;参数.四：nAVLen<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 
+可空：N<BR>&nbsp; 意思：缓冲区大小</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
 <H1>备注</H1>
-<P>如果YUV是存在一个缓冲区,那么传递给ptszYBuffer和nYLen,其他设置NULL和0即可</P>
+<P>&nbsp;</P>
 <H1>示例</H1></body>
 </html>

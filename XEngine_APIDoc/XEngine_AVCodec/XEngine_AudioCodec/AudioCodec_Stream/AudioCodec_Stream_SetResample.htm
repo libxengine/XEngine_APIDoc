@@ -23,12 +23,14 @@ html,body {
 <H1>功能</H1> 
  <P>             音频重采样启用并且设置</P>
 <H1>语法</H1>
-<P>BOOL AudioCodec_Stream_SetResample(XNETHANDLE xhNet, 
-int* pInt_Len, int nSrcRate = 11025, int nDstRate =   
- 44100, ENUM_AVCOLLECT_AUDIOSAMPLEFORMAT enSrcSampleFmt =     ENUM_AVCOLLECT_AUDIO_SAMPLE_FMT_S16, 
-ENUM_AVCOLLECT_AUDIOSAMPLEFORMAT enDstSampleFmt = 
-ENUM_AVCOLLECT_AUDIO_SAMPLE_FMT_FLTP, int 
-nSrcChannel = 1, int nDstChannel = 2, int 
+<P>BOOL AudioCodec_Stream_SetResample(XNETHANDLE xhNet, int* 
+pInt_Len, int nSrcRate = 11025, int nDstRate =    
+44100, ENUM_AVCODEC_AUDIO_SAMPLEFMT enSrcSampleFmt =   
+     ENUM_AVCOLLECT_AUDIO_SAMPLE_FMT_S16, ENUM_AVCODEC_AUDIO_SAMPLEFMT enDstSampleFmt =   
+ ENUM_AVCOLLECT_AUDIO_SAMPLE_FMT_FLTP, int nSrcChannel =     1, 
+int nDstChannel = 
+  
+      2, int 
 nSrcNBSample = 0)</P>
 <P></P>
 <P></P>

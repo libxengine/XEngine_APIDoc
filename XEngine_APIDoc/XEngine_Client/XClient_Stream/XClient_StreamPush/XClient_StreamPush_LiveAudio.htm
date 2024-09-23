@@ -23,8 +23,8 @@ html,body {
 <H1>功能</H1> 
  <P>             推送音频数据到流中</P>
 <H1>语法 </H1>
-<P>BOOL XClient_StreamPush_LiveAudio(XHANDLE xhNet, 
-uint8_t* ptszPCMBuffer, int nLen, __int64x nPTSValue =   
+<P>bool XClient_StreamPush_LiveAudio(XHANDLE xhNet, 
+uint8_t* ptszAVBuffer, int nAVLen, __int64x nPTSValue =   
    0, __int64x nDuration =   
    0)</P>
 <P></P>
@@ -33,8 +33,8 @@ uint8_t* ptszPCMBuffer, int nLen, __int64x nPTSValue =
 <H1>参数</H1>
 <P>&nbsp;参数.一：xhNet<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入要操作的RTMP客户端<BR>&nbsp;参数.二：ptszPCMBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要推送的数据<BR>&nbsp;参数.三：nLen<BR>&nbsp; 
+意思：输入要操作的RTMP客户端<BR>&nbsp;参数.二：ptszAVBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要推送的数据<BR>&nbsp;参数.三：nAVLen<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输入数据大小<BR>&nbsp;参数.四：nPTSValue<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 
 可空：Y<BR>&nbsp; 意思：自定义PTS时间戳<BR>&nbsp;参数.五：nDuration<BR>&nbsp; 
