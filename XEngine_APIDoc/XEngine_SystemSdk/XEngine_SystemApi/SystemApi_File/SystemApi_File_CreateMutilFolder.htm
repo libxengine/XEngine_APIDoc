@@ -23,16 +23,14 @@ html,body {
 <H1>功能</H1> 
  <P>             创建多级目录</P>
 <H1>语法</H1>
-<P>BOOL SystemApi_File_CreateMutilFolder(LPCSTR 
-lpszFolder,DWORD dwFloder = 0)</P>
+<P>  
+BOOL SystemApi_File_CreateMutilFolder(LPCSTR  lpszFolder)</P>
 <P></P>
 <P></P>
 <H1>参数 </H1>
 <P>&nbsp;参数.一：lpszFolder<BR>&nbsp;&nbsp; 
-In/Out：In<BR>&nbsp;&nbsp; 类型：常量字符指针<BR>&nbsp;&nbsp; 可空：N<BR>&nbsp;&nbsp; 
-意思：要创建的目录<BR>&nbsp;参数.二：dwFloder<BR>&nbsp;&nbsp; In/Out：In<BR>&nbsp;&nbsp; 
-类型：双字<BR>&nbsp;&nbsp; 可空：Y<BR>&nbsp;&nbsp; 意思：要创建的目录的权限，如果指定0.那么表示任何权限的人都可以访问 读取 
-写入 执行</P>
+In/Out：In<BR>&nbsp;&nbsp; 类型：常量字符指针<BR>&nbsp;&nbsp; 可空：N<BR>   
+&nbsp;&nbsp; 意思：要创建的目录</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
