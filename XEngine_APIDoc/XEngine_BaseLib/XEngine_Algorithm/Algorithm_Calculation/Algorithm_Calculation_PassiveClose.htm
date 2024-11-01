@@ -23,14 +23,16 @@ html,body {
 <H1>功能</H1> 
  <P>             被动触发器关闭</P>
 <H1>语法</H1>
-<P>BOOL Algorithm_Calculation_PassiveClose(XHANDLE 
-pxhToken)</P>
+<P>BOOL Algorithm_Calculation_PassiveClose(XHANDLE pxhToken, 
+bool blParamDel =  
+false)</P>
 <P></P>
 <P></P>
 <H1>参数</H1>
-<P>&nbsp;参数.一：pxhToken<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：句柄<BR>&nbsp; 
-可空：N<BR>&nbsp; 意思：输入要操作的句柄</P>
+<P>&nbsp;参数.一：pxhToken<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要操作的句柄<BR>&nbsp;参数.二：blParamDel<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：删除自定义参数内存,使用此功能内存必须是malloc的才可以</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
