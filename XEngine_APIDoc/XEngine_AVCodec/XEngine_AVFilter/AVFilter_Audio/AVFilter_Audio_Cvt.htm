@@ -30,9 +30,11 @@ AVFilter_Audio_Cvt
 
 <DIV 
 style="FONT-SIZE: 14px; FONT-FAMILY: Consolas, 'Courier New', monospace; WHITE-SPACE: pre; FONT-WEIGHT: normal; COLOR: #000000; LINE-HEIGHT: 19px; BACKGROUND-COLOR: #ffffff"> 
- <DIV><SPAN style="COLOR: #000000">bool 
-AVFilter_Audio_Cvt(XNETHANDLE xhToken, uint8_t* ptszSrcBuffer, int nSrcLen, 
-uint8_t* ptszDstBuffer, int* pInt_DstLen)</SPAN>             </DIV></DIV>
+ <DIV>bool AVFilter_Audio_Cvt(XNETHANDLE xhToken, uint8_t* 
+ptszSrcBuffer, int nSrcLen, AVFILTER_MSGBUFFER*** pppSt_MSGBuffer, int* 
+pInt_ListCount, int64_t nPTS =    
+      
+0)             </DIV></DIV>
 <P></P>
 <P></P>
 <P></P>
@@ -40,12 +42,15 @@ uint8_t* ptszDstBuffer, int* pInt_DstLen)</SPAN>             </DIV></DIV>
 <P>&nbsp;参数.一：xhToken<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：网络句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输入要操作的过滤器句柄<BR>&nbsp;参数.二：ptszSrcBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：无符号字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：要转换的数据缓冲区<BR>&nbsp;参数.三：nSrcLen<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：转换数据缓冲区大小<BR>&nbsp;参数.四：ptszDstBuffer<BR>&nbsp; In/Out：Out<BR>&nbsp; 
 类型：无符号字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：转换后的数据缓冲区<BR>&nbsp;参数.五：pInt_DstLen<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：导出缓冲区大小</P>
+意思：要转换的数据缓冲区,可以为NULL<BR>&nbsp;参数.三：nSrcLen<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：转换数据缓冲区大小<BR>&nbsp;参数.四：pppSt_MSGBuffer<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：三级指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：转换后的数据缓冲区<BR>&nbsp;参数.五：pInt_ListCount<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出缓冲区列表个数<BR>&nbsp;参数.六：nPTS<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：自定义PTS,原始音频可变帧率需要传递,比如best_effort_timestamp,固定可以0</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

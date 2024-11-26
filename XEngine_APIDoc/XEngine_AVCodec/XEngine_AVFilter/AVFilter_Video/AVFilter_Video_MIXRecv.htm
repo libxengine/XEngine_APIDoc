@@ -30,18 +30,18 @@ AVFilter_Video_MIXRecv
 
 <DIV 
 style="FONT-SIZE: 14px; FONT-FAMILY: Consolas, 'Courier New', monospace; WHITE-SPACE: pre; FONT-WEIGHT: normal; COLOR: #000000; LINE-HEIGHT: 19px; BACKGROUND-COLOR: #ffffff"> 
- <DIV>       bool AVFilter_Video_MIXRecv(XNETHANDLE xhToken, uint8_t* ptszBuffer, int* pInt_Len)</DIV></DIV>
+ <DIV>       bool AVFilter_Video_MIXRecv(XNETHANDLE xhToken, AVFILTER_MSGBUFFER*** pppSt_MSGBuffer, int* pInt_ListCount)</DIV></DIV>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：xhToken<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：网络句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入要操作的过滤器句柄<BR>&nbsp;参数.二：ptszBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：无符号字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：导出添加过滤器后的数据缓冲区<BR>&nbsp;参数.三：pInt_Len<BR>&nbsp; In/Out：In/Out<BR>&nbsp; 
+意思：输入要操作的过滤器句柄<BR>&nbsp;参数.二：pppSt_MSGBuffer<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：三级指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：导出添加过滤器后的数据缓冲区<BR>&nbsp;参数.三：pInt_ListCount<BR>&nbsp; In/Out：Out<BR>&nbsp; 
 类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入提供的缓冲区大小,输出转换后缓冲区大小</P>
+意思：输出缓冲区列表个数</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
