@@ -1,0 +1,127 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Cryption_XCrypto_Encoder</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<H1>函数</H1>
+<P>
+Cryption_XCrypto_Encoder
+</P>
+<H1>
+功能
+
+</H1>
+<P>X加密函数</P>
+<H1 >
+ 语法</H1>
+<P >
+      
+     bool Cryption_XCrypto_Encoder(LPCXSTR lpszMsgBuffer, 
+int* pInt_MsgLen, XBYTE* 
+      
+          
+ptszMsgBuffer, LPCXSTR lpszKeys = 
+NULL, bool bXEngineHdr = 
+true)</P>
+
+<P></P> 
+ <P>             </P>
+<H1>参数</H1>
+<P>&nbsp;参数.一：lpszMsgBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入要加密的缓冲区<BR>&nbsp;参数.二：pInt_MsgLen<BR>&nbsp; In/Out：In/Out<BR>&nbsp; 
+类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入要加密缓冲区大小,输出加密后的缓冲区大小<BR>&nbsp;参数.三：ptszMsgBuffer<BR>&nbsp; 
+In/Out：Out<BR>&nbsp; 类型：字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输出加密好的缓冲区,如果此参数为NULL,参数二将被设置为需要的大小<BR>&nbsp;参数.四：lpszKeys<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输入要加密的密码,如果为空表示这个数据不需要单独的密码加密<BR>&nbsp;参数.五：bXEngineHdr<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：是否包含XEngine的协议头,方便用于区分加密信息,可以不带就设置否</P>
+<P></P>
+<H1>返回值</H1>
+<P>类型：逻辑型<BR>意思：是否成功</P>
+<H1>备注</H1>
+<P>bXEngineHdr为false,大小输入多少就是多少</P>
+<H1>示例</H1>
+<DIV 
+style="FONT-SIZE: 12px; FONT-FAMILY: Consolas, 'Courier New', monospace; WHITE-SPACE: pre; FONT-WEIGHT: normal; COLOR: #000000; LINE-HEIGHT: 16px; BACKGROUND-COLOR: #fffffe">
+<DIV><SPAN style="COLOR: #0000ff">int</SPAN><SPAN style="COLOR: #000000"> 
+XCrypto_Test()</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">{</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;LPCTSTR lpszFile = 
+_T(</SPAN><SPAN 
+style="COLOR: #a31515">"K:\\netengineapp\\NetEngine_WINApps\\Debug\\test.Key"</SPAN><SPAN 
+style="COLOR: #000000">);</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #0000ff">int</SPAN><SPAN style="COLOR: #000000"> nLen = 
+strlen(lpszFile);</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;UCHAR 
+tszEncoder[</SPAN><SPAN style="COLOR: #09885a">2048</SPAN><SPAN 
+style="COLOR: #000000">];</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;CHAR 
+tszDecoder[</SPAN><SPAN style="COLOR: #09885a">2048</SPAN><SPAN 
+style="COLOR: #000000">];</SPAN></DIV><BR>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;memset(tszEncoder, 
+</SPAN><SPAN style="COLOR: #a31515">'</SPAN><SPAN 
+style="COLOR: #000000">\</SPAN><SPAN style="COLOR: #09885a">0</SPAN><SPAN 
+style="COLOR: #a31515">'</SPAN><SPAN style="COLOR: #000000">, </SPAN><SPAN 
+style="COLOR: #0000ff">sizeof</SPAN><SPAN 
+style="COLOR: #000000">(tszEncoder));</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;memset(tszDecoder, 
+</SPAN><SPAN style="COLOR: #a31515">'</SPAN><SPAN 
+style="COLOR: #000000">\</SPAN><SPAN style="COLOR: #09885a">0</SPAN><SPAN 
+style="COLOR: #a31515">'</SPAN><SPAN style="COLOR: #000000">, </SPAN><SPAN 
+style="COLOR: #0000ff">sizeof</SPAN><SPAN 
+style="COLOR: #000000">(tszDecoder));</SPAN></DIV><BR>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #0000ff">if</SPAN><SPAN style="COLOR: #000000"> 
+(!OPenSsl_XCrypto_Encoder(lpszFile, &amp;nLen, tszEncoder, </SPAN><SPAN 
+style="COLOR: #a31515">"123123"</SPAN><SPAN 
+style="COLOR: #000000">))</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;{</SPAN></DIV>
+<DIV><SPAN 
+style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #0000ff">return</SPAN><SPAN style="COLOR: #000000"> -</SPAN><SPAN 
+style="COLOR: #09885a">1</SPAN><SPAN style="COLOR: #000000">;</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;}</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #0000ff">for</SPAN><SPAN style="COLOR: #000000"> (</SPAN><SPAN 
+style="COLOR: #0000ff">int</SPAN><SPAN style="COLOR: #000000"> i = </SPAN><SPAN 
+style="COLOR: #09885a">0</SPAN><SPAN style="COLOR: #000000">; i &lt; nLen; 
+i++)</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;{</SPAN></DIV>
+<DIV><SPAN 
+style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(</SPAN><SPAN 
+style="COLOR: #a31515">"%02X "</SPAN><SPAN style="COLOR: #000000">, 
+tszEncoder[i]);</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;}</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;printf(</SPAN><SPAN 
+style="COLOR: #a31515">"\r\n%s\n"</SPAN><SPAN style="COLOR: #000000">, 
+tszEncoder);</SPAN></DIV>
+<DIV><SPAN 
+style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN></DIV>
+<DIV><SPAN 
+style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;OPenSsl_XCrypto_Decoder((LPCSTR)tszEncoder, 
+&amp;nLen, tszDecoder, </SPAN><SPAN style="COLOR: #a31515">"123123"</SPAN><SPAN 
+style="COLOR: #000000">);</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;printf(</SPAN><SPAN 
+style="COLOR: #a31515">"%s\n"</SPAN><SPAN style="COLOR: #000000">, 
+tszDecoder);</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
+style="COLOR: #0000ff">return</SPAN><SPAN style="COLOR: #000000"> </SPAN><SPAN 
+style="COLOR: #09885a">0</SPAN><SPAN style="COLOR: #000000">;</SPAN></DIV>
+<DIV><SPAN style="COLOR: #000000">}</SPAN></DIV></DIV></body>
+</html>

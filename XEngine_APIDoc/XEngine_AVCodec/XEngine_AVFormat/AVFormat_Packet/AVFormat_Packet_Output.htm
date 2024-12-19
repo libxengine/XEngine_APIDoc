@@ -23,10 +23,11 @@ html,body {
 
 <P>打开输出文件信息</P> 
  <H1>             语法</H1>
-<P>bool&nbsp;AVFormat_Packet_Output(XHANDLE xhNet, LPCSTR 
-lpszFile = NULL, double dlAVTimeStart = 0, double dlAVTimeEnd = 0, 
-CALLBACK_XENGINE_AVCODER_AVPACKET_FILEPACKET_FILERW fpCall_FileWrite = NULL, 
-LPVOID lParam = NULL)</P>
+<P>bool AVFormat_Packet_Output(XHANDLE xhNet, LPCXSTR 
+lpszFile = NULL, double dlAVTimeStart = 0, double dlAVTimeEnd = 0, CALLBACK_XENGINE_AVCODEC_AVFORMAT_PACKETRW 
+fpCall_FileWrite = NULL, XPVOID lParam = NULL, XENGINE_KEYVALUE*** pppSt_KEYValue = NULL, 
+int nListCount =  
+   0)</P>
 <P></P>
 <P></P>
 <P></P>
@@ -41,7 +42,10 @@ In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp;
 意思：要打包的结束时间<BR>&nbsp;参数.五：fpCall_FileWrite<BR>&nbsp; In/Out：In/Out<BR>&nbsp; 
 类型：回调函数<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：内存会写数据回调,如果不想输出到文件,可以使用此回调<BR>&nbsp;参数.六：lParam<BR>&nbsp; 
-In/Out：In/Out<BR>&nbsp; 类型：无类型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：回调函数自定义参数</P>
+In/Out：In/Out<BR>&nbsp; 类型：无类型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：回调函数自定义参数<BR>&nbsp;参数.七：pppSt_KEYValue<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：三级指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：自定义参数列表<BR>&nbsp;参数.八：nListCount<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：参数列表个数</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

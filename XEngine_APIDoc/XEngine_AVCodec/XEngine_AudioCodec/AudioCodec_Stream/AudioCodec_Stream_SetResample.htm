@@ -24,10 +24,10 @@ html,body {
  <P>             音频重采样启用并且设置</P>
 <H1>语法</H1>
 <P>BOOL AudioCodec_Stream_SetResample(XNETHANDLE xhNet, int* 
-pInt_Len, int nSrcRate = 11025, int nDstRate =    
+pInt_Len, int nSrcRate = 44100, int nDstRate =    
 44100, ENUM_AVCODEC_AUDIO_SAMPLEFMT enSrcSampleFmt =   
      ENUM_AVCOLLECT_AUDIO_SAMPLE_FMT_S16, ENUM_AVCODEC_AUDIO_SAMPLEFMT enDstSampleFmt =   
- ENUM_AVCOLLECT_AUDIO_SAMPLE_FMT_FLTP, int nSrcChannel =     1, 
+ ENUM_AVCOLLECT_AUDIO_SAMPLE_FMT_FLTP, int nSrcChannel =     2, 
 int nDstChannel = 
   
       2, int 
@@ -54,7 +54,6 @@ In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思�
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
 <H1>备注</H1>
-<P>重采样主要为了采样格式转换,比如某些格式PCM为S16,要编码成AAC,需要转成FLTP</P>
-<P>解码重复用一般只采样格式转换,通道,采样率在编码做转换</P>
+<P>重采样主要为了采样格式转换,比如某些格式PCM为S16,要编码成AAC,需要转成FLTP<BR>解码重复用一般只采样格式转换,通道,采样率在编码做转换<BR>解码器目标采样率不能高于原采样率</P>
 <H1>示例</H1></body>
 </html>
