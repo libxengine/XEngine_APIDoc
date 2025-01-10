@@ -16,15 +16,15 @@ html,body {
 
 <body>
 <H1>函数</H1>
-<P>BaseLib_Time_GetSysTime</P>
-<H1>功能</H1>
-<P>  获取系统时间</P>
+<P>BaseLib_Time_GetTimeOfday </P>
+<H1>功能 </H1>
+<P>与LINUX gettimeofday 函数功能相同，意思参考LINUX的</P>
 <H1>
-语法 
+语法
 </H1>
 <P>
- BOOL BaseLib_Time_GetSysTime(LPXENGINE_LIBTIMER 
-pSt_LibTimer)
+BOOL BaseLib_Time_GetTimeOfday(XENGINE_VALTIME * 
+pSt_Timeval)
 
 </P>
 <P></P>
@@ -32,11 +32,18 @@ pSt_LibTimer)
 <H1 >
   参数</H1>
 
-<P> &nbsp;</P>
+<P>&nbsp;</P>
 <P></P>
 <H1>返回值</H1>
-<P>类型：逻辑型<BR>意思：是否成功</P>
-<H1>备注</H1>
-<P>&nbsp;</P>
+<P>类型：逻辑型
+<BR>  意思：是否成功</P>
+<H1>
+备注 
+</H1>
+<P>
+   
+参数二被省略了，默认为NULL
+
+</P>
 <H1>示例</H1></body>
 </html>
