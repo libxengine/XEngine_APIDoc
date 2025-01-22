@@ -23,9 +23,10 @@ html,body {
 <H1>功能</H1> 
  <P>             SSL安全发送数据</P>
 <H1>语法</H1>
-<P>BOOL Cryption_Client_SendMsgEx(XHANDLE xhNet, LPCSTR 
-lpszMsgBuffer, int nLen, CHAR * ptszMsgBuffer = NULL, int* pInt_MsgLen = 
-NULL)</P>
+<P>bool Cryption_Client_SendMsgEx(XHANDLE xhNet, LPCXSTR 
+lpszMsgBuffer, int nLen, XCHAR* ptszMsgBuffer =    
+   NULL, int* pInt_MsgLen = NULL, int nTimeout = 
+0)</P>
 <P></P>
 <P></P>
 <P></P>
@@ -37,7 +38,9 @@ In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp;
 类型：字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：输出要发送的加密后的数据,如果使用自定义收发套接字<BR>&nbsp;参数.四：pInt_MsgLen<BR>&nbsp; 
 In/Out：Out<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：输出发送加密数据缓冲区大小</P>
+意思：输出发送加密数据缓冲区大小<BR>&nbsp;参数.五：nTimeout<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输入超时时间,单位毫秒,0不启用</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

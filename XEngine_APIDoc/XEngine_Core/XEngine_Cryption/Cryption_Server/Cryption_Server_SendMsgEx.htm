@@ -23,9 +23,10 @@ html,body {
 <H1>功能</H1> 
  <P>             发送安全数据</P>
 <H1>语法</H1>
-<P>BOOL Cryption_Server_SendMsgEx(XHANDLE xhToken, LPCSTR 
-lpszClientAddr,LPCSTR lpszMsgBuffer,int nLen, CHAR * ptszMsgBuffer = NULL, int* 
-pInt_MsgLen = NULL)</P>
+<P>bool Cryption_Server_SendMsgEx(XHANDLE xhToken, LPCXSTR 
+lpszClientAddr,LPCXSTR lpszMsgBuffer,int nLen, XCHAR * ptszMsgBuffer =    
+   NULL, int* pInt_MsgLen = NULL, int 
+nTimeout = 0)</P>
 <P></P>
 <P></P>
 <H1>参数</H1>
@@ -37,7 +38,9 @@ In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp;
 In/Out：Out<BR>&nbsp; 类型：字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：如果使用了自定义发送数据,输出要发送的数据缓冲区<BR>&nbsp;参数.五：pInt_MsgLen<BR>&nbsp; 
 In/Out：In/Out<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：输入提供的缓冲区大小,提供的缓冲区大小,必须比参数三大</P>
+意思：输入提供的缓冲区大小,提供的缓冲区大小,必须比参数三大<BR>&nbsp;参数.六：nTimeout<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输入超时时间,单位毫秒,0不启用</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

@@ -23,8 +23,9 @@ html,body {
 <H1>功能</H1> 
  <P>             读取数据到一段新的内存中</P>
 <H1>语法</H1>
-<P>BOOL Cryption_Client_RecvMemoryEx(XHANDLE xhNet, CHAR** 
-pptszMsgBuffer, int* pInt_MsgLen, LPCSTR lpszMsgBuffer = NULL, int nMsgLen = 
+<P>bool Cryption_Client_RecvMemoryEx(XHANDLE xhNet, XCHAR** 
+pptszMsgBuffer, int* pInt_MsgLen, LPCXSTR lpszMsgBuffer =    
+  NULL, int nMsgLen = 0, int nTimeout = 
 0)</P>
 <P></P>
 <P></P>
@@ -37,7 +38,9 @@ pptszMsgBuffer, int* pInt_MsgLen, LPCSTR lpszMsgBuffer = NULL, int nMsgLen =
 意思：输出接受到的大小<BR>&nbsp;参数.三：lpszMsgBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：输入你套接字接受的数据缓冲区,如果你使用自定义收发数据套接字模式<BR>&nbsp;参数.四：nMsgLen<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入收到的数据大小</P>
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输入收到的数据大小<BR>&nbsp;参数.五：nTimeout<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入超时时间,单位毫秒,0不启用</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

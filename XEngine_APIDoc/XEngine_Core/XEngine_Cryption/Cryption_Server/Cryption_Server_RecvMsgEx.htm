@@ -27,9 +27,11 @@ Cryption_Server_RecvMsgEx
 <H1 >
  语法</H1>
 <P >
-  BOOL Cryption_Server_RecvMsgEx(XHANDLE xhToken, LPCSTR 
-lpszClientAddr, CHAR * ptszMsgBuffer, int* pInt_MsgLen, LPCSTR lpszMsgBuffer = 
-NULL, int nMsgLen = 0)</P>
+  bool Cryption_Server_RecvMsgEx(XHANDLE xhToken, LPCXSTR 
+lpszClientAddr, XCHAR * ptszMsgBuffer, int* pInt_MsgLen, LPCXSTR lpszMsgBuffer =
+      
+     NULL, int nMsgLen = 
+0, int nTimeout = 0)</P>
 
 <P></P> 
  <P>             </P>
@@ -42,9 +44,11 @@ NULL, int nMsgLen = 0)</P>
 类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输入提供的缓冲区大小(必须比参数五大),输出缓冲区大小<BR>&nbsp;参数.四：lpszMsgBuffer<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：如果bSSocket为FALSE,你RECV的数据需要投递给最后两个参数<BR>&nbsp;参数.五：nMsgLen<BR>&nbsp; 
+意思：如果bSSocket为false,你RECV的数据需要投递给最后两个参数<BR>&nbsp;参数.五：nMsgLen<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：输入提供的缓冲区大小,输出接收到的缓冲区大小</P>
+意思：输入提供的缓冲区大小,输出接收到的缓冲区大小<BR>&nbsp;参数.六：nTimeout<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输入超时时间,单位毫秒,0不启用</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

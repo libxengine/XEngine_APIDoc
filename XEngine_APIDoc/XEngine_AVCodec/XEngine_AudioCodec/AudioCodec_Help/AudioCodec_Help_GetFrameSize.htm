@@ -23,22 +23,20 @@ html,body {
 <H1>功能</H1> 
  <P>             获取一个音频帧的完整输入输出大小</P>
 <H1>语法</H1>
-<P>BOOL AudioCodec_Help_GetFrameSize(int* pInt_Len, int 
+<P>  int AudioCodec_Help_GetFrameSize(int 
 nChannel, int nSampleSize, ENUM_AVCODEC_AUDIO_SAMPLEFMT enAudioFmt)</P>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
-<P>&nbsp;参数.一：pInt_Len<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出获取到的大小<BR>&nbsp;参数.二：nChannel<BR>&nbsp; 
+<P>&nbsp;参数.一：nChannel<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入音频通道个数<BR>&nbsp;参数.二：nSampleSize<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入音频通道个数<BR>&nbsp;参数.三：nSampleSize<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入音频采样大小,这里提供一个参考值,AAC:1024,MP3:1152<BR>&nbsp;参数.四：enAudioFmt<BR>&nbsp; 
+意思：输入音频采样大小,这里提供一个参考值,AAC:1024,MP3:1152<BR>&nbsp;参数.三：enAudioFmt<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入音频的采样格式</P>
 <P></P>
 <H1>返回值</H1>
-<P>类型：逻辑型<BR>意思：是否成功</P>
+<P>类型：整数型<BR>意思：返回每帧所需内存大小</P>
 <H1>备注</H1>
 <P>上面的输入参数都应该是由输入源提供出来的<BR>通过此参数你可以知道每次要读写多少大小才是一个完整的音频帧</P>
 <H1>示例</H1></body>
