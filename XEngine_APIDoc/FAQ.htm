@@ -72,5 +72,10 @@ XClient_OPenSsl_GetKeyEx
 <P> 
  
 8.问:为什么只有TCPXCore的高性能客户端函数库,没有UDP高性能的客户端函数</P>
-<P>&nbsp;&nbsp;&nbsp;答:无论TCP还是UDP的XCore,内部都是使用IOCP,EPOLL,KEVENT实现,UDP的XCore可以直接使用XEngine_Core模块下的UDPXCore服务端函数实现客户端的功能.</P></body>
+<P>&nbsp;&nbsp;&nbsp;答:无论TCP还是UDP的XCore,内部都是使用IOCP,EPOLL,KEVENT实现,UDP的XCore可以直接使用XEngine_Core模块下的UDPXCore服务端函数实现客户端的功能.</P>
+<P>9.问:UNICODE和ANSI版本字符串操作函数有什么区别,什么时候使用?</P>
+<P>&nbsp;&nbsp; 
+答:我们目前使用的UTF8的代码集.一般情况下是支持多语言处理的,但是,UTF8毕竟不是标准UNICODE处理方法,在某些特殊字符或者语言下可能会处理失败,如果可以,我们建议你使用UNICODE版本的字符串处理函数.</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+目前我们默认的函数式Ansi UTF8的.UNICODE的版本函数式W结尾,ANSI是A结尾的函数库</P></body>
 </html>

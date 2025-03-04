@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>AVHelp_MetaInfo_GetTime</title>
+<title>AVHelp_MetaInfo_GetStartTime</title>
 <meta name="GENERATOR" content="WinCHM">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style>
@@ -15,16 +15,13 @@ html,body {
 </head>
 
 <body>
-<H1 >
- 函数</H1>
-<P >
-  AVHelp_MetaInfo_GetTime</P>
-
-<H1>功能</H1> 
- <P>             获取时间信息</P>
+<H1>函数</H1>
+<P>AVHelp_MetaInfo_GetStartTime</P>
+<H1>功能</H1>
+<P>获取媒体流开始时间</P>
 <H1>语法</H1>
-<P>bool AVHelp_MetaInfo_GetTime(LPCXSTR lpszFile, int 
-nAVIndex, double* pdlTime = NULL, AVCODEC_TIMEBASE* pSt_AVTime = NULL)</P>
+<P>    
+bool AVHelp_MetaInfo_GetStartTime(LPCXSTR lpszFile,  int nAVIndex, double*  pdlTime)</P>
 <P></P>
 <P></P>
 <P></P>
@@ -32,10 +29,8 @@ nAVIndex, double* pdlTime = NULL, AVCODEC_TIMEBASE* pSt_AVTime = NULL)</P>
 <P>&nbsp;参数.一：lpszFile<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要获取的文件<BR>&nbsp;参数.二：nAVIndex<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入索引,-1表示获取封包时间&gt;-1获取流时间&nbsp;参数.三：pdlTime<BR>&nbsp; In/Out：Out<BR>&nbsp; 类型：浮点型<BR>&nbsp; 
-可空：Y<BR>&nbsp; 意思：输出媒体总时长<BR>&nbsp;参数.四：pSt_AVTime<BR>&nbsp; 
-In/Out：Out<BR>&nbsp; 类型：数据结构指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：输出媒体时间基</P>
+意思：输入索引<BR>&nbsp;参数.三：pdlTime<BR>&nbsp; In/Out：Out<BR>&nbsp; 类型：浮点型<BR>&nbsp; 
+可空：Y<BR>&nbsp; 意思：输出开始时间,比如0.12 秒开始</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
