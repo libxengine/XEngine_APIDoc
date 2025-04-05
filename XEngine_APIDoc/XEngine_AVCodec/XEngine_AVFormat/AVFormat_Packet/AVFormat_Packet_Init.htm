@@ -24,15 +24,20 @@ html,body {
  <P>             初始化一个打包器</P>
 <H1>语法</H1>
 <P>  XHANDLE 
-AVFormat_Packet_Init(CALLBACK_NETENGINE_AVCODER_AVPACKET_NOTIFY fpCall_AVNotify = NULL, LPVOID 
-lPararm = NULL)</P>
+AVFormat_Packet_Init(CALLBACK_XENGINE_AVCODEC_AVFORMAT_NOTIFY fpCall_AVNotify = 
+  NULL, 
+XPVOID lPararm = NULL, XENGINE_PROTOCOL_AVINFO* 
+pSt_AVProtocol = NULL)</P>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
-<P>&nbsp;参数.一：fpCall_AVNotify<BR>&nbsp; In/Out：In/Out<BR>&nbsp; 
-类型：回调函数<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：打包通知回调<BR>&nbsp;参数.二：lPararm<BR>&nbsp; 
-In/Out：In/Out<BR>&nbsp; 类型：无类型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：回调函数自定义参数</P>
+<P>&nbsp;参数.一：fpCall_AVNotify<BR>&nbsp; 
+In/Out：In/Out<BR>&nbsp; 类型：回调函数<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：打包通知回调<BR>&nbsp;参数.二：lPararm<BR>&nbsp; In/Out：In/Out<BR>&nbsp; 
+类型：无类型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：回调函数自定义参数<BR>&nbsp;参数.三：pSt_AVProtocol<BR>&nbsp; In/Out：In/Out<BR>&nbsp; 
+类型：数据结构指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入打包的音视频信息</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：句柄型

@@ -23,8 +23,9 @@ html,body {
 <H1>功能</H1> 
  <P>             设置日志输出颜色,仅仅控制台有效</P>
 <H1>语法</H1>
-<P>BOOL HelpComponents_XLog_SetLogColor(XHANDLE xhLog, 
-HELPCOMPONENTS_XLOG_COLOR *pSt_XLogColor)</P>
+<P>bool HelpComponents_XLog_SetLogColor(XHANDLE xhLog, 
+HELPCOMPONENTS_XLOG_COLOR *pSt_XLogColor =   
+ NULL)</P>
 <P></P>
 <P></P>
 <P></P>
@@ -32,7 +33,7 @@ HELPCOMPONENTS_XLOG_COLOR *pSt_XLogColor)</P>
 <P>&nbsp;参数.一：xhLog<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：日志句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输入要操作的日志句柄<BR>&nbsp;参数.二：pSt_XLogColor<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：数据结构指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：要设置的打印的颜色</P>
+类型：数据结构指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：要设置的打印的颜色.为空表示还原</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
