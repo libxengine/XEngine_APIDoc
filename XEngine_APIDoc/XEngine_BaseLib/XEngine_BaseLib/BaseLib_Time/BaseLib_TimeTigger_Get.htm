@@ -24,15 +24,15 @@ html,body {
 <P>获取一个触发器开始与当前结束时间间隔</P> 
  <H1>             语法</H1>
 <P>bool BaseLib_TimeTigger_Get(XHANDLE pxhTimer, int 
-nIDEvent, __int64x *pInt_MillTimer)</P>
+nIDEvent, __int64x* pInt_Timer)</P>
 <P></P>
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：pxhTimer<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：触发器句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要操作的触发器<BR>&nbsp;参数.二：nIDEvent<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入触发器ID<BR>&nbsp;参数.三：pInt_MillTimer<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出时间间隔,单位纳秒,可以计算一段代码执行时间</P>
+意思：输入触发器ID<BR>&nbsp;参数.三：pInt_Timer<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出时间间隔,根据输入的参数类型决定此类型,支持秒,毫秒,微妙,纳秒</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

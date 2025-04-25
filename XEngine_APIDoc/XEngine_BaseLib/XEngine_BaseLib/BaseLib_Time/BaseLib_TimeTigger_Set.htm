@@ -23,23 +23,21 @@ html,body {
 
 <P>设置添加一个触发器</P> 
  <H1>             语法</H1>
-<P>bool BaseLib_TimeTigger_Set(XHANDLE pxhTimer, int 
-nIDEvent, __int64x nMillTimer = 0, int nCount = 1)</P>
+<P>   
+bool BaseLib_TimeTigger_Set(XHANDLE pxhTimer,  int nIDEvent, XENGINE_LIBTIGGER*  pSt_TimeTigger)</P>
 <P></P>
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：pxhTimer<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：触发器句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要操作的触发器<BR>&nbsp;参数.二：nIDEvent<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入触发器ID.这个ID不能重复<BR>&nbsp;参数.三：nMillTimer<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：输入间隔多久触发一次,单位纳秒<BR>&nbsp;参数.四：nCount<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入触发器触发次数.为-1表示一直触发,为0不触发</P>
+意思：输入触发器ID.这个ID不能重复<BR>&nbsp;参数.三：pSt_TimeTigger<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：数据结构指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入触发器属性</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
 <H1>备注</H1>
-<P>&nbsp;</P>
+<P>由于时间精度问题,请勿在同一时间设置TIME类型和其他类型,否则可能导致意外</P>
 <H1>示例</H1>
 <DIV 
 style="FONT-SIZE: 12px; FONT-FAMILY: Consolas, 'Courier New', monospace; WHITE-SPACE: pre; FONT-WEIGHT: normal; COLOR: #000000; LINE-HEIGHT: 16px; BACKGROUND-COLOR: #fffffe">

@@ -23,11 +23,13 @@ html,body {
 <H1>说明</H1> 
  <P>关闭指定的命名管道<BR>             </P>
 <H1>语法</H1>
-<P>BOOL NetCore_PIPNamed_Close(LPCSTR lpszPipName)</P>
+<P>bool NetCore_PIPNamed_Close(LPCXSTR lpszPipName, bool 
+bDelete =  true)</P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：lpszPipName<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：指定一个命名管道名称</P>
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：指定一个命名管道名称<BR>&nbsp;参数.二：bDelete<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：是否删除管道文件</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否关闭成功<BR></P>

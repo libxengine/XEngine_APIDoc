@@ -77,5 +77,9 @@ XClient_OPenSsl_GetKeyEx
 <P>&nbsp;&nbsp; 
 答:我们目前使用的UTF8的代码集.一般情况下是支持多语言处理的,但是,UTF8毕竟不是标准UNICODE处理方法,在某些特殊字符或者语言下可能会处理失败,如果可以,我们建议你使用UNICODE版本的字符串处理函数.</P>
 <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-目前我们默认的函数式Ansi UTF8的.UNICODE的版本函数式W结尾,ANSI是A结尾的函数库</P></body>
+目前我们默认的函数式Ansi UTF8的.UNICODE的版本函数式W结尾,ANSI是A结尾的函数库</P>
+<P> 
+ 10.问:回调函数中可以调用与之相关的其他操作函数吗?比如关闭.</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp; 答:不能,比如启动一个服务器,会注册回调函数,在close回调或者recv回调中都不能调用关闭客户端函数,是否需要关闭需要参考函数说明.大部分我们都会默认当客户端离开后者出错后自动清理资源.</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 如果强行调用关闭函数,可能会造成死锁.我们也不推荐你在回调函数中使用其他相关操作函数.</P></body>
 </html>

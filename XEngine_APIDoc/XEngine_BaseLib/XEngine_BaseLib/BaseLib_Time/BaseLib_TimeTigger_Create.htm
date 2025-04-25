@@ -26,62 +26,24 @@ BaseLib_TimeTigger_Create
 <P>创建一个触发计时器</P>
 <H1 >
  语法</H1>
-<P >&nbsp;bool BaseLib_TimeTigger_Create(XHANDLE* pxhTimer, 
-CALLBACK_XENGINE_LIB_BASELIB_TIME_TRIGGER fpCall_TTimer = NULL, XPVOID lParam = 
+<P >  &nbsp;XHANDLE 
+BaseLib_TimeTigger_Create(CALLBACK_XENGINE_LIB_BASELIB_TIME_TRIGGER fpCall_TTimer = NULL, XPVOID lParam = 
 NULL)</P>
 
 <P></P> 
  <P>             </P>
 <H1>参数</H1>
-<P>&nbsp;参数.一：pxhTimer<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：触发器句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输出创建好的句柄<BR>&nbsp;参数.二：fpCall_TTimer<BR>&nbsp; In/Out：In/Out<BR>&nbsp; 
-类型：回调函数<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：输入触发回调函数指针.为NULL表示只是一个获取时间间隔的函数<BR>&nbsp;参数.三：lParam<BR>&nbsp; 
+<P>&nbsp;参数.一：fpCall_TTimer<BR>&nbsp; 
+In/Out：In/Out<BR>&nbsp; 类型：回调函数<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输入触发回调函数指针.为NULL表示只是一个获取时间间隔的函数<BR>&nbsp;参数.二：lParam<BR>&nbsp; 
 In/Out：In/Out<BR>&nbsp; 类型：无类型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：回调函数自定义参数</P>
 <P></P>
 <H1>返回值</H1>
-<P>类型：逻辑型<BR>意思：是否成功</P>
+<P>类型：触发器句柄<BR>意思：输出创建好的句柄</P>
 <H1>备注</H1>
 <P>&nbsp;</P>
 <H1>示例</H1>
 <DIV 
 style="FONT-SIZE: 12px; FONT-FAMILY: Consolas, 'Courier New', monospace; WHITE-SPACE: pre; FONT-WEIGHT: normal; COLOR: #000000; LINE-HEIGHT: 16px; BACKGROUND-COLOR: #fffffe">
-<DIV><SPAN style="COLOR: #0000ff">int</SPAN><SPAN style="COLOR: #000000"> 
-test_TTrigger()</SPAN></DIV>
-<DIV><SPAN style="COLOR: #000000">{</SPAN></DIV>
-<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;XHANDLE 
-xhToken;</SPAN></DIV>
-<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-style="COLOR: #0000ff">if</SPAN><SPAN style="COLOR: #000000"> 
-(!BaseLib_OperatorTTigger_Create(&amp;xhToken))</SPAN></DIV>
-<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;{</SPAN></DIV>
-<DIV><SPAN 
-style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-style="COLOR: #0000ff">return</SPAN><SPAN style="COLOR: #000000"> -</SPAN><SPAN 
-style="COLOR: #09885a">1</SPAN><SPAN style="COLOR: #000000">;</SPAN></DIV>
-<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;}</SPAN></DIV>
-<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-style="COLOR: #0000ff">if</SPAN><SPAN style="COLOR: #000000"> 
-(!BaseLib_OperatorTTigger_Set(xhToken, </SPAN><SPAN 
-style="COLOR: #09885a">1</SPAN><SPAN style="COLOR: #000000">))</SPAN></DIV>
-<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;{</SPAN></DIV>
-<DIV><SPAN 
-style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-style="COLOR: #0000ff">return</SPAN><SPAN style="COLOR: #000000"> -</SPAN><SPAN 
-style="COLOR: #09885a">2</SPAN><SPAN style="COLOR: #000000">;</SPAN></DIV>
-<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;}</SPAN></DIV><BR>
-<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;__int64x nTTimer = 
-</SPAN><SPAN style="COLOR: #09885a">0</SPAN><SPAN 
-style="COLOR: #000000">;</SPAN></DIV>
-<DIV><SPAN 
-style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;BaseLib_OperatorTTigger_Get(xhToken, 
-</SPAN><SPAN style="COLOR: #09885a">1</SPAN><SPAN style="COLOR: #000000">, 
-&amp;nTTimer);</SPAN></DIV><BR>
-<DIV><SPAN 
-style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;BaseLib_OperatorTTigger_Destory(xhToken);</SPAN></DIV>
-<DIV><SPAN style="COLOR: #000000">&nbsp;&nbsp;&nbsp;&nbsp;</SPAN><SPAN 
-style="COLOR: #0000ff">return</SPAN><SPAN style="COLOR: #000000"> </SPAN><SPAN 
-style="COLOR: #09885a">0</SPAN><SPAN style="COLOR: #000000">;</SPAN></DIV>
-<DIV><SPAN style="COLOR: #000000">}</SPAN></DIV></DIV></body>
+<DIV><SPAN style="COLOR: #000000"></SPAN>&nbsp;</DIV></DIV></body>
 </html>
