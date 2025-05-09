@@ -21,11 +21,11 @@ html,body {
   BaseLib_Handle_Create</P>
 
 <H1>功能</H1> 
- <P>             创建一个网络句柄</P>
+ <P>             创建一个句柄</P>
 <H1>语法</H1>
-<P>BOOL BaseLib_Handle_Create(PXNETHANDLE pxhNet, 
-__int64x nStartRange = 1000000001, __int64x nEndRange = 9000000002, BOOL bAuto = 
-TRUE)</P>
+<P>   
+bool BaseLib_Handle_Create(PXNETHANDLE  pxhNet, __int64x nStartRange = 1000000001, __int64x nEndRange = 
+9000000002)</P>
 <P></P>
 <P></P>
 <H1>参数 </H1>
@@ -34,8 +34,7 @@ TRUE)</P>
 意思：导出一个创建成功的网络句柄<BR>&nbsp;参数.二：nStartRange<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：最低开始句柄随机数范围<BR>&nbsp;参数.三：nEndRange<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：最高结束句柄随机数范围<BR>&nbsp;参数.四：bAuto<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：自动处理,保证不重复</P>
+意思：最高结束句柄随机数范围<BR> </P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型 <BR>意思：是否创建成功</P>

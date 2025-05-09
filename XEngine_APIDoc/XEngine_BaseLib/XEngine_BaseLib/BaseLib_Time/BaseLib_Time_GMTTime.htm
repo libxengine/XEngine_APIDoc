@@ -23,9 +23,9 @@ html,body {
 <H1>功能</H1> 
  <P>             获取GMT时间字符串</P>
 <H1>语法</H1>
-<P>BOOL BaseLib_Time_GMTTime(CHAR *ptszTime, time_t nTTime =    
-  0, XENGINE_LIBTIME * 
-pSt_Timer = NULL)</P>
+<P>    bool     
+  BaseLib_Time_GMTTime(XCHAR *ptszTime, time_t 
+nTTime = 0)</P>
 <P></P>
 <P></P>
 <H1>参数</H1>
@@ -33,8 +33,7 @@ pSt_Timer = NULL)</P>
 类型：字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：导出获取到的GMT时间格式字符串<BR>&nbsp;参数.二：nTTime<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：时间类型<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：输入要转换的时间,如果为空,将使用本机时间<BR>&nbsp;参数.三：pSt_Timer<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：数据结构指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输出GMT时间结构体</P>
+意思：输入要转换的时间,如果为空,将使用本机时间<BR> </P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
