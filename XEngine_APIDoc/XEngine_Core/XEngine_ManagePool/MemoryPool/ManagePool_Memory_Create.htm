@@ -24,8 +24,9 @@ html,body {
 </H1>
 <P>
 XHANDLE ManagePool_Memory_Create(size_t nCount = 
-100, size_t nMaxCount = 256, 
-size_t nMaxSize = XENGINE_MEMORY_SIZE_MAX, bool bMemoryChunk = true)
+100, size_t nMaxCount = 
+256, size_t nMaxSize = XENGINE_MEMORY_SIZE_MAX, 
+bool bMemoryChunk = true, bool bAutoFree = true)
 
 </P>
 <P></P>
@@ -40,7 +41,9 @@ size_t nMaxSize = XENGINE_MEMORY_SIZE_MAX, bool bMemoryChunk = true)
 意思：最大允许申请内存个数<BR>&nbsp;参数.三：nMaxSize<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：无符号整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：大内存默认内存最大大小<BR>&nbsp;参数.四：bMemoryChunk<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：逻辑型<BR>&nbsp; 可空：Y<BR> &nbsp; 意思：是否启用内存CHUNK复用,默认启用</P>
+类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：是否启用内存CHUNK复用,默认启用<BR>&nbsp;参数.五：bAutoFree<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：是否自动释放,开启后可以设置每个内存的超时时间</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：内存池句柄<BR>意思：成功返回句柄，失败返回NULL</P>

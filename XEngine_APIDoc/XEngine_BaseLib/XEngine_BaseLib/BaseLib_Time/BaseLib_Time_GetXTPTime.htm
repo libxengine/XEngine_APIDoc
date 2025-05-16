@@ -28,16 +28,15 @@ BaseLib_Time_GetXTPTime
 <H1 >
   语法</H1>
 
-<P>BOOL BaseLib_Time_GetXTPTime(XNETHANDLE 
-xhXTPTime, XENGINE_LIBTIME * pSt_LibTimer = NULL, time_t * pnTTimer = NULL)</P> 
+<P>  
+   bool  BaseLib_Time_GetXTPTime(XNETHANDLE xhXTPTime, XENGINE_LIBTIME *  pSt_LibTimer)</P> 
  <P>             </P>
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：xhXTPTime<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：时间句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输出设置成功后的时间格式<BR>&nbsp;参数.二：pSt_LibTimer<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：数据结构指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输出转换后的时间<BR>&nbsp;参数.三：pnTTimer<BR>&nbsp; 
-In/Out：Out<BR>&nbsp; 类型：时间型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输出time时间值,这个值将不包括微妙</P>
+类型：数据结构指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出转换后的时间</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

@@ -29,8 +29,8 @@ bool AVHelp_MetaInfo_GetStartTime(LPCXSTR lpszFile,  int nAVIndex, double*  pdlT
 <P>&nbsp;参数.一：lpszFile<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要获取的文件<BR>&nbsp;参数.二：nAVIndex<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入索引<BR>&nbsp;参数.三：pdlTime<BR>&nbsp; In/Out：Out<BR>&nbsp; 类型：浮点型<BR>&nbsp; 
-可空：Y<BR>&nbsp; 意思：输出开始时间,比如0.12 秒开始</P>
+意思：输入索引,-1为媒体索引,&gt;=0表示流索引<BR>&nbsp;参数.三：pdlTime<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：浮点型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输出开始时间,比如0.12 秒开始</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

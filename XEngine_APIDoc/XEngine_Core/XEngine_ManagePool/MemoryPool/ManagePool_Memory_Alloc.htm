@@ -23,8 +23,9 @@ html,body {
 <H1>功能</H1> 
  <P>             在内存池申请一段内存</P>
 <H1>语法</H1>
-<P>  void* 
-ManagePool_Memory_Alloc(XMPOOL pxmPool,size_t nSize,  BOOL bIsFree = TRUE)</P>
+<P>  void* ManagePool_Memory_Alloc(XHANDLE pxmPool, size_t 
+nSize, bool bIsFree =   
+  true,  int nTimeout = 0)</P>
 <P></P>
 <P></P>
 <P></P>
@@ -33,7 +34,9 @@ ManagePool_Memory_Alloc(XMPOOL pxmPool,size_t nSize,  BOOL bIsFree = TRUE)</P>
 类型：内存池句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：要操作的内存池<BR>&nbsp;参数.二：nSize<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：无符号整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：要申请的内存池大小<BR>&nbsp;参数.三：bIsFree<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：是否允许被free,如果为假,调用释放的时候这块内存不会被还原到线程池</P>
+类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：是否允许被free,如果为假,调用释放的时候这块内存不会被还原到线程池<BR>&nbsp;参数.四：nTimeout<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：超时时间,单位秒,0为不超时</P>
 <P></P>
 <H1>返回值</H1>
 <P>&nbsp;类型：内存地址<BR>&nbsp;意思：申请到的内存空间地址</P>
