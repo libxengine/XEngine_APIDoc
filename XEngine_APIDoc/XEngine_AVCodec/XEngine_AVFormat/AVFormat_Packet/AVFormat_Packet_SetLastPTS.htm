@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>AVFormat_Convert_Seek</title>
+<title>AVFormat_Packet_SetLastPTS</title>
 <meta name="GENERATOR" content="WinCHM">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style>
@@ -14,25 +14,26 @@ html,body {
 
 </head>
 
-<body> 
- <H1>             函数</H1>
-<P>AVFormat_Convert_Seek</P>
-<H1>功能</H1>
-<P>解码跳转器</P>
+<body>
+<H1 >
+ 函数</H1>
+<P >
+  AVFormat_Packet_SetLastPTS</P>
+
+<H1>功能</H1> 
+ <P>             设置当前写的包为末尾包</P>
 <H1>语法</H1>
-<P>BOOL AVFormat_Convert_Seek(XHANDLE xhNet, 
-double dlTime)</P>
+<P>bool AVFormat_Packet_SetLastPTS(XHANDLE xhNet)</P>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：xhNet<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：要操作的句柄<BR>&nbsp;参数.二：dlTime<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：浮点型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入跳转时间</P>
+类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：要操作的封包器</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
 <H1>备注</H1>
-<P>快进,快退,定位,使用此函数</P>
+<P>AVFormat_Packet_StreamWrite切换文件使用<BR>当切换到下一个文件的时候,新的文件PTS会通过此函数叠加</P>
 <H1>示例</H1></body>
 </html>

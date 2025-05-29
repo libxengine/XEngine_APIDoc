@@ -21,7 +21,8 @@ html,body {
 <P>初始化XLOG日志系统</P>
 <H1>语法</H1>
 <P>XHANDLE HelpComponents_XLog_Init(XLONG 
-dwOutType,HELPCOMPONENTS_XLOG_CONFIGURE *pSt_XLogConfigure, bool bIsCache = 
+dwOutType,HELPCOMPONENTS_XLOG_CONFIGURE *pSt_XLogConfigure, bool bRewrite =  
+ false, bool bIsCache = 
 false)</P>
 <P></P>
 <P></P>
@@ -31,8 +32,10 @@ false)</P>
 <P>&nbsp;参数.一：dwOutType<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：双字<BR>&nbsp; 可空：N<BR>&nbsp; 意思：日志输出类型，可以用 | 
 符号包含<BR>&nbsp;参数.二：pSt_XLogConfigure<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：数据结构<BR>&nbsp; 可空：N<BR>&nbsp; 意思：配置日志系统属性<BR>&nbsp;参数.三：bIsCache<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：写日志文件是否使用缓存功能</P>
+类型：数据结构<BR>&nbsp; 可空：N<BR>&nbsp; 意思：配置日志系统属性<BR>&nbsp;参数.三：bRewrite<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：打开的日志是覆写还是追加.默认追加<BR>&nbsp;参数.四：bIsCache<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：写日志文件是否使用缓存功能</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：日志句柄 <BR>意思：返回此日志操作句柄</P>

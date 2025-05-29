@@ -25,7 +25,9 @@ html,body {
 <H1>语法</H1>
 <P>bool AVFormat_UNPack_Read(XHANDLE xhNet, int* 
 pInt_AVIndex, XBYTE* ptszMSGBuffer, int* pInt_MSGLen, AVCODEC_PACKETINFO* 
-pSt_AVPacket = NULL, AVCODEC_TIMEBASE* pSt_Timebase = NULL)</P>
+pSt_AVPacket = NULL, AVCODEC_TIMEBASE* pSt_Timebase =    
+    NULL, double* 
+pdlAVTime =     NULL)</P>
 <P></P>
 <P></P>
 <P></P>
@@ -39,7 +41,8 @@ In/Out：Out<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp;
 类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出数据大小<BR>&nbsp;参数.五：pSt_AVPacket<BR>&nbsp; 
 In/Out：Out<BR>&nbsp; 类型：数据结构指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：输出包信息<BR>&nbsp;参数.六：pSt_Timebase<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：数据结构指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输出包时间基</P>
+类型：数据结构指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输出包时间基<BR>&nbsp;参数.七：pdlAVTime<BR>&nbsp; 
+In/Out：Out<BR>&nbsp; 类型：浮点型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输出当前读取的帧的时间</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

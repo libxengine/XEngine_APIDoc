@@ -42,7 +42,7 @@ In/Out：In/Out<BR>&nbsp; 类型：无类型指针<BR>&nbsp; 可空：Y<BR>&nbsp
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
 <H1>备注</H1>
-<P>输入的音频或者视频数据可以采用文件和回调内存方式,但是不能同时使用<BR> 
-必须先调用AVPacket_FilePacket_Output函数在使用此函数</P>
+<P>输入的音频或者视频数据可以采用文件和回调内存方式,但是不能同时使用<BR>必须先调用AVFormat_Packet_Output函数在使用此函数<BR>也可以选择使用AVFormat_Packet_StreamCreate和AVFormat_Packet_StreamWrite 
+来实现而不调用此函数</P>
 <H1>示例</H1></body>
 </html>
