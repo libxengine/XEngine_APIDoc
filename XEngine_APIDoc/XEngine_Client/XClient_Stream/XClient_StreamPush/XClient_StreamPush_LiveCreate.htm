@@ -1,0 +1,42 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>XClient_StreamPush_LiveCreate</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<H1>函数</H1>
+<P >
+ XClient_StreamPush_LiveCreate</P>
+<H1 >
+  功能</H1>
+
+<P>通过音视频结构创建流</P> 
+ <H1>             语法</H1>
+<P>bool XClient_StreamPush_LiveCreate(XHANDLE xhNet, 
+XENGINE_PROTOCOL_AVINFO* pSt_AVProtocol)</P>
+<P></P>
+<P></P>
+<P></P>
+<H1>参数</H1>
+<P>&nbsp;参数.一：xhNet<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入要操作的句柄<BR>&nbsp;参数.二：pSt_AVProtocol<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：数据结构指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入音视频媒体信息</P>
+<P></P>
+<H1>返回值</H1>
+<P>类型：逻辑型<BR>意思：是否成功</P>
+<H1>备注</H1>
+<P>pSt_AVProtocol的视频参数需要填写长宽帧率,码率,编码器等<BR>pSt_AVProtocol的音频参数需要填写样本大小,采样率,编码器,码率,通道,采样格式等</P>
+<H1>示例</H1></body>
+</html>

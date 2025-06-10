@@ -23,7 +23,9 @@ html,body {
 <H1>
 功能</H1>
 <P>执行一个请求</P>
-<H1>语法</H1>bool APIClient_Http_Excute(XNETHANDLE xhToken)
+<H1>语法</H1>
+<P>bool APIClient_Http_Excute(XNETHANDLE xhToken, LPCXSTR 
+lpszCustomBody = XNULL, int nMSGLen = 0, LPCXSTR lpszCustomHdr = NULL)</P>  
 <P></P>
 <P></P>
 <P></P>
@@ -31,7 +33,12 @@ html,body {
 <H1>参数</H1>
 <P>&nbsp;参数.一：xhToken<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入要操作的HTTP句柄</P>
+意思：输入要操作的HTTP句柄<BR>&nbsp;参数.二：lpszCustomBody<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入请求的附加数据<BR>&nbsp;参数.三：nMSGLen<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输入负载内容数据大小<BR>&nbsp;参数.四：lpszCustomHdr<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输入请求的自定义头\r\n分割</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

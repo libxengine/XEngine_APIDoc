@@ -24,7 +24,8 @@ html,body {
  <P>             获取结果</P>
 <H1>语法</H1>
 <P>bool APIClient_Http_GetResult(XNETHANDLE xhToken, bool* 
-pbComplete, int* pInt_HTTPCode = NULL)</P>
+pbComplete, int* pInt_HTTPCode =    
+NULL, bool bWaitComplete = true)</P>
 <P></P>
 <P></P>
 <P></P>
@@ -34,7 +35,9 @@ pbComplete, int* pInt_HTTPCode = NULL)</P>
 类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：要操作的HTTP客户端<BR>&nbsp;参数.二：pbComplete<BR>&nbsp; 
 In/Out：Out<BR>&nbsp; 类型：逻辑型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输出是否执行完毕<BR>&nbsp;参数.三：pInt_HTTPCode<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：整数型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输出得到的HTTP状态码</P>
+类型：整数型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输出得到的HTTP状态码<BR>&nbsp;参数.四：bWaitComplete<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：是否线程等待执行完毕</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
