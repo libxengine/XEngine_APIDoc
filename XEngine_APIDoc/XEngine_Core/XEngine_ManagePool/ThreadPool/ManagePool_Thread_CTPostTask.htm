@@ -23,16 +23,19 @@ html,body {
 
 <P>投递任务</P> 
  <H1>             语法</H1>
-<P>BOOL 
-ManagePool_Thread_CTPostTask(MANAGEPOOL_THREAD_WORKERPROC fpCall_ThreadsTask, 
-LPVOID lParam = NULL)</P>
+<P>bool 
+ManagePool_Thread_CTPostTask(MANAGEPOOL_THREAD_WORKERPROCEX fpCall_ThreadsTask, 
+XPVOID lParam = 
+ NULL, 
+XNETHANDLE* pxhToken = NULL)</P>
 <P></P>
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：fpCall_ThreadsTask<BR>&nbsp; 
 In/Out：In/Out<BR>&nbsp; 类型：回调函数<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：自定义线程处理函数<BR>&nbsp;参数.二：lParam<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：无类型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：线程参数</P>
+类型：无类型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：线程参数<BR>&nbsp;参数.三：pxhToken<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：句柄<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输出线程任务唯一编号</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

@@ -24,9 +24,11 @@ html,body {
  <P>             推送音频数据到流中</P>
 <H1>语法 </H1>
 <P>   
-   bool XClient_StreamPush_LiveAudio(XHANDLE xhNet,    
-   uint8_t* ptszAVBuffer, int    
-   nAVLen)</P>
+   bool XClient_StreamPush_LiveAudio(XHANDLE xhNet, uint8_t* 
+ptszAVBuffer, int nAVLen, bool bWaitTime =   
+         
+         
+   false)</P>
 <P></P>
 <P></P>
 <P></P>
@@ -35,7 +37,9 @@ html,body {
 类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输入要操作的RTMP客户端<BR>&nbsp;参数.二：ptszAVBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要推送的数据<BR>&nbsp;参数.三：nAVLen<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入数据大小</P>
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入数据大小<BR>&nbsp;参数.四：bWaitTime<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：逻辑型<BR>&nbsp; 
+可空：Y<BR>&nbsp; 意思：真启用内部延迟,自动计算推流速率</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

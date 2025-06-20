@@ -20,7 +20,8 @@ html,body {
 <H1>功能</H1>
 <P>推送一个视频数据</P>
 <H1>语法 </H1>bool XClient_StreamPush_LiveVideo(XHANDLE xhNet, 
-uint8_t* ptszAVBuffer, int nAVLen, bool bKeyFrame = false)
+uint8_t* ptszAVBuffer, int nAVLen, bool bKeyFrame = false, bool bWaitTime =   
+       false)
 <P></P>
 <P></P>
 <P></P>
@@ -32,7 +33,8 @@ uint8_t* ptszAVBuffer, int nAVLen, bool bKeyFrame = false)
 类型：无符号整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：要处理的缓冲区<BR>&nbsp;参数.三：nAVLen<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：缓冲区大小<BR>&nbsp;参数.四：bKeyFrame<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：逻辑型<BR>&nbsp; 
-可空：Y<BR>&nbsp; 意思：是否设置关键帧编码</P>
+可空：Y<BR>&nbsp; 意思：是否设置关键帧编码<BR>&nbsp;参数.五：bWaitTime<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：真启用内部延迟,自动计算推流速率</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

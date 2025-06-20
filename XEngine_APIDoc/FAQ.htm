@@ -35,7 +35,7 @@ html,body {
 答:不一定.代码示例应该按照版本库中的示例为标准</P>
 <P>5.问:句柄返回有时候是XNETHANDLE,有时候是XHANDLE,他们有什么区别?</P>
 <P>&nbsp;&nbsp; 
-答:XHANDLE一般有内部线程,而且是线程安全,为了防止内部线程锁冲突,我们通过单独申请内存XHANDLE来处理相关代码逻辑</P>
+答:XHANDLE一般有内部线程,内部线程一般属于非线程安全</P>
 <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 XNETHANDLE属于线程安全,XHANDLE不属于线程安全.</P>
 <P> 
@@ -81,5 +81,8 @@ XClient_OPenSsl_GetKeyEx
 <P> 
  10.问:回调函数中可以调用与之相关的其他操作函数吗?比如关闭.</P>
 <P>&nbsp;&nbsp;&nbsp;&nbsp; 答:不能,比如启动一个服务器,会注册回调函数,在close回调或者recv回调中都不能调用关闭客户端函数,是否需要关闭需要参考函数说明.大部分我们都会默认当客户端离开后者出错后自动清理资源.</P>
-<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 如果强行调用关闭函数,可能会造成死锁.我们也不推荐你在回调函数中使用其他相关操作函数.</P></body>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 如果强行调用关闭函数,可能会造成死锁.我们也不推荐你在回调函数中使用其他相关操作函数.</P>
+<P> 11.问:线程池优先级和CPU亲和性设置是否有并要?</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp; 答:我们虽然提供了接口,但是现代计算机系统对于CPU线程调度已经做了优化,一般情况下不需要自己在配置优先级了.除非你明确知道你在做什么.并且大多数系统都需要管理员权限才可以使用</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 而且在移动端,比如IOS,线程优先级已经被禁用了.设置了也没有作用.</P></body>
 </html>

@@ -23,9 +23,9 @@ html,body {
 语法
 </H1>
 <P>
-BOOL BaseLib_TimeSpan_GetForStr(LPCSTR 
-lpszTimeStart, LPCSTR lpszTimeEnd, __int64x *pInt_Timer, int nType = 0, BOOL 
-bChange = FALSE)
+  
+ BOOL BaseLib_TimeSpan_GetForStr(LPCSTR lpszTimeStart, LPCSTR lpszTimeEnd, __int64x  *pInt_Timer, int 
+nType = 0)
 
 </P>
 <P></P>
@@ -38,9 +38,7 @@ bChange = FALSE)
 In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：结束时间<BR>&nbsp;参数.三：pInt_Time<BR>&nbsp; In/Out：Out<BR>&nbsp; 
 类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出时间差值<BR>&nbsp;参数.四：nType<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：获取结果值类型,0:天数 1:小时 2:分钟 
-3:秒钟<BR>&nbsp;参数.五：bChange<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：逻辑型<BR>&nbsp; 
-可空：Y<BR>&nbsp; 意思：是否支持交换计算,如果为真,那么将取最大的时间来减去最小时间,而不关心开始和结束</P>
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：获取结果值类型,0:天数 1:小时 2:分钟 3:秒钟</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

@@ -28,9 +28,9 @@ ManagePool_Thread_DTPostTask&nbsp;
 <H1 >
   语法</H1>
 
-<P>BOOL ManagePool_Thread_DTPostTask(XHANDLE 
-xhPool,MANAGEPOOL_THREAD_WORKERPROC fpCall_ThreadsTask,LPVOID lParam = 
-NULL,XNETHANDLE xhToken = 0,XNETHANDLE xhSerial = 0)</P> 
+<P>bool ManagePool_Thread_DTPostTask(XHANDLE xhPool, MANAGEPOOL_THREAD_WORKERPROCEX 
+fpCall_ThreadsTask, XPVOID lParam = 
+ NULL,  XNETHANDLE* pxhToken = NULL)</P> 
  <P>             </P>
 <P></P>
 <H1>参数</H1>
@@ -39,10 +39,8 @@ NULL,XNETHANDLE xhToken = 0,XNETHANDLE xhSerial = 0)</P>
 意思：要投递到哪个创建的线程池中<BR>&nbsp;参数.二：fpCall_ThreadsTask<BR>&nbsp; 
 In/Out：In/Out<BR>&nbsp; 类型：回调函数<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：要投递的任务<BR>&nbsp;参数.三：lParam<BR>&nbsp; In/Out：In/Out<BR>&nbsp; 
-类型：无类型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：投递任务的参数<BR>&nbsp;参数.四：xhToken<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：句柄<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：这个任务所属句柄(自己创建,可唯一可重用)<BR>&nbsp;参数.五：xhSerial<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：这个任务的序列号</P>
+类型：无类型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：投递任务的参数<BR>&nbsp;参数.四：pxhToken<BR>&nbsp; 
+In/Out：Out<BR>&nbsp; 类型：句柄<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输出当前任务唯一编号</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

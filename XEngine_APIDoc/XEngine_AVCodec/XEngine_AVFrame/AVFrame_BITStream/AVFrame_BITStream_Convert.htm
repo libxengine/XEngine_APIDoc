@@ -20,8 +20,9 @@ html,body {
 <H1>功能</H1>
 <P>转换数据</P>
 <H1>语法</H1>
-<P>bool AVFrame_BITStream_Convert(XNETHANDLE xhNet, 
-uint8_t* lpszMSGBuffer, int nMSGLen)</P>
+<P>bool AVFrame_BITStream_Convert(XNETHANDLE xhNet, uint8_t* 
+lpszMSGBuffer, int nMSGLen, 
+AVFRAME_PARSEDATA*** pppSt_Frame, int* pInt_ListCount)</P>
 <P></P>
 <P></P>
 <P></P>
@@ -31,7 +32,11 @@ uint8_t* lpszMSGBuffer, int nMSGLen)</P>
 意思：输入要操作的转换器<BR>&nbsp;参数.二：lpszMSGBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要转换的缓冲区<BR>&nbsp;参数.三：nMSGLen<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：要转换的大小</P>
+意思：要转换的大小<BR>&nbsp;参数.四：pppSt_Frame<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：三级指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输出转换后的缓冲区队列<BR>&nbsp;参数.五：pInt_ListCount<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输出队列个数</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型 <BR>意思：是否成功</P>
