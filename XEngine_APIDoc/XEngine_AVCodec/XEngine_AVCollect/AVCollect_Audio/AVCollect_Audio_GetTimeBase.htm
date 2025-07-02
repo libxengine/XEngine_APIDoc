@@ -23,17 +23,16 @@ html,body {
 <H1>功能</H1> 
  <P>             获取时间基</P>
 <H1>语法</H1>
-<P>bool AVCollect_Audio_GetTimeBase(XHANDLE xhNet, int* 
-pInt_Num, int* pInt_Den)</P>
+<P>  bool AVCollect_Audio_GetTimeBase(XHANDLE 
+xhNet, AVCODEC_TIMEBASE* pSt_TimeBase)</P>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：xhNet<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：网络句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要操作的句柄<BR>&nbsp;参数.二：pInt_Num<BR>&nbsp; 
-In/Out：Out<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输出分子<BR>&nbsp;参数.三：pInt_Den<BR>&nbsp; In/Out：Out<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 
-可空：N<BR>&nbsp; 意思：输出分母</P>
+类型：网络句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入要操作的句柄<BR>&nbsp;参数.二：pSt_TimeBase<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：数据结构指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出时间基</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
