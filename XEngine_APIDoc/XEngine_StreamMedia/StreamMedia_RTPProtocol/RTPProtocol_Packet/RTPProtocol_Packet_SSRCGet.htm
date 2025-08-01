@@ -27,7 +27,8 @@ RTPProtocol_Packet_SSRCGet
 <H1 >
  语法</H1>
 <P >
-  bool RTPProtocol_Packet_SSRCGet(LPCXSTR lpszClientID, 
+  bool RTPProtocol_Packet_SSRCGet(LPCXSTR
+  lpszClientID, int nPType, 
 unsigned int* pInt_nSSRCValue)</P>
 
 <P></P> 
@@ -35,8 +36,9 @@ unsigned int* pInt_nSSRCValue)</P>
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：lpszClientID<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入要操作的客户端<BR>&nbsp;参数.二：pInt_nSSRCValue<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要操作的客户端<BR>&nbsp;参数.二：nPType<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入要操作的包ID<BR>&nbsp;参数.三：pInt_nSSRCValue<BR>&nbsp; In/Out：Out<BR>&nbsp; 
 类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出SSRC值</P>
 <P></P>
 <H1>返回值</H1>

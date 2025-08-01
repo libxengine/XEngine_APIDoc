@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>RTPProtocol_Packet_GetCount</title>
+<title>RTPProtocol_Parse_SetLink</title>
 <meta name="GENERATOR" content="WinCHM">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style>
@@ -18,28 +18,27 @@ html,body {
 <H1 >
  函数</H1>
 <P >
-  RTPProtocol_Packet_GetCount</P>
+  RTPProtocol_Parse_SetLink</P>
 
 <H1>功能</H1> 
- <P>             获取发送者统计信息</P>
+ <P>             设置RTP协议ID关联</P>
 <H1>语法</H1>
-<P>   
-BOOL RTPProtocol_Packet_GetCount(LPCXSTR lpszClientID, unsigned int* pInt_SendPkt, unsigned int* 
-pInt_SendByte)</P>
+<P>bool RTPProtocol_Parse_SetLink(LPCXSTR lpszClientID, int 
+nPTypeID, ENUM_STREAMMEDIA_RTPPROTOCOL_PAYLOADTYPE enPayLoad)</P>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：lpszClientID<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入要操作的客户端句柄<BR>&nbsp;参数.二：pInt_SendPkt<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：发送的包个数<BR>&nbsp;参数.三：pInt_SendByte<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：发送的数据大小</P>
+意思：输入要操作的客户端ID<BR>&nbsp;参数.二：nPTypeID<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入RTP协议的负载类型包<BR>&nbsp;参数.三：enPayLoad<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：枚举型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：关联的类型包</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
 <H1>备注</H1>
-<P>&nbsp;</P>
+<P>插入客户端后必须调用此函数关联payload 类型</P>
 <H1>示例</H1></body>
 </html>

@@ -23,15 +23,16 @@ html,body {
 <H1>功能</H1> 
  <P>             设置RTP时间戳,由系统自动计算</P>
 <H1>语法</H1>
-<P>bool RTPProtocol_Packet_SetTime(LPCXSTR lpszClientID, 
+<P>bool RTPProtocol_Packet_SetTime(LPCXSTR lpszClientID, int nPType, 
 int nFrameRate)</P>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：lpszClientID<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入要操作的客户端句柄<BR>&nbsp;参数.二：nFrameRate<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要操作的客户端句柄<BR>&nbsp;参数.二：nPType<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入要操作的包ID<BR>&nbsp;参数.三：nFrameRate<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：根据负载类型决定此参数,音频表示采样大小,视频表示帧率</P>
 <P></P>
 <H1>返回值</H1>

@@ -24,7 +24,8 @@ html,body {
 <P>主动读取一段数据</P> 
  <H1>             语法</H1>
 <P>bool AVCollect_Audio_Read(XHANDLE xhNet, XBYTE * 
-ptszMsgBuffer, int* pInt_MsgLen)</P>
+ptszMsgBuffer, int* pInt_MsgLen, AVCOLLECT_TIMEINFO* pSt_TimeInfo =     
+  NULL)</P>
 <P></P>
 <P></P>
 <P></P>
@@ -33,7 +34,9 @@ ptszMsgBuffer, int* pInt_MsgLen)</P>
 类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输入要操作的采集器<BR>&nbsp;参数.二：ptszMsgBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出读取到的数据<BR>&nbsp;参数.三：pInt_MsgLen<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出数据大小</P>
+In/Out：In<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输出数据大小<BR>&nbsp;参数.四：pSt_TimeInfo<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：数据结构指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输出媒体帧的时间戳</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
