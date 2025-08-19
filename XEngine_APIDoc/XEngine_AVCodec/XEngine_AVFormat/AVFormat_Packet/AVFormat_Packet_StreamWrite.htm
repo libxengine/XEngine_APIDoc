@@ -23,9 +23,11 @@ html,body {
 <H1>功能</H1> 
  <P>             写入媒体数据</P>
 <H1>语法</H1>
-<P>bool AVFormat_Packet_StreamWrite(XHANDLE xhNet, int 
-nAVIndex, LPCXBTR lpszMSGBuffer, int nMSGLen, AVCODEC_TIMEBASE* pSt_AVTimebase, 
-AVCODEC_PACKETINFO* pSt_PacketInfo = NULL,)</P>
+<P>extern "C" bool AVFormat_Packet_StreamWrite(XHANDLE 
+xhNet, int nAVIndex, LPCXBTR lpszMSGBuffer, int nMSGLen, AVCODEC_PACKETINFO* 
+pSt_PacketInfo = NULL, double* pdlAVTime = NULL, bool bWait =    
+      false, 
+bool bChanged = false)</P>
 <P></P>
 <P></P>
 <P></P>
@@ -36,16 +38,17 @@ In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp;
 意思：数据的媒体索引<BR>&nbsp;参数.三：lpszMSGBuffer<BR>&nbsp; In/Out：Out<BR>&nbsp; 
 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要写的媒体数据<BR>&nbsp;参数.四：nMSGLen<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入媒体数据大小<BR>&nbsp;参数.五：pSt_AVTimebase<BR>&nbsp; In/Out：In<BR>&nbsp; 
+意思：输入媒体数据大小<BR>&nbsp;参数.五：pSt_PacketInfo<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：数据结构指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：输入原始媒体时间基<BR>&nbsp;参数.六：pSt_PacketInfo<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：数据结构指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：输入数据的媒体包信息<BR>&nbsp;参数.七：pdlAVTime<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：浮点型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输出打包的媒体时间</P>
+意思：输入数据的媒体包信息<BR>&nbsp;参数.六：pdlAVTime<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：浮点型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输出打包的媒体时间<BR>&nbsp;参数.七：bWait<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输入是否使用系统等待<BR>&nbsp;参数.八：bChanged<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：这次输入是否是新的流(流切换)</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
 <H1>备注</H1>
-<P>&nbsp;</P>
+<P>切换流会导致pts时间戳变换,bChanged必须设置为真,否则会导致输出的流时间戳不连续</P>
 <H1>示例</H1></body>
 </html>
