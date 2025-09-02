@@ -23,9 +23,10 @@ html,body {
 <H1>功能</H1> 
  <P>             设置输入数据流</P>
 <H1>语法</H1>
-<P>BOOL AVFormat_UNPack_Input(XHANDLE xhNet, LPCSTR 
-lpszFile, CALLBACK_XENGINE_AVCODER_AVPACKET_FILEPACKET_FILERW fpCall_FileRead = 
-NULL, LPVOID lParam = NULL)</P>
+<P>bool AVFormat_UNPack_Input(XHANDLE xhNet, LPCXSTR 
+lpszFile, int nTimeout =    
+0, CALLBACK_XENGINE_AVCODEC_AVFORMAT_PACKETRW fpCall_FileRead = 
+NULL, XPVOID lParam = NULL)</P>
 <P></P>
 <P></P>
 <P></P>
@@ -33,14 +34,16 @@ NULL, LPVOID lParam = NULL)</P>
 <P>&nbsp;参数.一：xhNet<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要操作的句柄<BR>&nbsp;参数.二：lpszFile<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：要解封包的文件<BR>&nbsp;参数.三：fpCall_FileRead<BR>&nbsp; In/Out：In/Out<BR>&nbsp; 
-类型：回调函数<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：如果此值不为NULL,表示从内存读取数据<BR>&nbsp;参数.四：lParam<BR>&nbsp; In/Out：In/Out<BR>&nbsp; 
+意思：要解封包的文件<BR>&nbsp;参数.三：nTimeout<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 
+可空：Y<BR>&nbsp; 
+意思：输入读取网络超时时间,单位微妙,仅网络地址有效<BR>&nbsp;参数.四：fpCall_FileRead<BR>&nbsp; 
+In/Out：In/Out<BR>&nbsp; 类型：回调函数<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：如果此值不为NULL,表示从内存读取数据<BR>&nbsp;参数.五：lParam<BR>&nbsp; In/Out：In/Out<BR>&nbsp; 
 类型：无类型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：回调函数自定义参数</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
 <H1>备注</H1>
-<P>&nbsp;</P>
+<P>lpszFile可以设置是文件地址,也可以是网络地址</P>
 <H1>示例</H1></body>
 </html>
