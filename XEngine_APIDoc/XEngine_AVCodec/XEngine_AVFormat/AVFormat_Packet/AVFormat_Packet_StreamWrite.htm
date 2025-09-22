@@ -24,7 +24,7 @@ html,body {
  <P>             写入媒体数据</P>
 <H1>语法</H1>
 <P>extern "C" bool AVFormat_Packet_StreamWrite(XHANDLE 
-xhNet, int nAVIndex, LPCXBTR lpszMSGBuffer, int nMSGLen, AVCODEC_PACKETINFO* 
+xhNet, int nAVIndex, LPCXBTR lpszMSGBuffer, int nMSGLen, AVCODEC_TIMESTAMP* 
 pSt_PacketInfo = NULL, double* pdlAVTime = NULL, bool bWait =    
       false, 
 bool bChanged = false)</P>
@@ -50,5 +50,7 @@ In/Out：In<BR>&nbsp; 类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp;
 <P>类型：逻辑型<BR>意思：是否成功</P>
 <H1>备注</H1>
 <P>切换流会导致pts时间戳变换,bChanged必须设置为真,否则会导致输出的流时间戳不连续</P>
+<P>lpszMSGBuffer支持设置NULL,nMSGLen = 
+0,表示刷新内部写数据缓冲区,一般切换文件使用</P>
 <H1>示例</H1></body>
 </html>

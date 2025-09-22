@@ -24,8 +24,8 @@ html,body {
  <P>             从音频队列得到一帧</P>
 <H1>语法</H1>
 <P>bool AudioCodec_Help_FifoRecv(XHANDLE xhToken, XBYTE* 
-pbyMSGBuffer, int* pInt_MSGLen, __int64x* pInt_Pts = NULL, bool bIsTail = false, 
-bool bFillSilence = false)</P>
+pbyMSGBuffer, int* pInt_MSGLen, __int64x* pInt_Pts = NULL, bool bIsTail =  
+   false)</P>
 <P></P>
 <P></P>
 <P></P>
@@ -37,12 +37,12 @@ In/Out：Out<BR>&nbsp; 类型：字符指针<BR>&nbsp; 可空：N<BR>&nbsp;
 类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出数据大小<BR>&nbsp;参数.四：pInt_Pts<BR>&nbsp; 
 In/Out：Out<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：输出当前音频的PTS<BR>&nbsp;参数.五：bIsTail<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：是否是末尾数据<BR>&nbsp;参数.六：bFillSilence<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：是否需要填充末尾数据的为标准大小的静音数据</P>
+类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：是否是末尾数据</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
 <H1>备注</H1>
 <P>DURATION就是nFrameSize,这里不在单独导出</P>
+<P>将自动填充采样大</P>
 <H1>示例</H1></body>
 </html>

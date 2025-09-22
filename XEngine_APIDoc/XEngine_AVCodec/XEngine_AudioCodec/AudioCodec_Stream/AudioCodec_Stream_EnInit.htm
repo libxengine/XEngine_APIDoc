@@ -27,8 +27,8 @@ html,body {
 <P>bool AudioCodec_Stream_EnInit(XNETHANDLE * pxhNet, 
 AVCODEC_AUDIO_INFO * pSt_AudioInfo, __int64x nRateMin =    
   0, __int64x nRateMax =    
-  0, int nRateLevel =   
-  -1)</P>
+  0, bool bFDKAAC =   
+  false)</P>
 <P></P>
 <P></P>
 <P></P>
@@ -41,8 +41,8 @@ AVCODEC_AUDIO_INFO * pSt_AudioInfo, __int64x nRateMin =
 In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：编码器可变码率最小值,设置后变为可变码率<BR>&nbsp;参数.四：nRateMax<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：编码器可变码率最大值,设置后变为可变码率<BR>&nbsp;参数.五：nRateLevel<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：编码器码率等级,AAC支持,0为固定,1-5质量等级</P>
+意思：编码器可变码率最大值,设置后变为可变码率<BR>&nbsp;参数.五：bFDKAAC<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：如果是AAC编码器,可以指定使用FDK AAC</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

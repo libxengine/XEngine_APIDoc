@@ -25,7 +25,7 @@ html,body {
 <H1>语法</H1>
 <P>bool DataBase_MySQL_Connect(XNETHANDLE * pxhData, 
 DATABASE_MYSQL_CONNECTINFO * pSt_MySQLConnector, int nTimeOut = 5, bool 
-bAutoReconnect = true, LPCXSTR lpszCharSet =    
+bKeepConnect = true, LPCXSTR lpszCharSet =    
   ("utf8"), LPCXSTR lpszSslKey =  
 NULL, LPCXSTR lpszSslCert =  
 NULL,  LPCXSTR lpszSslCa = NULL)</P>
@@ -38,20 +38,19 @@ NULL,  LPCXSTR lpszSslCa = NULL)</P>
 In/Out：In<BR>&nbsp; 类型：结构体指针<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：连接客户端信息结构<BR>&nbsp;参数.三：nTimeOut<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：连接超时时间，默认5秒<BR>&nbsp;参数.四：bAutoReconnect<BR>&nbsp; In/Out：In<BR>&nbsp; 
+意思：连接超时时间，默认5秒<BR>&nbsp;参数.四：bKeepConnect<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：是否在检测到断开与服务器连接后自动连接<BR>&nbsp;参数.五：lpszCharSet<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：是否开启保持连接,开启后将自动在规定时间段PING,也可以自己实现<BR>&nbsp;参数.五：lpszCharSet<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：输入链接的数据库的字符集，默认utf8<BR>&nbsp;参数.六：lpszSslKey<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：SSL证书秘钥路径<BR>&nbsp;参数.七：lpszSslCert<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：SSL证书路径<BR>&nbsp;参数.八：lpszSslCa<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：SSL授权根证书</P>
+In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：SSL授权根证书 </P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型 <BR>意思：是否成功</P>
 <H1>备注</H1>
-<P>bAutoReconnect将在未来版本移除,建议使用DataBase_MySQL_Ping来检查服务器连接状态</P>
+<P>断线重连现在需要自己实现.</P>
 <H1>示例</H1></body>
 </html>
