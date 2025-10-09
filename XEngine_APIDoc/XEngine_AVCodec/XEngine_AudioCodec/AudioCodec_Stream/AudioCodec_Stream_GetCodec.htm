@@ -23,8 +23,8 @@ html,body {
 
 <P>获取编解码信息</P> 
  <H1>             语法</H1>
-<P>bool AudioCodec_Stream_GetAVCodec(XNETHANDLE xhNet, 
-XHANDLE* pSt_AVParameter = NULL, AVCODEC_TIMEBASE* pSt_AVTimeBase = NULL)</P>
+<P> bool AudioCodec_Stream_GetAVCodec(XHANDLE 
+xhNet, XHANDLE*  pSt_AVParameter, AVCODEC_TIMEBASE* pSt_AVTimeBase = NULL)</P>
 <P></P>
 <P></P>
 <P></P>
@@ -32,7 +32,7 @@ XHANDLE* pSt_AVParameter = NULL, AVCODEC_TIMEBASE* pSt_AVTimeBase = NULL)</P>
 <P>&nbsp;参数.一：xhNet<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输入要操作的流<BR>&nbsp;参数.二：pSt_AVParameter<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：二级指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+类型：二级指针<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输出获取的编解码参数信息,AVCodecParameters类型.此参数需要释放内存<BR>&nbsp;参数.三：pSt_AVTimeBase<BR>&nbsp; 
 In/Out：Out<BR>&nbsp; 类型：数据结构指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输出时间基</P>
 <P></P>

@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>AudioCodec_Stream_Destroy</title>
+<title>BaseLib_Memory_MSGFree</title>
 <meta name="GENERATOR" content="WinCHM">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style>
@@ -15,22 +15,27 @@ html,body {
 </head>
 
 <body>
-<H1 >
- 函数</H1>
-<P >
-  AudioCodec_Stream_Destroy</P>
+<H1>函数</H1>
+<P>
+BaseLib_Memory_MSGFree
+</P>
+<H1>
+功能
 
-<H1>功能</H1> 
- <P>             销毁一个音频编解码器</P>
-<H1>语法</H1>
-<P>bool AudioCodec_Stream_Destroy(XHANDLE xhNet)</P>
-<P></P>
-<P></P>
-<P></P>
-<P></P>
+</H1>
+<P>释放缓冲区内存数据</P>
+<H1 >
+ 语法</H1>
+<P >
+  bool BaseLib_Memory_MSGFree(XENGINE_MSGBUFFER* 
+pSt_MSGBuffer)</P>
+
+<P></P> 
+ <P>             </P>
 <H1>参数</H1>
-<P>&nbsp;参数.一：xhNet<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：编解码器句柄</P>
+<P>&nbsp;参数.一：pSt_MSGBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：数据结构指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入要释放的内存</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

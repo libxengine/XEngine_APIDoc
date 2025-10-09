@@ -23,8 +23,8 @@ html,body {
 <H1>功能</H1> 
  <P>             解码音频数据</P>
 <H1>语法</H1>
-<P>  bool AudioCodec_Stream_DeCodec(XNETHANDLE 
-xhNet, uint8_t *pszSourceBuffer, int nLen, AVCODEC_AUDIO_MSGBUFFER  
+<P>    
+bool AudioCodec_Stream_DeCodec(XHANDLE xhNet, AVCODEC_AUDIO_MSGBUFFER* pSt_MSGBuffer, AVCODEC_AUDIO_MSGBUFFER  
 * **pppSt_ListMsgBuffer, int*  pInt_ListCount)</P>
 <P></P>
 <P></P>
@@ -32,13 +32,12 @@ xhNet, uint8_t *pszSourceBuffer, int nLen, AVCODEC_AUDIO_MSGBUFFER
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：xhNet<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：解码器句柄<BR>&nbsp;参数.二：pszSourceBuffer<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：无符号整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：要解码的数据缓冲区<BR>&nbsp;参数.三：nLen<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 
-可空：N<BR>&nbsp; 意思：要解码的数据缓冲区大小<BR>&nbsp;参数.四：pppSt_ListMsgBuffer<BR>&nbsp; 
+类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：解码器句柄<BR>&nbsp;参数.二：pSt_MSGBuffer<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：数据结构指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：要解码的数据缓冲区,时间戳可以为0或者提供<BR>&nbsp;参数.三：pppSt_ListMsgBuffer<BR>&nbsp; 
 In/Out：Out<BR>&nbsp; 类型：三级指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输出解码后的音频数据列表<BR>&nbsp;参数.五：pInt_ListCount<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出列表个数<BR> </P>
+意思：输出解码后的音频数据列表<BR>&nbsp;参数.四：pInt_ListCount<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出列表个数 </P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

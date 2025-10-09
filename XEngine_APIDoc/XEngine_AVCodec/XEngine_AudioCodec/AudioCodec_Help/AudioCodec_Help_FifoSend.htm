@@ -23,21 +23,19 @@ html,body {
 
 <P>发送一个音频数据给音频队列</P> 
  <H1>             语法</H1>
-<P>bool AudioCodec_Help_FifoSend(XHANDLE xhToken, LPCXSTR 
-lpszMSGBuffer, int nNBSample)</P>
+<P>  bool AudioCodec_Help_FifoSend(XHANDLE 
+xhToken, AVCODEC_AUDIO_MSGBUFFER* pSt_MSGBuffer)</P>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：xhToken<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要操作的队列<BR>&nbsp;参数.二：lpszMSGBuffer<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入要投递的缓冲区<BR>&nbsp;参数.三：nNBSample<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入投递的缓冲区大小</P>
+类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要操作的队列<BR>&nbsp;参数.二：pSt_MSGBuffer<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：数据结构指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要投递的数据</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
 <H1>备注</H1>
-<P>仅支持S16采样格式</P>
+<P>支持各种format格式</P>
 <H1>示例</H1></body>
 </html>

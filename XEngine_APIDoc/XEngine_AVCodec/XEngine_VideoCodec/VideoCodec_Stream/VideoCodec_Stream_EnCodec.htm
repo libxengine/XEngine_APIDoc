@@ -23,11 +23,11 @@ html,body {
 <H1>功能</H1> 
  <P>             编码图像</P>
 <H1>语法</H1>
-<P>bool VideoCodec_Stream_EnCodec(XNETHANDLE xhNet, 
-uint8_t* ptszAVBuffer, int nAVLen, AVCODEC_VIDEO_MSGBUFFER*** pppSt_MSGBuffer, 
-int* pInt_ListCount, __int64u nPTS =   
+<P>   
+     bool 
+VideoCodec_Stream_EnCodec(XHANDLE xhNet, AVCODEC_VIDEO_MSGBUFFER* pSt_MSGBuffer,    
       
- 0, __int64u nDTS = 0, bool bKeyFrame =    
+ AVCODEC_VIDEO_MSGBUFFER*** pppSt_MSGBuffer, int*  pInt_ListCount, bool bKeyFrame =    
       
         false)</P>
 <P></P>
@@ -36,22 +36,19 @@ int* pInt_ListCount, __int64u nPTS =
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：xhNet<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：要操作的编码器句柄<BR>&nbsp;参数.二：ptszAVBuffer<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：无符号整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：原始帧的数据缓冲区<BR>&nbsp;参数.三：nAVLen<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 
-可空：N<BR>&nbsp; 意思：数据缓冲区大小<BR>&nbsp;参数.四：pppSt_MSGBuffer<BR>&nbsp; 
+类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：要操作的编码器句柄<BR>&nbsp;参数.二：pSt_MSGBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：数据结构指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：原始帧的数据缓冲区,可以为NULL,表示发送结束帧<BR>&nbsp;参数.三：pppSt_MSGBuffer<BR>&nbsp; 
 In/Out：Out<BR>&nbsp; 类型：三级指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：导出编码好的数据结构<BR>&nbsp;参数.五：pInt_ListCount<BR>&nbsp; In/Out：In/Out<BR>&nbsp; 
-类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出编码的个数<BR>&nbsp;参数.六：nPTS<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：自定义PTS<BR>&nbsp;参数.七：nDTS<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 
-可空：Y<BR>&nbsp; 意思：自定义DTS,有B帧的情况需要<BR>&nbsp;参数.八：bKeyFrame<BR>&nbsp; 
+意思：导出编码好的数据结构<BR>&nbsp;参数.四：pInt_ListCount<BR>&nbsp; In/Out：In/Out<BR>&nbsp; 
+类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出编码的个数<BR>&nbsp;参数.五：bKeyFrame<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：是否编码成关键帧</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
 <H1>备注</H1>
 <P> 
-nYLen =       0,表示发送结束帧</P>
+pSt_MSGBuffer会用到时间戳,如果没有请设置为0,模块会自动生成时间戳</P>
 <H1>示例</H1></body>
 </html>

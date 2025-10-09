@@ -24,16 +24,17 @@ html,body {
  <P>             发送一个原始数据给滤镜</P>
 <H1>语法</H1>
 <DIV 
-style="FONT-SIZE: 14px; FONT-FAMILY: Consolas, 'Courier New', monospace; WHITE-SPACE: pre; FONT-WEIGHT: normal; COLOR: #000000; LINE-HEIGHT: 19px; BACKGROUND-COLOR: #ffffff">
-<DIV>    
-    bool AVFilter_Video_MIXSend(XNETHANDLE xhToken, int 
-nIndex, uint8_t* ptszAVBuffer, int nAVLen, int64_t nPTS =    
+style="FONT-SIZE: 14px; FONT-FAMILY: Consolas, 'Courier New', monospace; WHITE-SPACE: pre; FONT-WEIGHT: normal; COLOR: #000000; LINE-HEIGHT: 19px; BACKGROUND-COLOR:
+    
         
-   0, int64_t nDTS =    
+      #ffffff" >    
         
-    0, int64_t nDUR =    
+   bool AVFilter_Video_MIXSend(XNETHANDLE xhToken,     
         
-    0)</DIV></DIV>
+    int nIndex, AVCODEC_VIDEO_MSGBUFFER*     
+        
+    pSt_MSGBuffer)</DIV>
+<DIV></DIV>
 <P></P>
 <P></P>
 <P></P>
@@ -41,20 +42,11 @@ nIndex, uint8_t* ptszAVBuffer, int nAVLen, int64_t nPTS =
 <P>&nbsp;参数.一：xhToken<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：网络句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要操作的过滤器句柄<BR>&nbsp;参数.二：nIndex<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入要操作的索引<BR>&nbsp;参数.三：ptszAVBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：无符号字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：视频缓冲区,可以为NULL<BR>&nbsp;参数.四：nAVLen<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：缓冲区大小<BR>&nbsp;参数.五：nPTS<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：自定义PTS,原始视频可变帧率需要传递,比如best_effort_timestamp,固定可以0<BR>&nbsp;参数.六：nDTS<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：自定义DTS,有B帧的情况需要传递<BR>&nbsp;参数.七：nDUR<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：自定义duration</P>
-<P></P>
+意思：输入要操作的索引<BR>&nbsp;参数.三：pSt_MSGBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：数据结构指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：视频缓冲区,可以为NULL</P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
 <H1>备注</H1>
-<P>&nbsp;</P>
+<P>pSt_MSGBuffer会用到时间戳,如果没有时间戳,会自动生成</P>
 <H1>示例</H1></body>
 </html>

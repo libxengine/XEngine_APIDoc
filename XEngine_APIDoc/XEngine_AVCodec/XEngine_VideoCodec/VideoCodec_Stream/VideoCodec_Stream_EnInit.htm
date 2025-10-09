@@ -27,8 +27,10 @@ VideoCodec_Stream_EnInit
 <H1 >
  语法</H1>
 <P >
- bool VideoCodec_Stream_EnInit(XNETHANDLE * pxhNet, 
-AVCODEC_VIDEO_INFO * pSt_VideoInfo, XENGINE_KEYVALUE*** pppSt_KEYValue =
+ XHANDLE VideoCodec_Stream_EnInit(AVCODEC_VIDEO_INFO * 
+pSt_VideoInfo, bool bHDRGlobal =
+     
+  true, XENGINE_KEYVALUE*** pppSt_KEYValue =
      
   NULL, int nListCount = 0, 
 __int64x nRateMin =
@@ -45,11 +47,11 @@ __int64x nRateMin =
  <P>             </P>
 <P></P>
 <H1>参数</H1>
-<P>&nbsp;参数.一：pxhNet<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：导出初始化成功的句柄<BR>&nbsp;参数.二：pSt_VideoInfo<BR>&nbsp; In/Out：In<BR>&nbsp; 
+<P>&nbsp;参数.一：pSt_VideoInfo<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：数据结构指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入视频信息,必须输入宽高,编码器ID,码率,帧率<BR>&nbsp;参数.三：pppSt_KEYValue<BR>&nbsp; 
+意思：输入视频信息,必须输入宽高,编码器ID,码率,帧率<BR>&nbsp;参数.二：bHDRGlobal<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：是否启用全局头,某些封装格式需要,裸流可以不设置,设置为假编码的I帧前面将没有SPS,PPS等信息<BR>&nbsp;参数.三：pppSt_KEYValue<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：三级指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：输入自定义编码器参数列表<BR>&nbsp;参数.四：nListCount<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入参数列表个数<BR>&nbsp;参数.五：nRateMin<BR>&nbsp; 
@@ -60,7 +62,7 @@ In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp;
 可空：Y<BR>&nbsp; 意思：选择硬件编码器,默认不启用</P>
 <P></P>
 <H1>返回值</H1>
-<P>类型：逻辑型<BR>意思：是否成功</P>
+<P>类型：句柄<BR>意思：输出初始化成功的句柄</P>
 <H1>备注</H1>
 <P>&nbsp;</P>
 <H1>示例</H1></body>

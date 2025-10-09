@@ -23,26 +23,22 @@ html,body {
 <H1>功能</H1> 
  <P>             从音频队列得到一帧</P>
 <H1>语法</H1>
-<P>bool AudioCodec_Help_FifoRecv(XHANDLE xhToken, XBYTE* 
-pbyMSGBuffer, int* pInt_MSGLen, __int64x* pInt_Pts = NULL, bool bIsTail =  
+<P>    
+ bool AudioCodec_Help_FifoRecv(XHANDLE xhToken, AVCODEC_AUDIO_MSGBUFFER*  pSt_MSGBuffer, bool bIsTail =  
    false)</P>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：xhToken<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要操作的队列<BR>&nbsp;参数.二：pbyMSGBuffer<BR>&nbsp; 
-In/Out：Out<BR>&nbsp; 类型：字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输出获取到的数据<BR>&nbsp;参数.三：pInt_MSGLen<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出数据大小<BR>&nbsp;参数.四：pInt_Pts<BR>&nbsp; 
-In/Out：Out<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：输出当前音频的PTS<BR>&nbsp;参数.五：bIsTail<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要操作的队列<BR>&nbsp;参数.二：pSt_MSGBuffer<BR>&nbsp; 
+In/Out：Out<BR>&nbsp; 类型：数据结构指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输出获取到的数据,需要专用函数释放内存<BR>&nbsp;参数.三：bIsTail<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：是否是末尾数据</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
 <H1>备注</H1>
-<P>DURATION就是nFrameSize,这里不在单独导出</P>
-<P>将自动填充采样大</P>
+<P>将会设置数据区的st_TimeStamp,这个值作为参考,一般编码的时候也会有自己的输出</P>
 <H1>示例</H1></body>
 </html>

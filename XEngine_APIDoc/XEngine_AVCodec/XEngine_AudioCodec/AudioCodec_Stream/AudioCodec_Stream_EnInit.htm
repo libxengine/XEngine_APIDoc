@@ -24,8 +24,9 @@ html,body {
 功能</H1>
 <P>初始化流编解码器</P>
 <H1>语法</H1>
-<P>bool AudioCodec_Stream_EnInit(XNETHANDLE * pxhNet, 
-AVCODEC_AUDIO_INFO * pSt_AudioInfo, __int64x nRateMin =    
+<P>XHANDLE AudioCodec_Stream_EnInit(AVCODEC_AUDIO_INFO * 
+pSt_AudioInfo, bool bHDRGlobal =    
+  true, __int64x nRateMin =    
   0, __int64x nRateMax =    
   0, bool bFDKAAC =   
   false)</P>
@@ -34,11 +35,12 @@ AVCODEC_AUDIO_INFO * pSt_AudioInfo, __int64x nRateMin =
 <P></P>
 <P></P>
 <H1>参数</H1>
-<P>&nbsp;参数.一：pxhNet<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：导出初始化成功的音频编码句柄<BR>&nbsp;参数.二：pSt_AudioInfo<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：枚举型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：要编码成的音频格式<BR>&nbsp;参数.三：nRateMin<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+<P>&nbsp;参数.一：pSt_AudioInfo<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：枚举型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：要编码成的音频格式<BR>&nbsp;参数.二：bHDRGlobal<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：是否写全局头,对于AAC不设置将会有ADTS头(适合裸流),设置将是raw(适合mp4等封装格式)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+mp2,mp3等格式没有多大作用<BR>&nbsp;参数.三：nRateMin<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：编码器可变码率最小值,设置后变为可变码率<BR>&nbsp;参数.四：nRateMax<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：编码器可变码率最大值,设置后变为可变码率<BR>&nbsp;参数.五：bFDKAAC<BR>&nbsp; In/Out：In<BR>&nbsp; 
