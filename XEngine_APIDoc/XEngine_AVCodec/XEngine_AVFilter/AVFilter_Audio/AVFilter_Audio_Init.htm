@@ -26,22 +26,20 @@ html,body {
 <DIV 
 style="FONT-SIZE: 14px; FONT-FAMILY: Consolas, 'Courier New', monospace; WHITE-SPACE: pre; FONT-WEIGHT: normal; COLOR: #000000; LINE-HEIGHT: 19px; BACKGROUND-COLOR: #ffffff">
 <DIV><SPAN style="COLOR: #000000"> 
-bool 
-AVFilter_Audio_Init(XNETHANDLE* pxhToken, LPCXSTR lpszFilterStr, 
+ 
+ XHANDLE AVFilter_Audio_Init(LPCXSTR lpszFilterStr, 
 AVFILTER_AUDIO_INFO* pSt_AudioFilter)</SPAN></DIV></DIV>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
-<P>&nbsp;参数.一：pxhToken<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：网络句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：导出初始化成功的音频过滤器<BR>&nbsp;参数.二：lpszFilterStr<BR>&nbsp; In/Out：In<BR>&nbsp; 
+<P>&nbsp;参数.一：lpszFilterStr<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：转换后的目标过滤器,可以和原始的一样<BR>&nbsp;参数.三：pSt_AudioFilter<BR>&nbsp; 
+意思：转换后的目标过滤器,可以和原始的一样<BR>&nbsp;参数.二：pSt_AudioFilter<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：数据结构体指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入原始音频参数</P>
 <P></P>
 <H1>返回值</H1>
-<P>类型：逻辑型<BR>意思：是否成功</P>
+<P>类型：句柄型<BR>意思：导出初始化成功的音频过滤器</P>
 <H1>备注</H1>
 <P>参数二为目标格式,为字符串,参数通过:分割,有很多滤镜可以通过FFMPEG得到<BR>&nbsp;&nbsp; 
 比如音量volume=2.0 就是双倍音量.调整播放速度asetrate=44100*1.5,44100是采样率等等</P>

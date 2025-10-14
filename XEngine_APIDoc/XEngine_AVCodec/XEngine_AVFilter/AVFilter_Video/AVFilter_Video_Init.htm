@@ -30,22 +30,19 @@ AVFilter_Video_Init
 
 <DIV 
 style="FONT-SIZE: 14px; FONT-FAMILY: Consolas, 'Courier New', monospace; WHITE-SPACE: pre; FONT-WEIGHT: normal; COLOR: #000000; LINE-HEIGHT: 19px; BACKGROUND-COLOR: #ffffff"> 
- <DIV><SPAN style="COLOR: #000000">bool 
-AVFilter_Video_Init(XNETHANDLE* pxhToken, LPCXSTR lpszFilterStr, 
-AVFILTER_VIDEO_INFO * pSt_VideoInfo)</SPAN>             </DIV></DIV>
+ <DIV>XHANDLE AVFilter_Video_Init(LPCXSTR lpszFilterStr, 
+AVFILTER_VIDEO_INFO * pSt_VideoInfo)             </DIV></DIV>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
-<P>&nbsp;参数.一：pxhToken<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：网络句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：导出初始化成功的视频过滤器<BR>&nbsp;参数.二：lpszFilterStr<BR>&nbsp; In/Out：In<BR>&nbsp; 
+<P>&nbsp;参数.一：lpszFilterStr<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入要为视频添加的过滤器字符串<BR>&nbsp;参数.三：pSt_VideoInfo<BR>&nbsp; In/Out：In<BR>&nbsp; 
+意思：输入要为视频添加的过滤器字符串<BR>&nbsp;参数.二：pSt_VideoInfo<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：数据结构指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入原始YUV信息</P>
 <P></P>
 <H1>返回值</H1>
-<P>类型：逻辑型<BR>意思：是否成功</P>
+<P>类型：句柄型<BR>意思：导出初始化成功的视频过滤器</P>
 <H1>备注</H1>
 <P>过滤器可以自己设置,比如调整亮度和对比度,可以填写字符串:eq=brightness=1.5:contrast=1.2</P>
 <H1>示例</H1></body>
