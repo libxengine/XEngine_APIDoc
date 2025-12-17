@@ -53,7 +53,8 @@ In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp;
 PPS等信息才能解码<BR>&nbsp;参数.三：nVLen<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 
 可空：Y<BR>&nbsp; 意思：附加媒体信息大小<BR>&nbsp;参数.四：pSt_AVParameter<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：句柄<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：指定解码器参数,用于一些特别的解码媒体格式解码<BR>&nbsp;参数.五：pSt_AVTimeBase<BR>&nbsp; 
+意思：指定解码器参数,用于一些特别的解码媒体格式解码<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+如果解码器和封包格式参数不匹配,这个值会被修改为解码器参数<BR>&nbsp;参数.五：pSt_AVTimeBase<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：数据结构指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：输入媒体封包时间基,用于时钟同步<BR>&nbsp;参数.六：enHWDevice<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：枚举型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：选择硬件解码器,默认不启用,如果启用将只有Y数据生效<BR> </P>
