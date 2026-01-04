@@ -24,7 +24,7 @@ html,body {
  <P>             解析并且获取一帧</P>
 <H1>语法</H1>
 <P>bool AVFrame_Frame_ParseGet(XNETHANDLE xhToken, LPCXSTR 
-lpszMsgBuffer, int nMsgLen, XENGINE_MSGBUFFER*** pppSt_Frame, int* 
+lpszMsgBuffer, int nMsgLen, XHANDLE*** pppSt_AVFrame, int* 
 pInt_ListCount)</P>
 <P></P>
 <P></P>
@@ -34,7 +34,7 @@ pInt_ListCount)</P>
 类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入操作句柄<BR>&nbsp;参数.二：lpszMsgBuffer<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输入要解析的缓冲区<BR>&nbsp;参数.三：nMsgLen<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入缓冲区大小<BR>&nbsp;参数.四：pppSt_Frame<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入缓冲区大小<BR>&nbsp;参数.四：pppSt_AVFrame<BR>&nbsp; 
 In/Out：Out<BR>&nbsp; 类型：三级指针<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输出解析好的缓冲区队列<BR>&nbsp;参数.五：pInt_ListCount<BR>&nbsp; In/Out：Out<BR>&nbsp; 
 类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出队列个数</P>

@@ -31,7 +31,7 @@ AVFilter_Audio_MIXSend
 <DIV 
 style="FONT-SIZE: 14px; FONT-FAMILY: Consolas, 'Courier New', monospace; WHITE-SPACE: pre; FONT-WEIGHT: normal; COLOR: #000000; LINE-HEIGHT: 19px; BACKGROUND-COLOR: #ffffff"> 
       
-   bool AVFilter_Audio_MIXSend(XHANDLE xhToken,  int nIndex, AVCODEC_AUDIO_MSGBUFFER*  pSt_MSGBuffer)</DIV>
+   bool AVFilter_Audio_MIXSend(XHANDLE xhToken,  int nIndex, XHANDLE  pSt_MSGBuffer)</DIV>
 <P></P>
 <P></P>
 <P></P>
@@ -46,6 +46,6 @@ In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp;
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
 <H1>备注</H1>
-<P>支持各种format格式滤镜,时间戳通过pSt_MSGBuffer传递pts和duration<BR>pSt_MSGBuffer的音频信息结构nNBSample需要传递</P>
+<P>支持各种format格式滤镜</P>
 <H1>示例</H1></body>
 </html>

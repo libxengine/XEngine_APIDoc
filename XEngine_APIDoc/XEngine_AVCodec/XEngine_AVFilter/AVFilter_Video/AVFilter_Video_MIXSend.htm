@@ -31,9 +31,9 @@ style="FONT-SIZE: 14px; FONT-FAMILY: Consolas, 'Courier New', monospace; WHITE-S
         
    bool AVFilter_Video_MIXSend(XHANDLE xhToken,     
         
-    int nIndex, AVCODEC_VIDEO_MSGBUFFER*     
+    int nIndex, XHANDLE     
         
-    pSt_MSGBuffer)</DIV>
+    pSt_AVBuffer)</DIV>
 <DIV></DIV>
 <P></P>
 <P></P>
@@ -42,11 +42,11 @@ style="FONT-SIZE: 14px; FONT-FAMILY: Consolas, 'Courier New', monospace; WHITE-S
 <P>&nbsp;参数.一：xhToken<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：网络句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要操作的过滤器句柄<BR>&nbsp;参数.二：nIndex<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入要操作的索引<BR>&nbsp;参数.三：pSt_MSGBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
+意思：输入要操作的索引<BR>&nbsp;参数.三：pSt_AVBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：数据结构指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：视频缓冲区,可以为NULL</P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
 <H1>备注</H1>
-<P>pSt_MSGBuffer会用到时间戳,如果没有时间戳,会自动生成</P>
+<P>&nbsp;</P>
 <H1>示例</H1></body>
 </html>

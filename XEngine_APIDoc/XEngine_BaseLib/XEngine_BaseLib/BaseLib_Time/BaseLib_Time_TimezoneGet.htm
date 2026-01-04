@@ -23,9 +23,10 @@ html,body {
 <H1>功能</H1> 
  <P>             获取时区</P>
 <H1>语法</H1>
-<P>bool BaseLib_Time_TimezoneGet(bool* pbZone, int* 
-pInt_Hour, int* pInt_Minute = NULL, XCHAR* ptszZoneStr =    
-NULL, time_t nTime =     0)</P>
+<P>   bool 
+BaseLib_Time_TimezoneGet(bool* pbZone, int*     
+pInt_Hour, int* pInt_Minute = NULL, time_t nTime =    
+        0)</P>
 <P></P>
 <P></P>
 <H1>参数</H1>
@@ -34,9 +35,8 @@ NULL, time_t nTime =     0)</P>
 -,真为+<BR>&nbsp;参数.二：pInt_Hour<BR>&nbsp; In/Out：Out<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 
 可空：N<BR>&nbsp; 意思：输出操作的小时,比如+8<BR>&nbsp;参数.三：pInt_Minute<BR>&nbsp; 
 In/Out：Out<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：输出操作的分钟,大部分情况都是0<BR>&nbsp;参数.四：ptszZoneStr<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输出时区字符串名称<BR>&nbsp;参数.五：nTime<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入时间值,默认本地时间</P>
+意思：输出操作的分钟,大部分情况都是0<BR>&nbsp;参数.四：nTime<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入时间值,默认本地时间</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

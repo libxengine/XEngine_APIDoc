@@ -25,7 +25,9 @@ html,body {
 <H1>语法</H1>
 <P>bool Cryption_Api_HMac(LPCXSTR lpszMsgBuffer, XBYTE* 
 ptszMsgBuffer, int* pInt_MSGLen, LPCXSTR lpszKey, ENUM_XENGINE_CRYPTION_DIGEST 
-enDigest = ENUM_XENGINE_CRYPTION_DIGEST_SHA1)</P>
+enDigest =    
+    ENUM_XENGINE_CRYPTION_DIGEST_SHA1, int 
+nKeyLen = 0)</P>
 <P></P>
 <P></P>
 <H1>参数</H1>
@@ -36,7 +38,9 @@ enDigest = ENUM_XENGINE_CRYPTION_DIGEST_SHA1)</P>
 In/Out：In/Out<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输入要计算的缓冲区大小,输出计算后的摘要信息大小<BR>&nbsp;参数.四：lpszKey<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入散列数据秘钥<BR>&nbsp;参数.五：enDigest<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：枚举型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入要选择计算的算法,默认SHA1</P>
+In/Out：In<BR>&nbsp; 类型：枚举型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输入要选择计算的算法,默认SHA1<BR>&nbsp;参数.六：nKeyLen<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入KEY长度大小</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否加密成功</P>

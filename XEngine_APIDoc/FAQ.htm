@@ -84,5 +84,8 @@ XClient_OPenSsl_GetKeyEx
 <P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 如果强行调用关闭函数,可能会造成死锁.我们也不推荐你在回调函数中使用其他相关操作函数.</P>
 <P> 11.问:线程池优先级和CPU亲和性设置是否有并要?</P>
 <P>&nbsp;&nbsp;&nbsp;&nbsp; 答:我们虽然提供了接口,但是现代计算机系统对于CPU线程调度已经做了优化,一般情况下不需要自己在配置优先级了.除非你明确知道你在做什么.并且大多数系统都需要管理员权限才可以使用</P>
-<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 而且在移动端,比如IOS,线程优先级已经被禁用了.设置了也没有作用.</P></body>
+<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 而且在移动端,比如IOS,线程优先级已经被禁用了.设置了也没有作用.</P>
+<P> 12.问:如何区分音视频原始内存数据操作参数的bPacket填写真还是假?</P>
+<P>&nbsp;&nbsp;&nbsp;&nbsp; 
+答:一般的,解码器出来的数据,都是假,内存参数需要填写false,如果是编码器输出的内存数据,那么就是真(true),其他情况,比如解封包后者bitstream,frame的操作的数据都是真,因为他们不会解码</P></body>
 </html>

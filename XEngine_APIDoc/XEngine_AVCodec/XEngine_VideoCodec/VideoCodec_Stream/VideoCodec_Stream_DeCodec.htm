@@ -24,17 +24,17 @@ html,body {
  <P>             解码一个视频帧</P>
 <H1>语法</H1>
 <P>    
-bool VideoCodec_Stream_DeCodec(XHANDLE xhNet, AVCODEC_VIDEO_MSGBUFFER* pSt_MSGBuffer, AVCODEC_VIDEO_MSGBUFFER  * 
-**pppSt_MSGBuffer, int*     
+ bool VideoCodec_Stream_DeCodec(XHANDLE xhNet, XHANDLE pSt_AVBuffer,  XHANDLE*** 
+pppSt_AVBuffer, int*     
   pInt_ListCount)</P>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：xhNet<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：要处理的解码器<BR>&nbsp;参数.二：pSt_MSGBuffer<BR>&nbsp; 
+类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：要处理的解码器<BR>&nbsp;参数.二：pSt_AVBuffer<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：数据结构指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：要解码的数据缓冲区地址,必须为一个完整的帧,可以为NULL,表示发送结束帧<BR>&nbsp;参数.三：pppSt_MSGBuffer<BR>&nbsp; 
+意思：要解码的数据缓冲区地址,必须为一个完整的帧,可以为NULL,表示发送结束帧<BR>&nbsp;参数.三：pppSt_AVBuffer<BR>&nbsp; 
 In/Out：Out<BR>&nbsp; 类型：三级指针<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输出解码的数据列表,<BR>&nbsp;参数.四：pInt_ListCount<BR>&nbsp; In/Out：Out<BR>&nbsp; 
 类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
@@ -43,6 +43,6 @@ In/Out：Out<BR>&nbsp; 类型：三级指针<BR>&nbsp; 可空：N<BR>&nbsp;
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
 <H1>备注</H1>
-<P>pSt_MSGBuffer会用到时间戳,用于同步,如果不确定,填充0</P>
+<P>&nbsp;</P>
 <H1>示例</H1></body>
 </html>

@@ -23,22 +23,23 @@ html,body {
 
 <P>获取编解码信息</P> 
  <H1>             语法</H1>
-<P> bool AudioCodec_Stream_GetAVCodec(XHANDLE 
-xhNet, XHANDLE*  pSt_AVParameter, AVCODEC_TIMEBASE* pSt_AVTimeBase = NULL)</P>
+<P> bool AudioCodec_Stream_DeCodec(XHANDLE xhNet, 
+XHANDLE pSt_AVBuffer,  XHANDLE*** pppSt_AVBuffer, int*  pInt_ListCount)</P>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：xhNet<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入要操作的流<BR>&nbsp;参数.二：pSt_AVParameter<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：二级指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输出获取的编解码参数信息,AVCodecParameters类型.此参数需要释放内存<BR>&nbsp;参数.三：pSt_AVTimeBase<BR>&nbsp; 
-In/Out：Out<BR>&nbsp; 类型：数据结构指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输出时间基</P>
+类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：解码器句柄<BR>&nbsp;参数.二：pSt_AVBuffer<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：数据结构指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：要解码的数据缓冲区,时间戳可以为0或者提供<BR>&nbsp;参数.三：pppSt_AVBuffer<BR>&nbsp; 
+In/Out：Out<BR>&nbsp; 类型：三级指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输出解码后的音频数据列表<BR>&nbsp;参数.四：pInt_ListCount<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出列表个数</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
 <H1>备注</H1>
-<P>pSt_AVParameter通过BaseLib_OperatorMemory_FreeCStyle释放内存</P>
+<P>&nbsp;</P>
 <H1>示例</H1></body>
 </html>

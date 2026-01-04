@@ -28,26 +28,34 @@ Cryption_Api_CryptEncodec
 <H1 >
   语法</H1>
 
-<P>bool Cryption_Api_CryptEncodec(LPCXSTR 
-lpszSourceData, XBYTE* ptszDestData, int* 
-pInt_Len, LPCXSTR lpszKey, 
-ENUM_XENGINE_CRYPTION_SYMMETRIC en_CryptType = 
-ENUM_XENGINE_CRYPTION_SYMMETRIC_3DES);</P> 
+<P>bool Cryption_Api_CryptEncodec(LPCXBTR lpszMSGBuffer, 
+XBYTE* ptszMSGBuffer, int* pInt_Len, LPCXSTR lpszKey, 
+ENUM_XENGINE_CRYPTION_SYMMETRIC enCryptType = 
+ENUM_XENGINE_CRYPTION_SYMMETRIC_AES128, XBYTE* ptszIVStr =  
+    
+  NULL, 
+XBYTE* ptszSalt = 
+NULL)</P> 
  <P>             </P>
 <P></P>
 <H1>参数</H1>
-<P>&nbsp;参数一：lpszSourceData<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：待加密的数据<BR>&nbsp;参数二：ptszDestData<BR>&nbsp; 
-In/Out：In/Out<BR>&nbsp; 类型：无符号字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：加密后的字符指针，请不要尝试做任何编码转换。编码转换肯定认不出这个数据内容<BR>&nbsp;参数三：pInt_MsgLen<BR>&nbsp; 
-In/Out：In/Out<BR>&nbsp; 类型：整数指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入待加密的字符串大小，输出加密后的数据长度<BR>&nbsp;参数四：lpszKey<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：表明要加密的KEY密钥。32位无符号，必须是8的倍数 
-要么8位要么16位<BR>&nbsp;参数五：en_CryptType<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：枚举型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：要使用哪种方式加密，默认为3DES</P>
+<P>&nbsp;参数.一：lpszMSGBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字节指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：待加密的数据,支持NULL,那么ptszMSGBuffer作为输入输出<BR>&nbsp;参数.二：ptszMSGBuffer<BR>&nbsp; 
+In/Out：Out<BR>&nbsp; 类型：字节指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：加密后的字符指针<BR>&nbsp;参数.三：pInt_MsgLen<BR>&nbsp; In/Out：In/Out<BR>&nbsp; 
+类型：整数指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入待加密的字符串大小，输出加密后的数据长度<BR>&nbsp;参数.四：lpszKey<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：表明要加密的KEY密钥<BR>&nbsp;参数.五：enCryptType<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：枚举型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：要使用哪种方式加密<BR>&nbsp;参数.六：ptszIVStr<BR>&nbsp; 
+In/Out：Out<BR>&nbsp; 类型：字节指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输出初始向量,长度16字节,如果为NULL表示不输出(不使用)<BR>&nbsp;参数.七：ptszSalt<BR>&nbsp; 
+In/Out：Out<BR>&nbsp; 类型：字节指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输出盐值,长度16字节,如果为NULL表示不输出(不使用)</P>
 <P></P>
 <H1>返回值</H1>
-<P>类型：逻辑型<BR>意思：是否加密成功</P>
+<P>类型：逻辑型<BR>意思：是否成功</P>
 <H1>备注</H1>
 <P>&nbsp;</P>
 <H1>示例</H1>

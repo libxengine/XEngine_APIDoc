@@ -30,14 +30,14 @@ AVFilter_Video_MIXRecv
 
 <DIV 
 style="FONT-SIZE: 14px; FONT-FAMILY: Consolas, 'Courier New', monospace; WHITE-SPACE: pre; FONT-WEIGHT: normal; COLOR: #000000; LINE-HEIGHT: 19px; BACKGROUND-COLOR: #ffffff"> 
- <DIV>       bool AVFilter_Video_MIXRecv(XHANDLE xhToken, AVCODEC_VIDEO_MSGBUFFER*** pppSt_MSGBuffer, int* pInt_ListCount)</DIV></DIV>
+ <DIV>       bool AVFilter_Video_MIXRecv(XHANDLE xhToken, XHANDLE*** pppSt_AVBuffer, int* pInt_ListCount)</DIV></DIV>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：xhToken<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：网络句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入要操作的过滤器句柄<BR>&nbsp;参数.二：pppSt_MSGBuffer<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+意思：输入要操作的过滤器句柄<BR>&nbsp;参数.二：pppSt_AVBuffer<BR>&nbsp; In/Out：Out<BR>&nbsp; 
 类型：三级指针<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：导出添加过滤器后的数据缓冲区<BR>&nbsp;参数.三：pInt_ListCount<BR>&nbsp; In/Out：Out<BR>&nbsp; 
 类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 

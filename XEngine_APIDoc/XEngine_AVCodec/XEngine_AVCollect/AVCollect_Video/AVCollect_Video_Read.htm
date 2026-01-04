@@ -31,7 +31,7 @@ AVCollect_Video_Read
 <P>
      
          bool 
-AVCollect_Video_Read(XHANDLE xhNet, AVCODEC_VIDEO_MSGBUFFER*** pppSt_MSGBuffer, int* 
+AVCollect_Video_Read(XHANDLE xhNet, XHANDLE*** pppSt_AVBuffer, int* 
      
           
   pInt_ListCount)</P>
@@ -47,7 +47,7 @@ AVCollect_Video_Read(XHANDLE xhNet, AVCODEC_VIDEO_MSGBUFFER*** pppSt_MSGBuffer, 
 <H1>参数</H1>
 <P >&nbsp;参数.一：xhNet<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入要操作的采集器<BR>&nbsp;参数.二：pppSt_MSGBuffer<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+意思：输入要操作的采集器<BR>&nbsp;参数.二：pppSt_AVBuffer<BR>&nbsp; In/Out：Out<BR>&nbsp; 
 类型：三级指针<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输出获取到的缓冲区数据,此参数需要内存释放<BR>&nbsp;参数.三：pInt_ListCount<BR>&nbsp; 
 In/Out：Out<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 

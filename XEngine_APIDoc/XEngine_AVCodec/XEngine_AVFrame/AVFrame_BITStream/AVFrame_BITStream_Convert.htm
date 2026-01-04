@@ -20,21 +20,19 @@ html,body {
 <H1>功能</H1>
 <P>转换数据</P>
 <H1>语法</H1>
-<P>bool AVFrame_BITStream_Convert(XNETHANDLE xhNet, uint8_t* 
-lpszMSGBuffer, int nMSGLen, 
-XENGINE_MSGBUFFER*** pppSt_Frame, int* pInt_ListCount)</P>
+<P>  bool AVFrame_BITStream_Convert(XNETHANDLE 
+xhNet, XHANDLE pSt_AVBuffer, 
+XHANDLE*** pppSt_AVFrame, int* pInt_ListCount)</P>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：xhNet<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入要操作的转换器<BR>&nbsp;参数.二：lpszMSGBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要转换的缓冲区<BR>&nbsp;参数.三：nMSGLen<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：要转换的大小<BR>&nbsp;参数.四：pppSt_Frame<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要操作的转换器<BR>&nbsp;参数.二：pSt_AVBuffer<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入要转换的缓冲区<BR>&nbsp;参数.三：pppSt_AVFrame<BR>&nbsp; In/Out：Out<BR>&nbsp; 
 类型：三级指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输出转换后的缓冲区队列<BR>&nbsp;参数.五：pInt_ListCount<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+意思：输出转换后的缓冲区队列<BR>&nbsp;参数.四：pInt_ListCount<BR>&nbsp; In/Out：Out<BR>&nbsp; 
 类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输出队列个数</P>
 <P></P>
