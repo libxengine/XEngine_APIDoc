@@ -31,7 +31,10 @@ AVFilter_Audio_MIXSend
 <DIV 
 style="FONT-SIZE: 14px; FONT-FAMILY: Consolas, 'Courier New', monospace; WHITE-SPACE: pre; FONT-WEIGHT: normal; COLOR: #000000; LINE-HEIGHT: 19px; BACKGROUND-COLOR: #ffffff"> 
       
-   bool AVFilter_Audio_MIXSend(XHANDLE xhToken,  int nIndex, XHANDLE  pSt_MSGBuffer)</DIV>
+   bool AVFilter_Audio_MIXSend(XHANDLE xhToken, int nIndex, 
+XHANDLE pSt_MSGBuffer, AVCODEC_TIMESTAMP* pSt_TimeStamp = 
+      
+           NULL)</DIV>
 <P></P>
 <P></P>
 <P></P>
@@ -41,7 +44,9 @@ style="FONT-SIZE: 14px; FONT-FAMILY: Consolas, 'Courier New', monospace; WHITE-S
 In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：要操作的索引混合文件索引<BR>&nbsp;参数.三：pSt_MSGBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：无符号字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入要混合的原始数据,可以为NULL</P>
+意思：输入要混合的原始数据,可以为NULL<BR>&nbsp;参数.四：pSt_TimeStamp<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：数据结构指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输入自定义时间戳</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

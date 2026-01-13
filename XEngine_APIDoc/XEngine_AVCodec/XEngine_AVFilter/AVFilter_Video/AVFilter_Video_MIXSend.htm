@@ -29,11 +29,14 @@ style="FONT-SIZE: 14px; FONT-FAMILY: Consolas, 'Courier New', monospace; WHITE-S
         
       #ffffff" >    
         
-   bool AVFilter_Video_MIXSend(XHANDLE xhToken,     
+   bool AVFilter_Video_MIXSend(XHANDLE xhToken, int nIndex, 
+XHANDLE pSt_AVBuffer, AVCODEC_TIMESTAMP* pSt_TimeStamp =    
         
-    int nIndex, XHANDLE     
+          
         
-    pSt_AVBuffer)</DIV>
+           
+        
+    NULL)</DIV>
 <DIV></DIV>
 <P></P>
 <P></P>
@@ -43,7 +46,9 @@ style="FONT-SIZE: 14px; FONT-FAMILY: Consolas, 'Courier New', monospace; WHITE-S
 类型：网络句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要操作的过滤器句柄<BR>&nbsp;参数.二：nIndex<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输入要操作的索引<BR>&nbsp;参数.三：pSt_AVBuffer<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：数据结构指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：视频缓冲区,可以为NULL</P>
+类型：数据结构指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：视频缓冲区,可以为NULL<BR>&nbsp;参数.四：pSt_TimeStamp<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：数据结构指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入自定义时间戳</P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
 <H1>备注</H1>
