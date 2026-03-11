@@ -24,8 +24,8 @@ html,body {
  <P>             添加TS文件到指定流中</P>
 <H1>语法</H1>
 <P>bool HLSProtocol_M3u8Packet_AddFile(XNETHANDLE xhToken, 
-XNETHANDLE xhSub, LPCXSTR lpszFileName = NULL, double dlTime = 0, bool bEndFile = 
-true)</P>
+XNETHANDLE xhSub, LPCXSTR lpszFileName = NULL, double dlTime = 0, LPCXSTR lpszParameter = 
+NULL)</P>
 <P></P>
 <P></P>
 <P></P>
@@ -34,10 +34,11 @@ true)</P>
 类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要操作的主文件<BR>&nbsp;参数.二：xhSub<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输入要操作的流<BR>&nbsp;参数.三：lpszFileName<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：文件名称<BR>&nbsp;参数.四：dlTime<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：浮点型<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：输入此视频文件的时长<BR>&nbsp;参数.五：bEndFile<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：添加是否结束,结束最后三个参数无效</P>
+类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：文件名称,如果为NULL,表示结束文件<BR>&nbsp;参数.四：dlTime<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：浮点型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输入此视频文件的时长<BR>&nbsp;参数.五：lpszParameter<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：Y<BR> &nbsp;意思：自定义后续参数,格式为:#参数1=值1\n#参数2= 值2</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

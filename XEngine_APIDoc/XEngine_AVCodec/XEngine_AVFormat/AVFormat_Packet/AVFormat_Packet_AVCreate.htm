@@ -24,7 +24,8 @@ html,body {
 <P>自定义结构创建流</P> 
  <H1>             语法</H1>
 <P>bool AVFormat_Packet_AVCreate(XHANDLE xhNet, 
-XENGINE_PROTOCOL_AVINFO* pSt_AVProtocol)</P>
+XENGINE_PROTOCOL_AVINFO* pSt_AVProtocol, int* pInt_AVIndex =   
+ NULL)</P>
 <P></P>
 <P></P>
 <P></P>
@@ -32,7 +33,9 @@ XENGINE_PROTOCOL_AVINFO* pSt_AVProtocol)</P>
 <P>&nbsp;参数.一：xhNet<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输入要操作的媒体包<BR>&nbsp;参数.二：pSt_AVProtocol<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：数据结构指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入创建的流信息</P>
+类型：数据结构指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入创建的流信息<BR>&nbsp;参数.三：pInt_AVIndex<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：整数型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输出创建的流索引</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

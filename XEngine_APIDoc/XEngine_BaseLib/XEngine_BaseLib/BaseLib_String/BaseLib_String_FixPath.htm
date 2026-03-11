@@ -23,8 +23,9 @@ html,body {
 <H1>功能</H1> 
  <P>             修复路径字符串</P>
 <H1>语法</H1>
-<P>BOOL BaseLib_String_FixPath(CHAR* ptszStrBuffer, 
-int nType = 0, int nRelativeCount = 0)</P>
+<P>BOOL BaseLib_String_FixPath(char* ptszStrBuffer, int 
+nType =  0, 
+int nRelativeCount = 0, bool bPoint = true)</P>
 <P></P>
 <P></P>
 <H1>参数</H1>
@@ -34,7 +35,9 @@ In/Out：In/Out<BR>&nbsp; 类型：字符指针<BR>&nbsp; 可空：N<BR>&nbsp;
 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：输入要处理的路径,0,自动,1使用绝对路径,2使用相对路径<BR>&nbsp;参数.三：nRelativeCount<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：如果大于0,那么绝对路径将被修改为相对路径,并且设置相对路径保留的路径数</P>
+意思：如果大于0,那么绝对路径将被修改为相对路径,并且设置相对路径保留的路径数<BR>&nbsp;参数.四：bPoint<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：转为相对路径时候是否在前面添加.</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

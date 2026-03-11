@@ -24,12 +24,15 @@ html,body {
  <P>             添加一个流</P>
 <H1>语法</H1>
 <P>bool HLSProtocol_M3u8Packet_AddStream(XNETHANDLE 
-xhToken, XNETHANDLE * pxhToken, LPCXSTR lpszSubFile, bool bVod, int nTimeSize =  
+xhToken, XNETHANDLE* pxhToken, LPCXSTR lpszSubFile, bool bVod, int nBindWidth, 
+int nTimeSize =  
        15, int nListSize =  
-       100, int nBindWidth = 
-0, int nSeq =   
-       1, LPCXSTR 
-lpszUrl =             NULL)</P>
+       100, int nSeq =  
+       1, LPCXSTR lpszParameter =  
+       NULL, LPCXSTR lpszUrl = 
+NULL, bool bCreateFile =   
+         
+              true)</P>
 <P></P>
 <P></P>
 <P></P>
@@ -42,12 +45,16 @@ In/Out：Out<BR>&nbsp; 类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp;
 In/Out：In<BR>&nbsp; 类型：逻辑型<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：是文件还是实时流<BR>&nbsp;参数.五：nTimeSize<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：输入此流最大分片时间.时间越长延迟越高<BR>&nbsp;参数.六：nListSize<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：列表最大个数<BR>&nbsp;参数.七：nBindWidth<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：输入此流的带宽大小,用于标示此为标清,高清,等<BR>&nbsp;参数.八：nSeq<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入开始的序列号<BR>&nbsp;参数.八：lpszUrl<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入流地址</P>
+意思：输入此流最大分片时间.时间越长延迟越高<BR>&nbsp;参数.六：nBindWidth<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入此流的带宽大小<BR>&nbsp;参数.七：nListSize<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：列表最大个数<BR>&nbsp;参数.八：nSeq<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 
+可空：Y<BR>&nbsp; 意思：输入开始的序列号<BR>&nbsp;参数.九：lpszParameter<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：Y<BR> 
+&nbsp;意思：输入流后续参数,如分辨率等,格式为:参数1=值1,参数2=值2<BR>&nbsp;参数.十：lpszUrl<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输入流地址<BR>&nbsp;参数.十一：bCreateFile<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：是否创建对应流的M3U8文件,如果不创建,pxhToken参数将无效&nbsp;</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

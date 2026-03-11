@@ -22,13 +22,19 @@ html,body {
 
 <H1>功能</H1> 
  <P>             初始化一个文件解封包器</P>
-<H1>语法</H1>XHANDLE AVFormat_UNPack_Init()
+<H1>语法</H1>
+<P>XHANDLE AVFormat_UNPack_Init(LPCXSTR lpszPassword = NULL, 
+int nCryptionType = 0)</P> 
 <P></P>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
-<P> 无</P>
+<P>&nbsp;参数.一：lpszPassword<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输入解密密码<BR>&nbsp;参数.二：nCryptionType<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输入解密类型,类型为加解密模块的:ENUM_XENGINE_CRYPTION_SYMMETRIC</P>
 <P></P>
 <H1>返回值</H1>
 <P> 

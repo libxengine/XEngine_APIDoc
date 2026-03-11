@@ -24,7 +24,8 @@ html,body {
  <P>             创建一个流</P>
 <H1>语法</H1>
 <P>bool AVFormat_Packet_StreamCreate(XHANDLE xhNet, XHANDLE 
-pSt_AVParameter)</P>
+pSt_AVParameter, int* pInt_AVIndex =    
+NULL)</P>
 <P></P>
 <P></P>
 <P></P>
@@ -32,7 +33,9 @@ pSt_AVParameter)</P>
 <P>&nbsp;参数.一：xhNet<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：要操作的流句柄<BR>&nbsp;参数.二：pSt_AVParameter<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入获取到的音视频参数:AVCodecParameters</P>
+类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输入获取到的音视频参数:AVCodecParameters<BR>&nbsp;参数.三：pInt_AVIndex<BR>&nbsp; 
+In/Out：Out<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输出创建的流索引</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
