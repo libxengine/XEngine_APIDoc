@@ -39,8 +39,7 @@ In/Out：In<BR>&nbsp; 类型：数据结构指针<BR>&nbsp; 可空：N<BR>&nbsp;
 意思：发送HTTP协议配置选项<BR>&nbsp;参数.四：lpszBody<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：添加响应的内容,如果此参数为NULL,参数5不为NULL,那么将由调用者自己发送后续内容数据<BR>&nbsp;参数.五：nBodyLen<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：响应内容的长度<BR>&nbsp;参数.六：lpszHdr<BR>&nbsp; In/Out：In<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：响应内容的长度,这个参数可以单独设置而不设置参数四,那么就没有数据负载只有头<BR>&nbsp;参数.六：lpszHdr<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：添加自定义协议头 格式 XEngine: 123\r\nXAuth: 
 abc\r\n</P>
 <P></P>
