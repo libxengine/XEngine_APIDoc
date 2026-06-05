@@ -24,15 +24,15 @@ html,body {
  <P>             设置当前写的包为末尾包</P>
 <H1>语法</H1>
 <P>bool 
-AVFormat_Packet_SetLastPTS(XHANDLE  xhNet, bool bAVSync = false, AVCODEC_TIMESTAMP* pSt_TimeStamp = NULL, int nAVIndex =  -1)</P>
+AVFormat_Packet_SetLastPTS(XHANDLE  xhNet, int nAVSyncMode = 0, AVCODEC_TIMESTAMP* pSt_TimeStamp = NULL, int nAVIndex =  -1)</P>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：xhNet<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：要操作的封包器<BR>&nbsp;参数.二：bAVSync<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：是否强制进行一次音画同步操作,此操作不支持多音轨<BR>&nbsp;&nbsp;如果你发现切流和切文件后音画出现同步问题,可以设置为真让封包器修正<BR>&nbsp;参数.三：pSt_TimeStamp<BR>&nbsp; 
+类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：要操作的封包器<BR>&nbsp;参数.二：nAVSyncMode<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：是否强制进行一次音画同步操作,此操作不支持多音轨,<BR>&nbsp;&nbsp;0不进行同步,1自动同步,2以视频为基准同步,3以音频为基准同步<BR>&nbsp;&nbsp;如果你发现切流和切文件后音画出现同步问题,可以设置为真让封包器修正<BR>&nbsp;参数.三：pSt_TimeStamp<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：数据结构指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：时间戳信息结构<BR>&nbsp;参数.四：nAVIndex<BR>&nbsp; In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 
 可空：Y<BR>&nbsp; 意思：输入要操作的流索引,-1 表示自动获取.指定索引需要指定时间戳</P>

@@ -28,11 +28,13 @@ Algorithm_Calculation_PassiveOPen
  语法</H1>
 <P >
   bool Algorithm_Calculation_PassiveOPen(XHANDLE pxhToken, 
-CALLBACK_XENGINE_BASELIB_ALGORITHM_PASSIVE fpCall_CBPassive, int nAvgSDFlow = 0, 
-int nAvgRVFlow =
+CALLBACK_XENGINE_BASELIB_ALGORITHM_PASSIVE fpCall_CBPassive, int nAvgSDFlow =
      
- 0, int nAvgTime = 0, 
-bool bTrace = false, XPVOID lParam =     NULL)</P>
+ 0, int nAvgRVFlow = 0, 
+int nAvgTime =
+     
+ 0, bool bTrace = false, 
+XPVOID lParam =         NULL)</P>
 
 <P></P> 
  <P>             </P>
@@ -43,7 +45,7 @@ bool bTrace = false, XPVOID lParam =     NULL)</P>
 类型：回调函数<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：触发设置后的回调函数<BR>&nbsp;参数.三：nAvgSDFlow<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：输入发送的触发值,为0不启用<BR>&nbsp;参数.四：nAvgSDFlow<BR>&nbsp; In/Out：In<BR>&nbsp; 
+意思：输入发送的触发值,为0不启用<BR>&nbsp;参数.四：nAvgRVFlow<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入接受的触发值<BR>&nbsp;参数.五：nAvgTime<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：输入次数的触发值<BR>&nbsp;参数.六：bTrace<BR>&nbsp; In/Out：In<BR>&nbsp; 
