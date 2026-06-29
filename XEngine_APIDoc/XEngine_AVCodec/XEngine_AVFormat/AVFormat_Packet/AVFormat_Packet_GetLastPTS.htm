@@ -1,0 +1,51 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>AVFormat_Packet_GetLastPTS</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<H1>函数</H1>
+<P >
+ AVFormat_Packet_GetLastPTS</P>
+<H1 >
+  功能</H1>
+
+<P>获取封包器的最后时间戳信息</P> 
+ <H1>             语法</H1>
+<P>bool AVFormat_Packet_GetLastPTS(XHANDLE xhNet, int 
+nAVIndex, int64_t* pInt_PTSStart, int64_t* pInt_TimeDuration, LPCXSTR 
+lpszTimeStart = NULL, int nTimeDuration = 0)</P>
+<P></P>
+<P></P>
+<P></P>
+<H1>参数</H1>
+<P>&nbsp;参数.一：xhNet<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要操作的封包器<BR>&nbsp;参数.二：nAVIndex<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：媒体索引<BR>&nbsp;参数.三：pInt_PTSStart<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出最后的 PTS 
+开始时间<BR>&nbsp;参数.四：pInt_TimeDuration<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输出时间持续长度<BR>&nbsp;参数.五：lpszTimeStart<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：字符串指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入开始时间字符串,格式为:2026-06-16 
+14:24:00<BR>&nbsp;参数.六：nTimeDuration<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：Y<BR> &nbsp; 意思：输入时间持续长度,单位为毫秒</P>
+<P></P>
+<H1>返回值</H1>
+<P>类型：逻辑型<BR>意思：是否成功</P>
+<H1>备注</H1>
+<P>最后两个参数可以为空,那么只代表获取最后的 PTS 时间戳,如果不为空,那么会计算出对应的 PTS 
+开始时间和持续长度</P>
+<H1>示例</H1></body>
+</html>

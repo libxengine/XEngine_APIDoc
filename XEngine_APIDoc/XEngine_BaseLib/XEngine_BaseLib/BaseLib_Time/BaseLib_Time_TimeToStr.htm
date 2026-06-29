@@ -23,9 +23,10 @@ html,body {
 <H1>功能</H1> 
  <P>             时间结构转字符串</P>
 <H1>语法</H1>
-<P>BOOL BaseLib_Time_TimeToStr(CHAR* ptszYMDTimer, 
-CHAR* ptszHMSTimer = NULL, BOOL bIsCombo = TRUE, XENGINE_LIBTIME* pSt_Timer = 
-NULL)</P>
+<P>bool BaseLib_Time_TimeToStr(XCHAR* ptszYMDTimer, XCHAR * 
+ptszHMSTimer =  NULL, 
+bool bIsCombo = true, XENGINE_LIBTIME* pSt_Timer = NULL, bool bShowMicroseconds = 
+false)</P>
 <P></P>
 <P></P>
 <H1>参数</H1>
@@ -36,7 +37,9 @@ In/Out：Out<BR>&nbsp; 类型：字符指针<BR>&nbsp; 可空：Y<BR>&nbsp;
 意思：导出时间的时分秒结构<BR>&nbsp;参数.三：bIsCombo<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：参数一是否打包成完整时间<BR>&nbsp;参数.四：pSt_Timer<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：数据结构指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入要转换的时间,为NULL获取当前时间</P>
+类型：数据结构指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：输入要转换的时间,为NULL获取当前时间<BR>&nbsp;参数.五：bShowMicroseconds<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：是否显示微秒</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
