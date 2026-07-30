@@ -23,21 +23,19 @@ html,body {
 
 <P>转换一帧图像数据</P> 
  <H1>             语法</H1>
-<P>bool VideoCodec_Help_ScaleConvert(XHANDLE xhToken, 
-XHANDLE pSt_SrcFrame, XHANDLE*** pppSt_DstFrame, int nSliceY = 0, int nSliceH =    
+<P>  bool 
+VideoCodec_Help_ScaleConvert(XHANDLE xhToken, XHANDLE pSt_AVFrame, int nSliceY = 0, int nSliceH =    
         0)</P>
 <P></P>
 <P></P>
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：xhToken<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要操作的转换器<BR>&nbsp;参数.二：pSt_SrcFrame<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：原始图像格式帧<BR>&nbsp;参数.三：pppSt_DstFrame<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：三级指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输出转换后的目标格式<BR>&nbsp;参数.四：nSliceY<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：要开始转换的Y坐标点<BR>&nbsp;参数.五：nSliceH<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：转换的行</P>
+类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要操作的转换器<BR>&nbsp;参数.二：pSt_AVFrame<BR>&nbsp; 
+In/Out：In/Out<BR>&nbsp; 类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：原始图像格式帧,转换后将会修改为目标图像格式帧<BR>&nbsp;参数.三：nSliceY<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：要开始转换的Y坐标点<BR>&nbsp;参数.四：nSliceH<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：转换的行</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
