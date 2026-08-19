@@ -26,7 +26,9 @@ html,body {
 <H1>语法</H1>
 <P >
  bool Cryption_Client_Connect(XSOCKET hSocket, XCHAR* 
-ptszSslSubJect = NULL, XCHAR* ptszSslIssuer = NULL, XCHAR* ptszSslAlgorithm =
+ptszSslSubJect = NULL, XCHAR* ptszSslIssuer =
+   NULL, XCHAR* 
+ptszSslAlgorithm =     NULL, LPCXSTR lpszHostStr =
      
  
  NULL)</P>
@@ -45,8 +47,8 @@ ptszSslSubJect = NULL, XCHAR* ptszSslIssuer = NULL, XCHAR* ptszSslAlgorithm =
 意思：输出证书主体名称<BR>&nbsp;参数.三：ptszSslIssuer<BR>&nbsp; In/Out：Out<BR>&nbsp; 
 类型：字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：输出证书发行者名称<BR>&nbsp;参数.四：ptszSslAlgorithm<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：输出加密算法<BR>
+类型：字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输出加密算法<BR>&nbsp;参数.五：lpszHostStr<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：输入要验证的主机名
   </P> 
 <P></P> <H1>返回值</H1> 
 <P>类型：逻辑型<BR>意思：是否成功</P> <H1>备注</H1> 
