@@ -24,14 +24,14 @@ html,body {
  <P>             改变用户</P>
 <H1>语法</H1>
 <P>BOOL DataBase_MySQL_ChangeUser(XHDATA 
-xhData,DATABASE_MYSQL_CONNECTINFO st_MySQLConnector)</P>
+xhData,DATABASE_MYSQL_CONNECTINFO* pSt_MySQLConnector)</P>
 <P></P>
 <P></P>
 <H1>参数 </H1>
 <P>&nbsp;参数.一：xhData<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：数据库句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：要对哪个SQL客户端执行<BR>&nbsp;参数.二：st_MySQLConnector<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：结构体<BR>&nbsp; 可空：N<BR>&nbsp; 意思：用户信息结构</P>
+意思：要对哪个SQL客户端执行<BR>&nbsp;参数.二：pSt_MySQLConnector<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：结构体指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：用户信息结构</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>

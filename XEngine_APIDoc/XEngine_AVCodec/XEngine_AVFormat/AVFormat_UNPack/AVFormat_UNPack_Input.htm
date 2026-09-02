@@ -24,9 +24,11 @@ html,body {
  <P>             设置输入数据流</P>
 <H1>语法</H1>
 <P>    
-  bool     
-AVFormat_UNPack_Input(XHANDLE xhNet, LPCXSTR     
-lpszFile, bool bMissDamage =    
+  bool AVFormat_UNPack_Input(XHANDLE xhNet, LPCXSTR 
+lpszFile, LPCXSTR lpszFmtStr =    
+       
+       
+NULL, bool bMissDamage =    
 false, XENGINE_KEYVALUE*** pppSt_KEYValue = 
 NULL, int nListCount = 0)</P>
 <P></P>
@@ -36,11 +38,13 @@ NULL, int nListCount = 0)</P>
 <P>&nbsp;参数.一：xhNet<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入要操作的句柄<BR>&nbsp;参数.二：lpszFile<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：要解封包的文件<BR>&nbsp;参数.三：bMissDamage<BR>&nbsp; In/Out：In<BR>&nbsp; 
+意思：要解封包的文件<BR>&nbsp;参数.三：lpszFmtStr<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：封包格式类型，或者设备类型<BR>&nbsp;参数.四：bMissDamage<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：是否允许跳过损坏帧并且自动重新生成pts<BR>&nbsp;参数.四：pppSt_KEYValue<BR>&nbsp; 
+意思：是否允许跳过损坏帧并且自动重新生成pts<BR>&nbsp;参数.五：pppSt_KEYValue<BR>&nbsp; 
 In/Out：In<BR>&nbsp; 类型：三级指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：输入自定义参数列表<BR>&nbsp;参数.五：nListCount<BR>&nbsp; In/Out：In<BR>&nbsp; 
+意思：输入自定义参数列表<BR>&nbsp;参数.六：nListCount<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：参数列表个数</P>
 <P></P>
 <H1>返回值</H1>
