@@ -16,13 +16,14 @@ html,body {
 
 <body>
 <H1>函数</H1>
-<P>FTPProtocol_Parse_Init</P>
+<P>FTPProtocol_Parse_InitEx</P>
 <H1>功能</H1>
 <P>初始化FTP解析器</P>
 <H1>语法</H1>
 <P>    
-    bool 
-FTPProtocol_Parse_Init(int nPoolCount = 0, bool bServer = true)</P>
+    XHANDLE FTPProtocol_Parse_InitEx(LPCXSTR    
+    lpszFTPCodes, 
+int nPoolCount = 0, bool bServer = true)</P>
 <P></P>
 <P>
 </P>
@@ -30,9 +31,10 @@ FTPProtocol_Parse_Init(int nPoolCount = 0, bool bServer = true)</P>
 
 </P>
 <H1>参数</H1>
-<P > &nbsp;参数.一：nPoolCount<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
-意思：任务池个数,应该配合线程池个数使用<BR>&nbsp;参数.二：bServer<BR>&nbsp; In/Out：In<BR>&nbsp; 
+<P >&nbsp;参数.一：lpszFTPCodes<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：FTP响应文件<BR>&nbsp;参数.二：nPoolCount<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：任务池个数,应该配合线程池个数使用<BR>&nbsp;参数.三：bServer<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：是否为服务器模式</P>
 <P></P>
 <H1>返回值</H1>
