@@ -25,10 +25,12 @@ html,body {
 <H1>语法</H1>
 <P>bool DataBase_MySQL_Connect(XNETHANDLE * pxhData, 
 DATABASE_MYSQL_CONNECTINFO * pSt_MySQLConnector, int nTimeOut = 5, bool 
-bKeepConnect = true, LPCXSTR lpszCharSet =    
-  ("utf8"), LPCXSTR lpszSslKey =  
-NULL, LPCXSTR lpszSslCert =  
-NULL,  LPCXSTR lpszSslCa = NULL)</P>
+bKeepConnect =    
+  true, LPCXSTR lpszCharSet = ("utf8"), LPCXSTR 
+lpszSslKey = NULL, LPCXSTR lpszSslCert =    
+  NULL, LPCXSTR lpszSslCa =  
+NULL, bool bCompress =  
+     false)</P>
 <P></P>
 <P></P>
 <H1>参数 </H1>
@@ -46,7 +48,9 @@ In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp;
 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：SSL证书秘钥路径<BR>&nbsp;参数.七：lpszSslCert<BR>&nbsp; In/Out：In<BR>&nbsp; 
 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：SSL证书路径<BR>&nbsp;参数.八：lpszSslCa<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：SSL授权根证书 </P>
+In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+意思：SSL授权根证书<BR>&nbsp;参数.九：bCompress<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：逻辑型<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：是否启用压缩支持 </P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型 <BR>意思：是否成功</P>
