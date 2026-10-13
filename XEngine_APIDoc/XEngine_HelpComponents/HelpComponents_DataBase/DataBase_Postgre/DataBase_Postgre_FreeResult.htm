@@ -20,18 +20,18 @@ html,body {
 <H1>功能</H1>
 <P>释放一个记录集句柄资源</P>
 <H1>语法</H1>
-<P>BOOL DataBase_Postgre_FreeResult(XNETHANDLE 
-xhNet,XNETHANDLE xhResult)</P>
+<P> bool DataBase_Postgre_FreeResult(XCHAR*** ppptszResult, 
+int nListCount)</P>
 <P></P>
 <P></P>
 <H1>参数 </H1>
 <P>&nbsp;参数.一：xhNet<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入数据库句柄<BR>&nbsp;参数.二：xhResult<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入记录集句柄</P>
+类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入数据库句柄<BR>&nbsp;参数.二：nListCount<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入插入的列表个数,row * col</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型 <BR>意思：是否成功</P>
 <H1>备注</H1>
-<P>&nbsp;</P>
+<P>同BaseLib_Memory_Free</P>
 <H1>示例</H1></body>
 </html>

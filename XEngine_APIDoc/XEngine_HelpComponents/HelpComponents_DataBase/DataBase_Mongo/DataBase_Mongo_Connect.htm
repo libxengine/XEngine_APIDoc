@@ -23,15 +23,17 @@ html,body {
 <H1>功能</H1> 
  <P>             链接到一个MONGODB服务器</P>
 <H1>语法</H1>
-<P>BOOL DataBase_Mongo_Connect(XNETHANDLE *pxhNet,LPCSTR 
-lpszDBUrl)</P>
+<P>bool DataBase_Mongo_Connect(XNETHANDLE* pxhNet, 
+DATABASE_MYSQL_CONNECTINFO* pSt_DBConnector, LPCXSTR lpszAuthDBName =   
+NULL)</P>
 <P></P>
 <P></P>
 <H1>参数 </H1>
 <P>&nbsp;参数.一：pxhNet<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：句柄指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：导出数据库句柄<BR>&nbsp;参数.二：lpszDBUrl<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：要链接的地址，如：mongodb://localhost:27017</P>
+类型：句柄指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：导出数据库句柄<BR>&nbsp;参数.二：pSt_DBConnector<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：数据结构指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：要链接的地址</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型 <BR>意思：是否成功</P>

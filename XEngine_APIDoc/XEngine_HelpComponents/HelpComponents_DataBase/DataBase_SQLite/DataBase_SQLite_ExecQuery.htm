@@ -21,25 +21,29 @@ html,body {
 <H1 >
   功能</H1>
 
-<P>通过回调来查询内容</P> 
+<P>执行查询语句</P> 
  <H1>             语法</H1>
-<P>BOOL DataBase_SQLite_ExecQuery(XHDATA xhData,LPCSTR 
-lpszSQL,CALLBACK_HELPCOMPONENTS_DATABASE_SQLITE_QUERY fpCall_SQLiteQuery,LPVOID 
-lParam = NULL)</P>
+<P>bool DataBase_SQLite_ExecQuery(XNETHANDLE xhData, 
+LPCXSTR lpszQueryStr, XCHAR*** ppptszResult, 
+__int64u* pInt_Row, 
+__int64u*  pInt_Column)</P>
 <P></P>
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：xhData<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：数据库句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：要查询的指定数据库<BR>&nbsp;参数.二：lpszSQL<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：要查询的数据库语句<BR>&nbsp;参数.三：lpCall_SQLiteQuery<BR>&nbsp; In/Out：In/Out<BR>&nbsp; 
-类型：回调函数<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：查询到的数据回调，失败将无作用<BR>&nbsp;参数.四：lParam<BR>&nbsp; In/Out：In/Out<BR>&nbsp; 
-类型：无类型指针<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：回调函数自定义参数</P>
+类型：数据库句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：要对哪个数据库进行操作<BR>&nbsp;参数.二：lpszQueryStr<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：要执行的SQL语句<BR>&nbsp;参数.三：ppptszResult<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：三级指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：保存结果的记录集数据&nbsp; 
+ppptszResult[i]<BR>&nbsp;参数.四：pInt_Row<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：执行后影响的行数<BR>&nbsp;参数.五：pInt_Column<BR>&nbsp; In/Out：Out<BR>&nbsp; 
+类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：执行后影响的列数</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型 <BR>意思：是否成功</P>
 <H1>备注</H1>
-<P>&nbsp;</P>
+<P>返回的数据集第一行是列表头,第二行ppptszResult(col)才是数据</P>
 <H1>示例</H1></body>
 </html>

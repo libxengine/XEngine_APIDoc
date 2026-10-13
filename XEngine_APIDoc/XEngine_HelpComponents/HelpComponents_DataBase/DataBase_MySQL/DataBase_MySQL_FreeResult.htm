@@ -27,20 +27,19 @@ DataBase_MySQL_FreeResult
 <H1 >
  语法</H1>
 <P >
-  BOOL DataBase_MySQL_FreeResult(XHDATA xhData,XNETHANDLE 
-xhResult = 0)</P>
+  bool DataBase_MySQL_FreeResult(XCHAR** pptszResult, 
+int  nListCount)</P>
 
 <P></P> 
  <P>             </P>
 <H1>参数 </H1>
-<P>&nbsp;参数.一：xhData<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：数据库句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：要对哪个SQL客户端执行<BR>&nbsp;参数.二：xhResult<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：记录集句柄<BR>&nbsp; 可空：Y<BR>&nbsp; 意思：要对哪个记录集操作，默认释放所有相关联记录集</P>
+<P>&nbsp;参数.一：pptszResult<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：二级指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：要释放的内存<BR>&nbsp;参数.二：nListCount<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：整数型<BR>&nbsp; 可空：N<BR>&nbsp; 意思：内存列表个数,row*col</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型<BR>意思：是否成功</P>
 <H1>备注</H1>
-<P>&nbsp;</P>
+<P>同BaseLib_Memory_Free函数</P>
 <H1>示例</H1></body>
 </html>

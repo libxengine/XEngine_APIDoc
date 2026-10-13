@@ -15,28 +15,24 @@ html,body {
 </head>
 
 <body>
-<H1>函数</H1>
-<P>
-DataBase_Postgre_Connect
-</P>
-<H1>
-功能
-
-</H1>
-<P>链接到一个POSTGRE服务器</P>
 <H1 >
- 语法</H1>
+ 函数</H1>
 <P >
-  BOOL DataBase_Postgre_Connect(XNETHANDLE *pxhNet,LPCSTR 
-lpszDBUrl)</P>
+  DataBase_Postgre_Connect</P>
 
-<P></P> 
- <P>             </P>
+<H1>
+功能</H1>
+<P>通过结构体连接到PG数据库</P>
+<H1>语法</H1>
+<P>bool DataBase_Postgre_Connect(XNETHANDLE* 
+pxhNet, DATABASE_MYSQL_CONNECTINFO* pSt_DBConnector)</P>
+<P></P>
+<P></P>
 <H1>参数 </H1>
 <P>&nbsp;参数.一：pxhNet<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：句柄指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：导出数据库句柄<BR>&nbsp;参数.二：lpszDBUrl<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：要链接的地址，如：hostaddr=192.168.0.101 user=postgres dbname=testdb1</P>
+类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 
+意思：输出成功后的操作句柄<BR>&nbsp;参数.二：pSt_DBConnector<BR>&nbsp; In/Out：In<BR>&nbsp; 
+类型：数据结构指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入数据库信息 </P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型 <BR>意思：是否成功</P>

@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>DataBase_Postgre_Exec</title>
+<title>DataBase_Postgre_Execute</title>
 <meta name="GENERATOR" content="WinCHM">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <style>
@@ -15,15 +15,15 @@ html,body {
 </head>
 
 <body>
-<H1>函数</H1>
-<P >
- DataBase_Postgre_Exec</P>
 <H1 >
-  功能</H1>
+ 函数</H1>
+<P >
+  DataBase_Postgre_Execute</P>
 
-<P>执行一条PG数据库非查询语句或者执行一条PG命令</P> 
- <H1>             语法</H1>
-<P>BOOL DataBase_Postgre_Exec(XNETHANDLE xhNet,LPCSTR 
+<H1>功能</H1> 
+ <P>             执行一条PG数据库非查询语句或者执行一条PG命令</P>
+<H1>语法</H1>
+<P>bool DataBase_Postgre_Execute(XNETHANDLE xhNet,LPCXSTR 
 lpszQuery)</P>
 <P></P>
 <P></P>
@@ -35,6 +35,6 @@ In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp;
 <H1>返回值</H1>
 <P>类型：逻辑型 <BR>意思：是否成功</P>
 <H1>备注</H1>
-<P>&nbsp;</P>
+<P>启用重连你需要再次检测是否链接成功</P>
 <H1>示例</H1></body>
 </html>

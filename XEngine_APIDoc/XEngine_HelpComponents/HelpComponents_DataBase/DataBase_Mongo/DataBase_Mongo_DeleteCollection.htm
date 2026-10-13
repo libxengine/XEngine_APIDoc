@@ -23,20 +23,18 @@ DataBase_Mongo_DeleteCollection
 功能
 
 </H1>
-<P>删除采集器</P>
+<P>删除一个集合或者表</P>
 <H1 >
  语法</H1>
 <P >
-  BOOL DataBase_Mongo_DeleteCollection(XNETHANDLE 
-xhNet,LPCSTR lpszDBName,LPCSTR lpszCollName)</P> 
+ bool DataBase_Mongo_DeleteCollection(XNETHANDLE xhNet, 
+LPCXSTR lpszCollName)</P> 
  <P>             </P>
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：xhNet<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入数据库句柄<BR>&nbsp;参数.二：lpszDBName<BR>&nbsp; 
-In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 
-意思：要操作的数据库<BR>&nbsp;参数.三：lpszCollName<BR>&nbsp; In/Out：In<BR>&nbsp; 
-类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：要操作的集合</P>
+类型：句柄<BR>&nbsp; 可空：N<BR>&nbsp; 意思：输入数据库句柄<BR>&nbsp;参数.二：lpszCollName<BR>&nbsp; 
+In/Out：In<BR>&nbsp; 类型：常量字符指针<BR>&nbsp; 可空：N<BR>&nbsp; 意思：要操作的集合</P>
 <P></P>
 <H1>返回值</H1>
 <P>类型：逻辑型 <BR>意思：是否成功</P>
