@@ -23,7 +23,7 @@ html,body {
 <H1>功能</H1> 
  <P>             枚举可用设备</P>
 <H1>语法</H1>
-<P>BOOL AVHelp_Device_EnumDevice(AVHELP_DEVICEINFO * 
+<P>bool AVHelp_Device_EnumDevice(AVHELP_DEVICEINFO * 
 **pppszAudioList, AVHELP_DEVICEINFO * **pppszVideoList, int* pInt_AudioCount, 
 int* pInt_VideoCount)</P>
 <P></P>
@@ -31,9 +31,9 @@ int* pInt_VideoCount)</P>
 <P></P>
 <H1>参数</H1>
 <P>&nbsp;参数.一：pppszAudioList<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：指向指针的指针的指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+类型：三级指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：输出音频设备列表,需要手动释放内存<BR>&nbsp;参数.二：pppszVideoList<BR>&nbsp; In/Out：Out<BR>&nbsp; 
-类型：指向指针的指针的指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
+类型：三级指针<BR>&nbsp; 可空：Y<BR>&nbsp; 
 意思：输出视频设备列表,需要手动释放内存<BR>&nbsp;参数.三：pInt_AudioCount<BR>&nbsp; 
 In/Out：Out<BR>&nbsp; 类型：整数型指针<BR>&nbsp; 可空：N<BR>&nbsp; 
 意思：输出音频设备列表个数<BR>&nbsp;参数.四：pInt_VideoCount<BR>&nbsp; In/Out：Out<BR>&nbsp; 
